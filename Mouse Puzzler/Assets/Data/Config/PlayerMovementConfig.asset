@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3d6513a427939149a92f0224959934d, type: 3}
-  m_Name: New PlayerMovementConfig
+  m_Name: PlayerMovementConfig
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementConfig
-  idleToWalkTransitionThreshold: 0.1
-  walkToRunTransitionThreshold: 5
-  runToOverheatThreshold: 10
+  IdleToWalkTransitionThreshold: 0.5
+  WalkToRunTransitionThreshold: 5
+  RunToOverheatThreshold: 20

@@ -2,12 +2,14 @@ using System;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class PlayerDizzyState : BaseState<PlayerStateMachine.PlayerState, PlayerContext>  
+public class PlayerRunningState : BaseState<PlayerStateMachine.PlayerState, PlayerContext>  
 {
     PlayerContext _context;
-    public PlayerDizzyState(PlayerStateMachine.PlayerState key, PlayerContext context) 
+    public PlayerRunningState(PlayerStateMachine.PlayerState key, PlayerContext context) 
         : base(key, context)
-    {}
+    {
+        _context = context;
+    }
 
     public override void Enter(){}
     public override void Exit(){}

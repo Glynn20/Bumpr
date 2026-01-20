@@ -81,15 +81,15 @@ public class PlayerMovement : MonoBehaviour, IMovement
 
     public PlayerMoveState GetMoveState()
     {
-        if (_currentSpeed > _config.runToOverheatThreshold)
+        if (_currentSpeed > _config.RunToOverheatThreshold)
         {
             return PlayerMoveState.Overheating;
         }
-        else if (_currentSpeed > _config.walkToRunTransitionThreshold)
+        else if (_currentSpeed > _config.WalkToRunTransitionThreshold)
         {
             return PlayerMoveState.Running;
         }
-        else if (_currentSpeed > _config.idleToWalkTransitionThreshold)
+        else if (_currentSpeed > _config.IdleToWalkTransitionThreshold)
         {
             return PlayerMoveState.Walking;
         }

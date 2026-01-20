@@ -7,7 +7,9 @@ public class PlayerWalkingState : BaseState<PlayerStateMachine.PlayerState, Play
     PlayerContext _context;
     public PlayerWalkingState(PlayerStateMachine.PlayerState key, PlayerContext context) 
         : base(key, context)
-    {}
+    {
+        _context = context;
+    }
 
     public override void Enter(){}
     public override void Exit(){}

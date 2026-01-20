@@ -2,12 +2,14 @@ using System;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class PlayerRunningState : BaseState<PlayerStateMachine.PlayerState, PlayerContext>  
+public class PlayerOverheatingState : BaseState<PlayerStateMachine.PlayerState, PlayerContext>  
 {
     PlayerContext _context;
-    public PlayerRunningState(PlayerStateMachine.PlayerState key, PlayerContext context) 
+    public PlayerOverheatingState(PlayerStateMachine.PlayerState key, PlayerContext context) 
         : base(key, context)
-    {}
+    {
+        _context = context;
+    }
 
     public override void Enter(){}
     public override void Exit(){}

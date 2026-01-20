@@ -5,15 +5,16 @@ using UnityEngine.EventSystems;
 
 public class Wall : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         // Must specifically be the Player
-        IKillable killable = other.gameObject.GetComponentInChildren<IKillable>();
+        IHealth killable = other.gameObject.GetComponentInChildren<IHealth>();
         IMovement movement = other.gameObject.GetComponent<IMovement>();
-
         if ( movement == null || killable == null ) return;
+
         if ( movement.GetMoveState() != PlayerMoveState.Overheating ) return;
         
         killable.Die();
     }
+
 }
