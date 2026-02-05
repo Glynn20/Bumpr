@@ -78,6 +78,11 @@ public class PlayerMovement : MonoBehaviour, IMovement
             ResetAccumulatedInputs();
         }
     }
+    public void SetInputEnabled(bool state)
+    {
+        _isInputEnabled = state;
+        ResetAccumulatedInputs();    
+    }
 
     public PlayerMoveState GetMoveState()
     {

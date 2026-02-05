@@ -13,7 +13,7 @@ public abstract class StateMachine<EState, TContext> : MonoBehaviour
     protected TContext _context;
     protected bool isTransitioningState = false;
 
-    [SerializeField] protected EState initialKey;
+    public EState InitialKey;
 
     protected void Update()
     {

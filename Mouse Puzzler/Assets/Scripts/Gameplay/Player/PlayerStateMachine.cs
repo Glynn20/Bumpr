@@ -18,7 +18,7 @@ public class PlayerStateMachine : StateMachine<PlayerStateMachine.PlayerState, P
 
     protected override BaseState<PlayerStateMachine.PlayerState, PlayerContext> SetInitialState()
     {
-        return _states[initialKey];
+        return _states[InitialKey];
     }
     
     protected override void SetUpStates()

@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour, 
@@ -7,9 +9,17 @@ public class Player : MonoBehaviour,
 {
     private Transform _transform;
     private int _currentHealth;
-    private int _maxHealth;
+    private int _maxHealth = 1;
+
+    [Header("Data")]
+    [SerializeField] private PlayerData _data;
+
+    [Header("Bomb Implementation")]
     [SerializeField] private Transform _bombAttachPoint;
     [SerializeField] private bool _isPermanentAttachPoint = false;
+
+    [Header("Game Events")]
+    [SerializeField] private GameEvent _playerDeathEvent;
 
     public int CurrentHealth => _currentHealth;
     public int MaxHealth => _maxHealth;
@@ -19,6 +29,7 @@ public class Player : MonoBehaviour,
     void Awake()
     {
         _transform = transform;
+        _maxHealth = _data.MaxHealth;
     }
     
     public void TeleportTo(Transform destination)
@@ -31,9 +42,15 @@ public class Player : MonoBehaviour,
         TeleportTo(respawnPoint);
         //
     }
-    public void TakeDamage() { Die(); } 
-    public void Die()
+    public void TakeDamage() 
     {
+        _currentHealth -= Constants.UNIVERSALDAMAGEVALUE;
+        
+        if (_currentHealth <= 0) Die();
+    } 
+    public void Die()
+    {  
+        _playerDeathEvent?.Raise(this, null);
         Debug.Log("Player Died.", this); return;
     }
 }

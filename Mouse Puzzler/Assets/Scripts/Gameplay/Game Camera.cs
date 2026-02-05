@@ -14,18 +14,12 @@ public class GameCamera : MonoBehaviour, IPannableCamera
     [Header("Events")]
     [SerializeField] private GameEvent _setPlayerInputEnabled;
     
-
     void Awake()
     {
         _transform = transform;
     }
-    public void SnapToPoint(Transform point)
-    {
-        if (_snapCoroutine != null) return;
-        _snapCoroutine = StartCoroutine(SnapToPointCoroutine(point));
-    }
 
-    IEnumerator SnapToPointCoroutine(Transform point)
+        IEnumerator SnapToPointCoroutine(Transform point)
     {
         _setPlayerInputEnabled?.Raise(this, false);
 
@@ -50,4 +44,27 @@ public class GameCamera : MonoBehaviour, IPannableCamera
         _snapCoroutine = null;
         yield return null;
     }
+
+    public void SnapToPoint(Transform point)
+    {
+        if (_snapCoroutine != null) return;
+        _snapCoroutine = StartCoroutine(SnapToPointCoroutine(point));
+    }
+    public void SnapToPointInstant(Transform point)
+    {
+        Vector2 pos = point.position; 
+        _transform.position = new Vector3(pos.x, pos.y, _transform.position.z);
+    }
+
+    public void OnPlayerDeath()
+    {
+        //TODO
+    }
+
+    public void OnPlayerContinue()
+    {
+        //SnapToPointInstant()
+    }
+
+
 }
