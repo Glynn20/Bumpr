@@ -5,6 +5,7 @@ using UnityEngine.PlayerLoop;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private GameObject _playerObject;
+    [SerializeField] private GameObject _cameraObject;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private GameObject _flagObject;
 
@@ -14,6 +15,7 @@ public class LevelManager : MonoBehaviour
 
     private Checkpoint _currentCheckpoint;
     private IPlayer _player;
+    private IPannableCamera _mainCamera;
    
     void Awake()
     {
@@ -23,14 +25,26 @@ public class LevelManager : MonoBehaviour
             return;
         }
         _currentCheckpoint = new Checkpoint(_initialCamPosition, _initialSpawnPoint);
-        
     }
     void Start()
     {
         _player = _playerObject?.GetComponentInChildren<IPlayer>();
-        _player.TeleportTo(_spawnPoint);
+        _mainCamera = _cameraObject?.GetComponentInChildren<IPannableCamera>();
+
+        if (_mainCamera == null || _player == null)
+        {
+            Debug.LogWarning("Level Manager missing Player and/or Camera reference.", this);
+        }
+
+        MovePlayerAndCamToCheckpoint();
     }
 
+    private void MovePlayerAndCamToCheckpoint()
+    {
+        _player.TeleportTo(_currentCheckpoint.SpawnPoint);
+        _mainCamera.SnapToPointInstant(_currentCheckpoint.CamSnapPoint);
+    }
+    
     public void OnPlayerDeath()
     {
         // Not Sure yet
@@ -38,7 +52,7 @@ public class LevelManager : MonoBehaviour
 
     public void OnPlayerContinue()
     {
-        _player.TeleportTo(_currentCheckpoint.SpawnPoint);
+        MovePlayerAndCamToCheckpoint();
     }
 
     public void OnCheckpointReached(Component sender, object[] data)

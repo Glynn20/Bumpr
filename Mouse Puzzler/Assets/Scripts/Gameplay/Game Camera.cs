@@ -12,7 +12,8 @@ public class GameCamera : MonoBehaviour, IPannableCamera
     private float _minSnapTime = 0.1f;
 
     [Header("Events")]
-    [SerializeField] private GameEvent _setPlayerInputEnabled;
+    [SerializeField] private GameEvent OnDisablePlayerInput;
+    [SerializeField] private GameEvent OnEnablePlayerInput;
     
     void Awake()
     {
@@ -21,7 +22,7 @@ public class GameCamera : MonoBehaviour, IPannableCamera
 
         IEnumerator SnapToPointCoroutine(Transform point)
     {
-        _setPlayerInputEnabled?.Raise(this, false);
+        OnDisablePlayerInput?.Raise(this, null);
 
         if (_snapTime < _minSnapTime) { _snapTime = _minSnapTime;}
         
@@ -40,7 +41,7 @@ public class GameCamera : MonoBehaviour, IPannableCamera
         // Snap directly to endpoint to avoid any margin of error
         _transform.position = endPoint;
 
-        _setPlayerInputEnabled?.Raise(this, true);
+        OnEnablePlayerInput?.Raise(this, null);
         _snapCoroutine = null;
         yield return null;
     }

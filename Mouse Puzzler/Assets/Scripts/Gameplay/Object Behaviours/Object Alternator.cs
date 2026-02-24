@@ -35,18 +35,34 @@ public class ObjectAlternator : MonoBehaviour
 
         for (int i = 0; i < _objectJaggedArray.Length; ++i)
         {
-            if (i == 0) {SetObjectsInArray(i, true); continue;}
-            SetObjectsInArray(i, false);
+            if (i == 0) 
+            {
+                EnableObjectsInArray(i); 
+                continue;
+            }
+            else { DisableObjectsInArray(i); }
         }
     }
 
-    void SetObjectsInArray(int index, bool makeActive)
+    void DisableObjectsInArray(int index)
     {
         if (_objectJaggedArray.Length == 0) return;
+        if (_objectJaggedArray[index].row.Length == 0) return;
 
         foreach(GameObject thing in _objectJaggedArray[index].row)
         {
-           thing?.gameObject.SetActive(makeActive);
+           thing?.gameObject.SetActive(false);
+        }
+    }
+
+    void EnableObjectsInArray(int index)
+    {
+        if (_objectJaggedArray.Length == 0) return;
+        if (_objectJaggedArray[index].row.Length == 0) return;
+
+        foreach(GameObject thing in _objectJaggedArray[index].row)
+        {
+           thing?.gameObject.SetActive(true);
         }
     }
 
@@ -54,7 +70,10 @@ public class ObjectAlternator : MonoBehaviour
     {
         if (_objectJaggedArray.Length == 0) return;
 
-        SetObjectsInArray(_currentEnabledIndex, false);
+        if (_objectJaggedArray[_currentEnabledIndex].row.Length > 0)
+        {
+            DisableObjectsInArray(_currentEnabledIndex);
+        }
 
         if (_currentEnabledIndex == _objectJaggedArray.Length - 1)
         {
@@ -64,7 +83,7 @@ public class ObjectAlternator : MonoBehaviour
         {
             ++_currentEnabledIndex;
         }
-
-        SetObjectsInArray(_currentEnabledIndex, true);
+        if (_objectJaggedArray[_currentEnabledIndex].row.Length == 0) return;
+        EnableObjectsInArray(_currentEnabledIndex);
     }
 }

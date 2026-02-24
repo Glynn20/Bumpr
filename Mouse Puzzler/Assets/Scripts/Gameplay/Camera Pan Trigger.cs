@@ -6,11 +6,16 @@ public class CameraPanTrigger : MonoBehaviour
     [SerializeField] private Transform _nextSnapPoint;
     [SerializeField] private Transform _queuedSnapPoint;
 
+    private IPannableCamera cam;
+
+    void Start()
+    {
+        cam = Camera.main.GetComponent<IPannableCamera>();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponentInChildren<IPlayer>() == null) return;
-
-        IPannableCamera cam = Camera.main.GetComponent<IPannableCamera>();
 
         if (cam == null) 
         {

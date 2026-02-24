@@ -4,26 +4,36 @@ using UnityEngine.UI;
 
 public class GameOverUI : MonoBehaviour
 {
-    [Header("Button")]
-    [SerializeField] private Button _continueButton;
+    private Canvas _canvas;
 
     [Header("Event")]
     [SerializeField] private GameEvent _onContinue; 
 
     void Start()
     {
-        _continueButton.gameObject.SetActive(false);
-
+        _canvas = GetComponent<Canvas>();
+        _canvas.enabled = false;
     }
-    public void _OnContinueButtonClicked()
+    public void OnContinueButtonClicked()
     {
         _onContinue?.Raise(this, null);
-        _continueButton.gameObject.SetActive(false);
+        DisableCanvas();
     }
 
     public void OnPlayerDeath()
     {
-        _continueButton.gameObject.SetActive(true);
+        EnableCanvas();
+    }
+
+    void EnableCanvas()
+    {
+        Debug.Log("Canvas enabled");
+        _canvas.enabled = true;
+    }
+
+    void DisableCanvas()
+    {
+        _canvas.enabled = false;
     }
 
 }

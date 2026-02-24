@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f70ad5b7f761e4c921cf911c1ecadb, type: 3}
+  m_Name: SceneRegistry
+  m_EditorClassIdentifier: Assembly-CSharp::SceneRegistry
+  AllLevels:
+  - {fileID: 11400000, guid: a27c959ded3e3364fa039f1b2fbb55f4, type: 2}
+  - {fileID: 11400000, guid: c4faf2ad1ccd2634082690da418dbd9a, type: 2}
+  - {fileID: 11400000, guid: 09334fe0217c7b94196dd02a3b1e91ea, type: 2}
+  - {fileID: 11400000, guid: 51ffa7a51dc5dd142955b1773c03cb59, type: 2}
+  - {fileID: 11400000, guid: ad3b74a50c9b2224e8bba0deadc92ff8, type: 2}

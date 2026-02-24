@@ -70,14 +70,18 @@ public class PlayerMovement : MonoBehaviour, IMovement
         _accumulatedInput += context.ReadValue<UnityEngine.Vector2>();
     }
 
-    public void SetInputEnabled(Component sender, params object[] data)
+    public void DisableInput()
     {
-        if (data.Length > 0 && data[0] is bool state)
-        {
-            _isInputEnabled = state;
-            ResetAccumulatedInputs();
-        }
+        _isInputEnabled = false;
+        ResetAccumulatedInputs();
     }
+
+    public void EnableInput()
+    {
+        _isInputEnabled = true;
+        ResetAccumulatedInputs();
+    }
+
     public void SetInputEnabled(bool state)
     {
         _isInputEnabled = state;

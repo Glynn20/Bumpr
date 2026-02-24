@@ -22,8 +22,10 @@ public class ObjectBlinking : MonoBehaviour
 
     void Update()
     {
-        _remainingTime -= Time.deltaTime;
+        if (_blinkCoroutine != null) return;
 
+        _remainingTime -= Time.deltaTime;
+        
         if (_remainingTime > 0) return;
         
         if (_blinkCoroutine == null)
