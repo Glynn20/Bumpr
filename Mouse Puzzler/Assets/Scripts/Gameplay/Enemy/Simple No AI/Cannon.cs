@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Cannon : MonoBehaviour, IEnemy
@@ -23,10 +24,11 @@ public class Cannon : MonoBehaviour, IEnemy
     [SerializeField] private float _timeBetweenAttack = 1.0f;
     [SerializeField] private float _timeBetweenIndividualShot = 0.4f;
     [SerializeField] private int _shotsPerBurst = 1;
-    [SerializeField] private Transform socket;
+    [SerializeField] private Transform _projectileSocket;
 
     [Header("Projectile")]
     [SerializeField] private ProjectileConfig _config;
+    [SerializeField] private float _velocityMultiplier = 1f;
 
     private float _remainingTimeBetweenAttack;
     private bool _isEnabled;
@@ -66,7 +68,7 @@ public class Cannon : MonoBehaviour, IEnemy
 
     private void SpawnProjectile()
     {
-        GameObject instance = Object.Instantiate(_config.Prefab, socket.position, socket.rotation);
+        GameObject instance = Object.Instantiate(_config.Prefab, _projectileSocket.position, _projectileSocket.rotation);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
         
         if (rb == null) 
@@ -75,7 +77,7 @@ public class Cannon : MonoBehaviour, IEnemy
             return;
         }
         
-        rb.linearVelocity = socket.up * _config.Velocity;
+        rb.linearVelocity = _projectileSocket.up * _config.Velocity * _velocityMultiplier;
     }
 
     public void Enable()

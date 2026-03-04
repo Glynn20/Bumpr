@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
     public void EnableCursor()
     {
         Cursor.lockState = CursorLockMode.Confined;

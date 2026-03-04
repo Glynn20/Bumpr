@@ -15,6 +15,11 @@ public class ObjectBlinking : MonoBehaviour
 
     void Awake()
     {
+        if (_controlledObjects == null || _controlledObjects.Length == 0)
+        {
+            Debug.LogWarning($"[ObjectBlinking] No objects assigned on {gameObject.name}. Script will stay idle.", this);
+            return;
+        }
         ActivateObjects();
         _blinkWait = new WaitForSeconds(_blinkDuration);
         _remainingTime = _timeBeforeBlink;
@@ -22,7 +27,7 @@ public class ObjectBlinking : MonoBehaviour
 
     void Update()
     {
-        if (_blinkCoroutine != null) return;
+        if (_controlledObjects == null || _controlledObjects.Length == 0 || _blinkCoroutine != null) return;
 
         _remainingTime -= Time.deltaTime;
         
@@ -37,7 +42,7 @@ public class ObjectBlinking : MonoBehaviour
 
     private void ActivateObjects()
     {
-        if (_controlledObjects.Length <= 0)
+        if (_controlledObjects == null)
         {
             Debug.Log("Object list in Blinking script not set.", this);
             return;
@@ -45,20 +50,27 @@ public class ObjectBlinking : MonoBehaviour
 
         foreach (GameObject thing in _controlledObjects)
         {
-            thing.SetActive(true);
+            if (thing != null)
+            {
+                thing.SetActive(true);
+            }
+            
         }
     }
 
     private void DeactivateObjects()
     {
-        if (_controlledObjects.Length <= 0)
+        if (_controlledObjects == null)
         {
             Debug.Log("Object list in Blinking script not set.", this);
             return;
         }
         foreach (GameObject thing in _controlledObjects)
         {
-            thing.SetActive(false);
+            if (thing != null)
+            {
+                thing.SetActive(false);
+            }    
         }
     }
 

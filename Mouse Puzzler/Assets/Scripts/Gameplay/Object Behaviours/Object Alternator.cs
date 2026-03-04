@@ -9,7 +9,7 @@ public class ObjectAlternator : MonoBehaviour
         public GameObject[] row;
     }
 
-    [SerializeField] GameObjectRow[] _objectJaggedArray;
+    [SerializeField] GameObjectRow[] _objectGroups;
     [SerializeField] private float _intervalTimeInSeconds;
     [Range(0.1f,10f)] private float _timeBeforeNextGroup;
     private int _currentEnabledIndex = 0;
@@ -31,9 +31,9 @@ public class ObjectAlternator : MonoBehaviour
 
     void Initialize()
     {
-        if (_objectJaggedArray.Length < 2) return;
+        if (_objectGroups.Length < 2) return;
 
-        for (int i = 0; i < _objectJaggedArray.Length; ++i)
+        for (int i = 0; i < _objectGroups.Length; ++i)
         {
             if (i == 0) 
             {
@@ -46,10 +46,10 @@ public class ObjectAlternator : MonoBehaviour
 
     void DisableObjectsInArray(int index)
     {
-        if (_objectJaggedArray.Length == 0) return;
-        if (_objectJaggedArray[index].row.Length == 0) return;
+        if (_objectGroups.Length == 0) return;
+        if (_objectGroups[index].row.Length == 0) return;
 
-        foreach(GameObject thing in _objectJaggedArray[index].row)
+        foreach(GameObject thing in _objectGroups[index].row)
         {
            thing?.gameObject.SetActive(false);
         }
@@ -57,10 +57,10 @@ public class ObjectAlternator : MonoBehaviour
 
     void EnableObjectsInArray(int index)
     {
-        if (_objectJaggedArray.Length == 0) return;
-        if (_objectJaggedArray[index].row.Length == 0) return;
+        if (_objectGroups.Length == 0) return;
+        if (_objectGroups[index].row.Length == 0) return;
 
-        foreach(GameObject thing in _objectJaggedArray[index].row)
+        foreach(GameObject thing in _objectGroups[index].row)
         {
            thing?.gameObject.SetActive(true);
         }
@@ -68,14 +68,14 @@ public class ObjectAlternator : MonoBehaviour
 
     void EnableNextGroup()
     {
-        if (_objectJaggedArray.Length == 0) return;
+        if (_objectGroups.Length == 0) return;
 
-        if (_objectJaggedArray[_currentEnabledIndex].row.Length > 0)
+        if (_objectGroups[_currentEnabledIndex].row.Length > 0)
         {
             DisableObjectsInArray(_currentEnabledIndex);
         }
 
-        if (_currentEnabledIndex == _objectJaggedArray.Length - 1)
+        if (_currentEnabledIndex == _objectGroups.Length - 1)
         {
             _currentEnabledIndex = 0;
         }
@@ -83,7 +83,7 @@ public class ObjectAlternator : MonoBehaviour
         {
             ++_currentEnabledIndex;
         }
-        if (_objectJaggedArray[_currentEnabledIndex].row.Length == 0) return;
+        if (_objectGroups[_currentEnabledIndex].row.Length == 0) return;
         EnableObjectsInArray(_currentEnabledIndex);
     }
 }

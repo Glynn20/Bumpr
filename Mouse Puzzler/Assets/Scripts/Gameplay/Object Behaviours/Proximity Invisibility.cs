@@ -17,6 +17,7 @@ public class ProximityInvisibility : MonoBehaviour
 
         _spriteRenderer.enabled = false;
         _collider.radius = _revealSpriteRange;
+        _collider.isTrigger = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)

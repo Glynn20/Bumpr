@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 5.332, y: 3.04175, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5398764210794302656}
@@ -108,8 +108,9 @@ MonoBehaviour:
   _timeBetweenAttack: 1
   _timeBetweenIndividualShot: 0.4
   _shotsPerBurst: 3
-  socket: {fileID: 5398764210794302656}
+  _projectileSocket: {fileID: 5398764210794302656}
   _config: {fileID: 11400000, guid: 8f2050d61d28cc548b769ebd31f1eb65, type: 2}
+  _velocityMultiplier: 1
 --- !u!1 &1650507077849030525
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5398764210794302656}
   m_Layer: 0
-  m_Name: Socket
+  m_Name: Projectile Socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

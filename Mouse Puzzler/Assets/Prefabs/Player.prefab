@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6999756984491312457}
   - component: {fileID: 818138850847798499}
   - component: {fileID: 9066196511219473167}
+  - component: {fileID: 474498639183233759}
   - component: {fileID: 7817655882632153179}
   - component: {fileID: 4553664516994203885}
   - component: {fileID: 2750807280904158053}
@@ -37,7 +38,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2581007313869013494}
@@ -182,6 +183,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 474498639183233759}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 639cef61-7aff-48c8-9c40-a492c973dcd9
+    m_ActionName: 'Player/Pause Game[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -293,6 +310,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBrain
   _stateMachine: {fileID: 7817655882632153179}
+--- !u!114 &474498639183233759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760906760015242316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768852317a316684793b21b7553550fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputs
+  PausePressed: {fileID: 11400000, guid: 750983fbcbc5a2a42a63847aebbbb518, type: 2}
 --- !u!114 &7817655882632153179
 MonoBehaviour:
   m_ObjectHideFlags: 0
