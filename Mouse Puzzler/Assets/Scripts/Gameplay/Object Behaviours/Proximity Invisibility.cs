@@ -1,23 +1,21 @@
 using UnityEngine;
 
-[RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 
 public class ProximityInvisibility : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
-    private CircleCollider2D _collider;
+    [SerializeField] private BoxCollider2D _detectionCollider;
 
-    [SerializeField] private float _revealSpriteRange = 1.0f;
+    [SerializeField] private float _detectionRange = 0.5f;
 
     void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _collider = GetComponent<CircleCollider2D>();
 
         _spriteRenderer.enabled = false;
-        _collider.radius = _revealSpriteRange;
-        _collider.isTrigger = true;
+        _detectionCollider.isTrigger = true;
+        _detectionCollider.edgeRadius = _detectionRange;
     }
 
     void OnTriggerEnter2D(Collider2D other)
