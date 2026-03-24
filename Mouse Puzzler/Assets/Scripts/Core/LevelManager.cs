@@ -7,7 +7,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject _playerObject;
     [SerializeField] private GameObject _cameraObject;
     [SerializeField] private Transform _spawnPoint;
-    [SerializeField] private GameObject _flagObject;
 
     [Header("Initial Checkpoint")]
     [SerializeField] private Transform _initialCamPosition;

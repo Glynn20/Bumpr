@@ -1,12 +1,14 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TimedDoor : MonoBehaviour
+public class TimedDoor : MonoBehaviour, IActivatable
 {
+    public bool IsActivatedOnStart {get; set;}
+    public bool IsActivated{get; set;}
+
     [SerializeField] private int _ID;
     [SerializeField] private float _timeBeforeOpen;
     private float _remainingTime;
-    private bool _isActive = false;
 
     void Awake()
     {
@@ -15,7 +17,7 @@ public class TimedDoor : MonoBehaviour
 
     void Update()
     {
-        if (!_isActive) return;
+        if (!IsActivated) return;
 
         _remainingTime -= Time.deltaTime;
 
@@ -34,7 +36,16 @@ public class TimedDoor : MonoBehaviour
     {
         if (data.Length > 0 && data[0] is int eventID)
         {
-            if (eventID == _ID) {_isActive = true;}
+            if (eventID == _ID) {IsActivated = true;}
         }
+    }
+
+    public void Activate()
+    {
+        IsActivated = true;
+    }
+    public void Deactivate()
+    {
+        IsActivated = false;
     }
 }

@@ -989,6 +989,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4638719578061586160}
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035822977558815825, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4730547199364136064, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
       propertyPath: m_LocalPosition.x
       value: 566.2344
@@ -1038,6 +1070,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+--- !u!114 &4638719578061586160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5981164671867573986, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
+  m_PrefabInstance: {fileID: 4638719578061586159}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f7c802b59b93f43ae8b7e1e28804a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneController
 --- !u!1001 &8497292796838870405
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1538,6 +1538,7 @@ GameObject:
   - component: {fileID: 8601863529397548330}
   - component: {fileID: 3190287700481117386}
   - component: {fileID: 3892495248448209281}
+  - component: {fileID: 8827767392904743627}
   m_Layer: 5
   m_Name: Return to Main Menu Button
   m_TagString: Untagged
@@ -1646,4 +1647,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3190287700481117386}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8827767392904743627}
+        m_TargetAssemblyTypeName: SceneSwitchButton, Assembly-CSharp
+        m_MethodName: SwitchToSceneByNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8827767392904743627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926871571573834405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2721872da5b4349af664ee3b6944b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitchButton
+  OnRequestLoadScene: {fileID: 11400000, guid: 2e0786b62c910b4428deb52ce63198fc, type: 2}
+  OnRequestLoadNextScene: {fileID: 11400000, guid: c96ea4849ae02cc41879cf3dca8901d3, type: 2}
+  sceneSwitchIndex: 0
