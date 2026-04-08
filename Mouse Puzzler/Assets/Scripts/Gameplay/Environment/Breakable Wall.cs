@@ -32,8 +32,7 @@ public class BreakableWall : MonoBehaviour, IHealth
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        // Must specifically be the Player
-        IMovement mover = other.gameObject.GetComponent<IMovement>();
+         IMovement mover = other.gameObject.GetComponent<IMovement>();
         if ( mover == null ) return;
 
         if ( mover.GetMoveState() == PlayerMoveState.Overheating )

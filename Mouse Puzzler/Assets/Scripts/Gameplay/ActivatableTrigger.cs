@@ -10,6 +10,7 @@ public class ActivatableTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (_activatables.Count == 0) return;
         foreach (Object obj in _activatables)
         {
             IActivatable activatable = obj.GetComponent<IActivatable>();
@@ -20,7 +21,6 @@ public class ActivatableTrigger : MonoBehaviour
             }
         }
         
-        this.enabled = false;
+        gameObject.SetActive(false);
     }
-    
 }

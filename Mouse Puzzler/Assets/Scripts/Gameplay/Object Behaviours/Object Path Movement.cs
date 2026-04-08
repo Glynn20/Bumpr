@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 public class ObjectPathMovement : MonoBehaviour, IActivatable
 {
@@ -41,6 +42,8 @@ public class ObjectPathMovement : MonoBehaviour, IActivatable
         }
         _transform.position = _points[0].position;
         _remainingTimeBetweenMove = _timeBetweenMove;
+        
+        if (_isActivatedOnStart) Activate();
     }
 
     void Update()

@@ -7,18 +7,27 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    private bool _canAttach = true;
-    private bool _timerEnabled = false;
-    private Transform _transform;
-    private ICanAttachBomb _currentSocket;
-
     [Header("Parameters")]
     [SerializeField] private float _timeBeforeExplosion = 3.0f;
     [SerializeField] private float _explosionRadius = 3.0f;
 
     [Header("UI")]
-
     [SerializeField] private TextMeshProUGUI _timerText;
+
+    private bool _canAttach = true;
+    private bool _timerEnabled = false;
+    private Transform _transform;
+    private ICanAttachBomb _currentSocket;
+    public void Explode()
+    {
+        StopTimer();
+        Collider2D[] hits = Physics2D.OverlapCircleAll(_transform.position, _explosionRadius);
+        foreach( Collider2D hit in hits)
+        {
+            hit.GetComponent<IHealth>()?.TakeDamage();
+        }
+    }
+
     void Awake()
     {
         _transform = transform;
@@ -39,7 +48,7 @@ public class Bomb : MonoBehaviour
 
         Explode();
     }
-    
+
     void OnTriggerEnter2D(Collider2D other)
     {
         ICanAttachBomb socket = other.gameObject.GetComponent<ICanAttachBomb>();
@@ -75,13 +84,5 @@ public class Bomb : MonoBehaviour
         _timerEnabled = false;
     }
 
-    public void Explode()
-    {
-        StopTimer();
-        Collider2D[] hits = Physics2D.OverlapCircleAll(_transform.position, _explosionRadius);
-        foreach( Collider2D hit in hits)
-        {
-            hit.GetComponent<IHealth>()?.TakeDamage();
-        }
-    }
+
 } 

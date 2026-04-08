@@ -7,9 +7,10 @@ public class Player : MonoBehaviour,
     IHealth,
     ICanAttachBomb
 {
-    private Transform _transform;
-    private int _currentHealth;
-    private int _maxHealth = 1;
+    public int CurrentHealth => _currentHealth;
+    public int MaxHealth => _maxHealth;
+    public Transform BombAttachPoint => _bombAttachPoint;
+    public bool IsPermanentAttachPoint => _isPermanentAttachPoint;
 
     [Header("Data")]
     [SerializeField] private PlayerData _data;
@@ -21,10 +22,9 @@ public class Player : MonoBehaviour,
     [Header("Game Events")]
     [SerializeField] private GameEvent _playerDeathEvent;
 
-    public int CurrentHealth => _currentHealth;
-    public int MaxHealth => _maxHealth;
-    public Transform BombAttachPoint => _bombAttachPoint;
-    public bool IsPermanentAttachPoint => _isPermanentAttachPoint;
+    private Transform _transform;
+    private int _currentHealth;
+    private int _maxHealth = 1;
 
     void Awake()
     {
@@ -53,4 +53,5 @@ public class Player : MonoBehaviour,
         _playerDeathEvent?.Raise(this, null);
         Debug.Log("Player Died.", this); return;
     }
+
 }
