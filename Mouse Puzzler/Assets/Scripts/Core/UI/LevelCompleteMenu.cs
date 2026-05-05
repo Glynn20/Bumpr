@@ -8,8 +8,8 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
 
     [Header("Events")]
     [SerializeField] private GameEvent OnRequestLoadNextLevel;
-    [SerializeField] private GameEvent OnInGameMenuOpen;
-    [SerializeField] private GameEvent OnInGameMenuClose;
+    [SerializeField] private GameEvent OnMenuOpen;
+    [SerializeField] private GameEvent OnMenuClose;
 
     void Awake()
     {
@@ -19,13 +19,13 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
 
     public void OpenMenu()
     {
-        OnInGameMenuOpen?.Raise(this, null);
+        OnMenuOpen?.Raise(this, null);
         _canvas.enabled = true;
     }
 
     public void CloseMenu()
     {
-        OnInGameMenuClose?.Raise(this, null);
+        OnMenuClose?.Raise(this, null);
         _canvas.enabled = false;
     }
 

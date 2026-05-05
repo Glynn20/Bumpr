@@ -1,12 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking.PlayerConnection;
 using UnityEngine.PlayerLoop;
 
 public class LevelManager : MonoBehaviour
 {
+    
     [SerializeField] private GameObject _playerObject;
     [SerializeField] private GameObject _cameraObject;
-    [SerializeField] private Transform _spawnPoint;
+    
+    [Header("Events")]
+    [SerializeField] private GameEvent OnLevelBegin;
 
     [Header("Initial Checkpoint")]
     [SerializeField] private Transform _initialCamPosition;
@@ -15,7 +19,48 @@ public class LevelManager : MonoBehaviour
     private Checkpoint _currentCheckpoint;
     private IPlayer _player;
     private IPannableCamera _mainCamera;
-   
+    private static List<IReset> AllResettables = new List<IReset>();
+
+    public void OnPlayerDeath()
+    {
+        // Not Sure yet
+    }
+
+    public void OnPlayerContinue()
+    {
+        MovePlayerAndCamToCheckpoint();
+        ResetAllResettables();
+    }
+
+    public void OnCheckpointReached(Component sender, object[] data)
+    {
+        if (data.Length == 0 || data[0] is not Checkpoint) return;
+        
+        Checkpoint newCheckpoint = data[0] as Checkpoint;
+        
+        if (newCheckpoint.CamSnapPoint == null || newCheckpoint.SpawnPoint == null)
+        {
+            Debug.Log("Invalid Checkpoint received.", this);
+        }
+        else
+        {
+            _currentCheckpoint = newCheckpoint;
+        }
+    }
+
+    public void OnLevelComplete()
+    {
+        AllResettables.Clear();
+    }
+
+    public static void RegisterResettable(IReset resettable)
+    {
+        AllResettables.Add(resettable);
+    }
+    public static void UnregisterResettable(IReset resettable)
+    {
+        AllResettables.Remove(resettable);
+    }
     void Awake()
     {
         if (_initialCamPosition == null || _initialSpawnPoint == null)
@@ -36,6 +81,7 @@ public class LevelManager : MonoBehaviour
         }
 
         MovePlayerAndCamToCheckpoint();
+        OnLevelBegin?.Raise(this, null);
     }
 
     private void MovePlayerAndCamToCheckpoint()
@@ -44,29 +90,16 @@ public class LevelManager : MonoBehaviour
         _mainCamera.SnapToPointInstant(_currentCheckpoint.CamSnapPoint);
     }
     
-    public void OnPlayerDeath()
+    private void ResetAllResettables()
     {
-        // Not Sure yet
-    }
+        List<IReset> resettablesCopyList = new List<IReset>(AllResettables);
 
-    public void OnPlayerContinue()
-    {
-        MovePlayerAndCamToCheckpoint();
-    }
-
-    public void OnCheckpointReached(Component sender, object[] data)
-    {
-        if (data.Length == 0 || data[0] is not Checkpoint) return;
-        
-        Checkpoint newCheckpoint = data[0] as Checkpoint;
-        
-        if (newCheckpoint.CamSnapPoint == null || newCheckpoint.SpawnPoint == null)
+        foreach (IReset r in resettablesCopyList)
         {
-            Debug.Log("Invalid Checkpoint received.", this);
-        }
-        else
-        {
-            _currentCheckpoint = newCheckpoint;
+            if (r != null)
+            {
+                r.Reset();
+            }
         }
     }
 }

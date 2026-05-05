@@ -3,7 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TimedDoor : MonoBehaviour, IActivatable
+public class TimedDoor : MonoBehaviour, IActivatable, IReset
 {
     public bool IsActivatedOnStart {get; set;}
     public bool IsActivated{get; set;}
@@ -13,6 +13,9 @@ public class TimedDoor : MonoBehaviour, IActivatable
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI _timerText;
+
+    private SpriteRenderer _renderer;
+    private Collider2D _collider;
     
     private bool _timerEnabled = false;
     private float _remainingTime;
@@ -26,14 +29,41 @@ public class TimedDoor : MonoBehaviour, IActivatable
     {
         IsActivated = false;
         _timerEnabled = false;
-    }
-    void Awake()
+    }    
+    public void Reset()
     {
-        _remainingTime = _timeBeforeOpen;
+        _renderer.enabled = true;
+        _collider.enabled = true;
+        _timerText.enabled = true;
+        Deactivate();
+        ResetTime();
+        UpdateTimerText();
+    }
+    public void RegisterToManager()
+    {
+        LevelManager.RegisterResettable(this);
+    }
+    public void UnregisterFromManager()
+    {
+        LevelManager.UnregisterResettable(this);
+    }
+    private void OnEnable()
+    {
+        RegisterToManager();
+    }
+    private void OnDisable()
+    {
+        UnregisterFromManager();
+    }
+    private void Awake()
+    {
+        _renderer = GetComponentInChildren<SpriteRenderer>();
+        _collider = GetComponentInChildren<Collider2D>();
+        ResetTime();
         UpdateTimerText();
     }
 
-    void Update()
+    private void Update()
     {
         if (!IsActivated) return;
         if (!_timerEnabled) return;
@@ -47,11 +77,18 @@ public class TimedDoor : MonoBehaviour, IActivatable
         if (_remainingTime <= 0)
         {
             Open();
+            _timerText.enabled = false;
+            Deactivate();
         }
     }
     private void Open()
     {
-        gameObject.SetActive(false);
+        _renderer.enabled = false;
+        _collider.enabled = false;
+    }
+    private void ResetTime()
+    {
+        _remainingTime = _timeBeforeOpen;
     }
     private void UpdateTimerText()
     {

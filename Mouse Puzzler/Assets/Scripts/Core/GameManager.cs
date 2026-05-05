@@ -1,50 +1,26 @@
+using UnityEditor;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
+    public bool GamePaused => _gamePaused;
     private bool _gamePaused = false;
     private static GameManager _instance;
-    public static GameManager Instance => _instance;
 
     [Header("Events")]
     [SerializeField] private GameEvent PauseStateChanged;
 
-    void Awake()
-    {
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else if (_instance != this)
-        {
-            Destroy(this);
-        }
-    }
-
     public void OnPausePressed()
     {
-        if (_gamePaused)
-        {
-            UnpauseGame();
-        }
-        else
-        {
-            PauseGame();
-        }
-    }
+        _gamePaused = !_gamePaused;
 
-    private void PauseGame()
-    {
-        Time.timeScale = 0f;
-        _gamePaused = true;
-        PauseStateChanged?.Raise(this, true);
+        Time.timeScale = _gamePaused ? 0.0f : 1.0f;
+        PauseStateChanged?.Raise(this, _gamePaused);
     }
-
-    private void UnpauseGame()
+    public void OnLevelBegin()
     {
-        Time.timeScale = 1f;
         _gamePaused = false;
-        PauseStateChanged?.Raise(this, false);
+        Time.timeScale = 1.0f;
+        PauseStateChanged?.Raise(this, _gamePaused);
     }
 }

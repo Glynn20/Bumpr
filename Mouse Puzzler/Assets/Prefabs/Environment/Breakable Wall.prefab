@@ -81,11 +81,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -3722003238996646333, guid: b4483f96608e74a4e92f45942b7803ca, type: 3}
   m_Color: {r: 0.8962264, g: 0.7747956, b: 0.3931559, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -130,10 +130,10 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ca6b9f4977e1340b78d30257a41946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
+  _physicalCollider: {fileID: 198894162410271580}
   _config: {fileID: 11400000, guid: 6b44470fed0e94c429d1dbc154388fcf, type: 2}
   _highHealthColour: {r: 0.6320754, g: 0.61232793, b: 0.48001954, a: 1}
   _mediumHealthColour: {r: 0.7953481, g: 0.8207547, b: 0.41424885, a: 1}

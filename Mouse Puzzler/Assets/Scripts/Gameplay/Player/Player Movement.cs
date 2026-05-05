@@ -33,9 +33,15 @@ public class PlayerMovement : MonoBehaviour, IMovement
     public void DisableInput()
     {
         _isInputEnabled = false;
+        _currentSpeed = 0;
         ResetAccumulatedInputs();
     }
 
+    public void OnLevelBegin()
+    {
+        EnableInput();
+    }
+    
     public void EnableInput()
     {
         _isInputEnabled = true;
@@ -64,7 +70,20 @@ public class PlayerMovement : MonoBehaviour, IMovement
         }
         return PlayerMoveState.Idle;  
     }
-
+    public void OnPauseStateChanged(Component sender, params object[] data)
+    {
+        if (data.Length == 1 && data[0] is bool isNowPaused)
+        {
+            if (isNowPaused)
+            {
+                DisableInput();
+            }
+            else
+            {
+                EnableInput();
+            }
+        }
+    }
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();  

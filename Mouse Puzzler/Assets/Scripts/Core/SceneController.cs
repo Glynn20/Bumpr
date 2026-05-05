@@ -4,16 +4,16 @@ using System.Collections;
 using UnityEngine.Rendering;
 using DG.Tweening;
 
-public class SceneController : MonoBehaviour
+public class SceneController : Singleton<SceneController>
 {
     [SerializeField] private SceneRegistry registry;
     private SceneData _currentScene;
     bool _isLoading = false;
     // GameEvent response
 
-    void Awake()
+    protected override void Awake()
     {
-        DontDestroyOnLoad(this);
+        base.Awake();
         string currentName = SceneManager.GetActiveScene().name;
         _currentScene = registry.GetLevelByName(currentName);
 

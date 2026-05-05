@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class BreakableWall : MonoBehaviour, IHealth 
+public class BreakableWall : MonoBehaviour,
+IHealth,
+IReset 
 {
-    
-    private int _currentHealth;
-    private int _maxHealth;
-    private float HealthPercentage => (float)_currentHealth / _maxHealth;
-    private SpriteRenderer _renderer;
+
+    public int CurrentHealth => _currentHealth;
+    public int MaxHealth => _maxHealth;
+
+    [SerializeField] private Collider2D _physicalCollider; // Must manually set in Inspector
 
     [Header("Health Settings.")]
     [SerializeField] private BreakableWallConfig _config;
@@ -18,16 +21,70 @@ public class BreakableWall : MonoBehaviour, IHealth
     [Range(0,1)][SerializeField] private float _highHealthThreshold = 0.67f;
     [Range(0,1)][SerializeField] private float _mediumHealthThreshold = 0.34f;
 
+    private int _currentHealth;
+    private int _maxHealth;
+    private float HealthPercentage => (float)_currentHealth / _maxHealth;
+    private SpriteRenderer _renderer;
+    
+    public void Reset()
+    {
+        if (GetComponent<ProximityInvisibility>() == null) _renderer.enabled = true;
+        
+        _physicalCollider.enabled = true;
+        _currentHealth = _maxHealth;
+        ChangeColour(_highHealthColour);
+    }
+    public void RegisterToManager()
+    {
+        LevelManager.RegisterResettable(this);
+    }
+    public void UnregisterFromManager()
+    {
+        LevelManager.UnregisterResettable(this);
+    }
+    public void TakeDamage()
+    {
+        _currentHealth -= Constants.UNIVERSALDAMAGEVALUE;
+        
+        if (_currentHealth <= 0)
+        {
+            Die();
+            return;
+        }
 
-    public int CurrentHealth => _currentHealth;
-    public int MaxHealth => _maxHealth;
+        if (HealthPercentage < _mediumHealthThreshold) 
+        {
+            ChangeColour(_lowHealthColour);
+            return;
+        } 
+        if (HealthPercentage < _highHealthThreshold)   
+        {
+            ChangeColour(_mediumHealthColour);
+            return;
+        } 
+    }
+
+    public void Die()
+    {
+        _physicalCollider.enabled = false;
+        _renderer.enabled = false;
+    }
+
+    private void OnEnable()
+    {
+        RegisterToManager();
+    }
+    private void OnDisable()
+    {
+        UnregisterFromManager();
+    }
 
     void Awake()
     {
         _maxHealth = _config.MaxHealth;
         _currentHealth = _maxHealth;
         _renderer = GetComponent<SpriteRenderer>();
-        _renderer.color = _highHealthColour;
+        ChangeColour(_highHealthColour);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -41,30 +98,10 @@ public class BreakableWall : MonoBehaviour, IHealth
         }
     }
 
-    public void TakeDamage()
+    void ChangeColour(Color newColour)
     {
-        _currentHealth -= Constants.UNIVERSALDAMAGEVALUE;
-        
-        if (_currentHealth <= 0)
-        {
-            Die();
-            return;
-        }
-
-        if (HealthPercentage < _mediumHealthThreshold) 
-        {
-            _renderer.color = _lowHealthColour;
-            return;
-        } 
-        if (HealthPercentage < _highHealthThreshold)   
-        {
-            _renderer.color = _mediumHealthColour;
-            return;
-        } 
+        _renderer.color = newColour;
     }
 
-    public void Die()
-    {
-        Destroy(gameObject);
-    }
+
 }

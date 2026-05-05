@@ -55,15 +55,20 @@ public class Cannon : MonoBehaviour, IEnemy
 
     private IEnumerator ShootCoroutine()
     {
+
         for (int i = 0; i < _shotsPerBurst; ++i)
         {
             SpawnProjectile();
-            yield return _burstWait;
-        }
 
-        _shootCoroutine = null;
+            if (_shotsPerBurst > 1 && i < _shotsPerBurst - 1)
+            {
+               yield return _burstWait; 
+            }
+        }   
+        
         _remainingTimeBetweenAttack = _timeBetweenAttack;
         yield return null;
+        _shootCoroutine = null;
     }
 
     private void SpawnProjectile()

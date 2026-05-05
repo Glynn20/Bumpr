@@ -3,7 +3,7 @@ using UnityEngine;
 using DG.Tweening;
 using TMPro;
 
-public class ObjectPathMovement : MonoBehaviour, IActivatable
+public class ObjectPathMovement : MonoBehaviour, IActivatable, IReset
 {
     public bool IsActivatedOnStart 
     {
@@ -12,57 +12,66 @@ public class ObjectPathMovement : MonoBehaviour, IActivatable
     }
     public bool IsActivated{get; set;}
 
+    [Header("Behaviour")]
+    public bool IsWrapping = false;
+    public bool DespawnAtLastPoint = false;
+    public float InitialDelay = 0f;
 
-    [SerializeField] private bool _isActivatedOnStart;
-
+    [SerializeField] private bool _isActivatedOnStart = false;
 
     [Header("Points")]
-    [SerializeField] private Transform[] _points;
-    private Transform _transform;
+    [SerializeField] private Transform[] _path;
 
     [Header("Tweening")]
+    [Range(0.01f, 10.0f)] public float TimeBetweenMove = 1.0f;
+    [Range(0.05f, 10.0f)] public float OscillationDuration = 1.0f;
     [SerializeField] private Ease _ease = Ease.Linear;
-    [Range(0.05f, 10.0f)] [SerializeField] private float _timeBetweenMove;
-    [Range(0.05f, 10.0f)] [SerializeField] private float _oscillationDuration;
     
-    [Header("Behaviour")]
-    [SerializeField] private bool _isWrapping = false;
-    private float _remainingTimeBetweenMove;    
+    private float _remainingInitialDelay;
+    private float _remainingTimeBetweenMove = 0;    
     private int _currentPointIndex = 0;
     private Coroutine _moveCoroutine = null;
     private bool _isAtLastPoint = false;
+    private Transform _transform;
 
-    void Awake()
+    public void SetNewPath(Transform[] newPath)
     {
-        _transform = transform;
-        if (_points.Length == 0)
+        if (newPath.Length > 1)
         {
-            Debug.LogError("Oscillation Points Array is empty. Set in inspector", this);
+            _path = newPath;
+            _isAtLastPoint = false;
+            
+            _currentPointIndex = 0;
+            _transform.position = _path[0].position;
+
+            //_remainingTimeBetweenMove = TimeBetweenMove;
+        }
+    }
+    public void Reset()
+    {
+        Deactivate();
+
+        if (_path.Length <= 1)
+        {
             _isAtLastPoint = true;
         }
-        _transform.position = _points[0].position;
-        _remainingTimeBetweenMove = _timeBetweenMove;
-        
+        else _isAtLastPoint = false;
+
+        _remainingInitialDelay = InitialDelay;
+        //_remainingTimeBetweenMove = TimeBetweenMove;
+        _currentPointIndex = 0;
+        _transform.position = _path[0].position;
+
         if (_isActivatedOnStart) Activate();
     }
-
-    void Update()
+    public void RegisterToManager()
     {
-        if (!IsActivated) return;
-        if (!_isWrapping && _isAtLastPoint) return;
-        if (_moveCoroutine != null) return;
-
-        _remainingTimeBetweenMove -= Time.deltaTime;
-
-        if (_remainingTimeBetweenMove > 0) return;
-
-        if (CanMove() && _moveCoroutine == null)
-        {
-            UpdateCurrentPointIndex();
-            _moveCoroutine = StartCoroutine(MoveCoroutine());
-        }
+        LevelManager.RegisterResettable(this);
     }
-
+    public void UnregisterFromManager()
+    {
+        LevelManager.UnregisterResettable(this);
+    }
     public void Activate()
     {
         IsActivated = true;
@@ -70,39 +79,92 @@ public class ObjectPathMovement : MonoBehaviour, IActivatable
 
     public void Deactivate()
     {
+        if (_moveCoroutine != null)
+        {
+            StopCoroutine(_moveCoroutine);
+            _moveCoroutine = null;
+        }
+        _transform.DOKill();
+
         IsActivated = false;
+    }
+    void Awake()
+    {
+        _transform = transform;
+
+        if (_path == null || _path.Length == 0) Debug.LogWarning("PathMovement needs a path!", this);
+        else               _transform.position = _path[0].position;
+
+        _remainingInitialDelay = InitialDelay;
+        //_remainingTimeBetweenMove = TimeBetweenMove;
+        
+        if (_isActivatedOnStart) Activate();
+    }
+
+    void Update()
+    {
+        if (!IsActivated) return;
+        if (!IsWrapping && _isAtLastPoint) return;
+        if (_moveCoroutine != null) return;
+
+        if (_remainingInitialDelay > 0f)
+        {
+            _remainingInitialDelay -= Time.deltaTime;
+            return;
+        }
+
+        _remainingTimeBetweenMove -= Time.deltaTime;
+        if (_remainingTimeBetweenMove > 0) return;
+
+        if (CanMove() && _moveCoroutine == null)
+        {
+            UpdateCurrentPointIndex();
+            _moveCoroutine = StartCoroutine(MoveToNextPointCoroutine());
+        }
+    }
+    private void OnEnable()
+    {
+        RegisterToManager();
+    }
+    private void OnDisable()
+    {
+        UnregisterFromManager();
     }
 
     private bool CanMove()
     {
-        if (_currentPointIndex >= (_points.Length - 1))
+        if (_currentPointIndex >= (_path.Length - 1))
         {
-            if (!_isWrapping) return false;
+            if (!IsWrapping) return false;
         }
         return true;
     }
 
     private void UpdateCurrentPointIndex()
     {
-        if (_currentPointIndex >= (_points.Length - 1) && _isWrapping)
+        if (_currentPointIndex >= (_path.Length - 1) && IsWrapping)
         {
             _currentPointIndex = 0;
+            _isAtLastPoint = false;
         }
         else 
         {
             ++_currentPointIndex;
-            if (_currentPointIndex >= (_points.Length - 1)) 
+            if (_currentPointIndex >= (_path.Length - 1)) 
             {
                 _isAtLastPoint = true;
             }
         }
     }
 
-    private IEnumerator MoveCoroutine()
+    private IEnumerator MoveToNextPointCoroutine()
     {
-        yield return _transform.DOMove(_points[_currentPointIndex].position, _oscillationDuration).SetEase(_ease).WaitForCompletion();
+        yield return _transform.DOMove(_path[_currentPointIndex].position, OscillationDuration).SetEase(_ease).WaitForCompletion();
         _moveCoroutine = null;
-        _remainingTimeBetweenMove = _timeBetweenMove;
+
+        if (_isAtLastPoint && DespawnAtLastPoint) Destroy(gameObject);
+
+        _remainingTimeBetweenMove = TimeBetweenMove;
     }
 }
 

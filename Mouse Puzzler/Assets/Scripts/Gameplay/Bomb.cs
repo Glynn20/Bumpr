@@ -5,19 +5,42 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 
-public class Bomb : MonoBehaviour
+public class Bomb : MonoBehaviour, IReset
 {
     [Header("Parameters")]
     [SerializeField] private float _timeBeforeExplosion = 3.0f;
     [SerializeField] private float _explosionRadius = 3.0f;
+    [SerializeField] private Transform _spawnLocation;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI _timerText;
 
+    private float _remainingTime;
     private bool _canAttach = true;
     private bool _timerEnabled = false;
     private Transform _transform;
     private ICanAttachBomb _currentSocket;
+
+    public void Reset()
+    {
+        _currentSocket = null;
+        _canAttach = true;
+        _transform.parent = null;
+        
+        SetSpawn();
+        
+        StopTimer();
+        ResetTimer();
+        UpdateTimerText();
+    }
+    public void RegisterToManager()
+    {
+        LevelManager.RegisterResettable(this);
+    }
+    public void UnregisterFromManager()
+    {
+        LevelManager.UnregisterResettable(this);
+    }
     public void Explode()
     {
         StopTimer();
@@ -28,9 +51,22 @@ public class Bomb : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        RegisterToManager();
+    }
+    private void OnDisable()
+    {
+        UnregisterFromManager();
+    }
+
     void Awake()
     {
         _transform = transform;
+        _remainingTime = _timeBeforeExplosion;
+
+        SetSpawn();
+
         UpdateTimerText();
     }
 
@@ -38,17 +74,22 @@ public class Bomb : MonoBehaviour
     {
         if (!_timerEnabled) return;
 
-        _timeBeforeExplosion -= Time.deltaTime;
+        _remainingTime -= Time.deltaTime;
         if (_timerText != null)
         {
             UpdateTimerText();
         }
         
-        if (_timeBeforeExplosion > 0f) return;
+        if (_remainingTime > 0f) return;
 
         Explode();
     }
 
+    private void SetSpawn()
+    {
+        if (_spawnLocation == null) _transform.position = _spawnLocation.position;
+        else                        _transform.position = _spawnLocation.position;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         ICanAttachBomb socket = other.gameObject.GetComponent<ICanAttachBomb>();
@@ -72,7 +113,7 @@ public class Bomb : MonoBehaviour
 
     void UpdateTimerText()
     {
-        _timerText.text = Math.Round(_timeBeforeExplosion, 1).ToString();
+        _timerText.text = Math.Round(_remainingTime, 1).ToString();
     }
     void StartTimer()
     {
@@ -83,6 +124,8 @@ public class Bomb : MonoBehaviour
     {
         _timerEnabled = false;
     }
-
-
+    void ResetTimer()
+    {
+        _remainingTime = _timeBeforeExplosion;
+    }
 } 
