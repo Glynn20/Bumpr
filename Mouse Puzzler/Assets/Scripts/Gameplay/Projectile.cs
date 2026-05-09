@@ -5,22 +5,29 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    SpriteRenderer _sprite;
-    Rigidbody2D _rb;
-    BoxCollider2D _collider;
+    private SpriteRenderer _sprite;
+    private Rigidbody2D _rb;
+    private BoxCollider2D _collider;
+    private float _lifecycle = 5.0f;
 
-    void Awake()
+    private void Awake()
     {
         _sprite = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<BoxCollider2D>();
     }
-    void OnCollisionEnter2D(Collision2D other)
+    private void Update()
+    {
+        _lifecycle -= Time.deltaTime;
+        if (_lifecycle <= 0.0f) Destroy(gameObject);
+    }
+    private void OnCollisionEnter2D(Collision2D other)
     {
         HideAndDestroy();
+        Debug.Log(other.gameObject.layer);
     }
 
-    void HideAndDestroy()
+    private void HideAndDestroy()
     {
         if (_sprite == null)
         {
@@ -32,4 +39,6 @@ public class Projectile : MonoBehaviour
         _collider.enabled = false;
         Destroy(gameObject, 0.5f);
     }
+
+
 }
