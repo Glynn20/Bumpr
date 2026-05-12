@@ -91,12 +91,7 @@ public class ObjectPathMovement : MonoBehaviour, IActivatable, IReset
     void Awake()
     {
         _transform = transform;
-
-        if (_path == null || _path.Length == 0) Debug.LogWarning("PathMovement needs a path!", this);
-        else               _transform.position = _path[0].position;
-
         _remainingInitialDelay = InitialDelay;
-        //_remainingTimeBetweenMove = TimeBetweenMove;
         
         if (_isActivatedOnStart) Activate();
     }
