@@ -24,7 +24,7 @@ public class ObjectPathMovement : MonoBehaviour, IActivatable, IReset
 
     [Header("Tweening")]
     [Range(0.01f, 10.0f)] public float TimeBetweenMove = 1.0f;
-    [Range(0.05f, 10.0f)] public float OscillationDuration = 1.0f;
+    [Range(0.05f, 20.0f)] public float OscillationDuration = 1.0f;
     [SerializeField] private Ease _ease = Ease.Linear;
     
     private float _remainingInitialDelay;

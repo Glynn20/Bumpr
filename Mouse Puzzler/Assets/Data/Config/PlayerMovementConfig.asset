@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementConfig
   IdleToWalkTransitionThreshold: 0.5
   WalkToRunTransitionThreshold: 5
-  RunToOverheatThreshold: 30
+  RunToOverheatThreshold: 25
