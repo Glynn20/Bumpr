@@ -93,10 +93,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointTrigger
   _onCheckpointReached: {fileID: 11400000, guid: dccd3661018f70042a53cf0bdb780a5d, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   _camSnapPoint: {fileID: 0}
   _spawnPoint: {fileID: 0}
   _preTriggerSprite: {fileID: -518138064236766853, guid: b4483f96608e74a4e92f45942b7803ca, type: 3}
   _onTriggerSprite: {fileID: -6285607920171838775, guid: b4483f96608e74a4e92f45942b7803ca, type: 3}
+  _onTriggerSoundData: {fileID: 11400000, guid: 18cf6622e599b9242a868ee1c64527f0, type: 2}
 --- !u!1 &5862013120719569286
 GameObject:
   m_ObjectHideFlags: 0

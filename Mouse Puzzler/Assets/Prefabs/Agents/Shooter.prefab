@@ -109,6 +109,8 @@ MonoBehaviour:
   _projectileSocket: {fileID: 1538468397827537660}
   _shotsPerSecond: 3
   _shotSpeed: 20
+  _shooterShootSoundData: {fileID: 11400000, guid: ae55d9b0fb571eb4596e8f372bdd456f, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   _playerRef: {fileID: 0}
 --- !u!1 &492926300131223522
 GameObject:

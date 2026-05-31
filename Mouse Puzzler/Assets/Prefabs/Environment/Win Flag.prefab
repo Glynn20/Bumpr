@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinFlag
   OnLevelComplete: {fileID: 11400000, guid: fbd2728ae4e5a7247bbd264d9b65893f, type: 2}
+  OnPlayLevelCompleteSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _levelCompleteSoundData: {fileID: 11400000, guid: ad416b6bba2712f4f867acfc97a7d338, type: 2}
 --- !u!58 &1093459497205075244
 CircleCollider2D:
   m_ObjectHideFlags: 0

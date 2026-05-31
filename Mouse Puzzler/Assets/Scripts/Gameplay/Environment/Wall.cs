@@ -5,16 +5,20 @@ using UnityEngine.EventSystems;
 
 public class Wall : MonoBehaviour
 {
+    [SerializeField] private GameEvent OnPlayWallBumpSound;
+    [SerializeField] private SoundData _wallBumpSoundData;
     void OnCollisionEnter2D(Collision2D other)
     {
         // Must specifically be the Player
-        IHealth killable = other.gameObject.GetComponentInChildren<IHealth>();
-        IMovement movement = other.gameObject.GetComponent<IMovement>();
-        if ( movement == null || killable == null ) return;
-
-        if ( movement.GetMoveState() != PlayerMoveState.Overheating ) return;
+        IMovement playerMovement = other.gameObject.GetComponent<IMovement>();
+        if ( playerMovement == null ) return;
         
-        killable.Die();
+        PlayerMoveState state = playerMovement.GetMoveState();
+        if (state == PlayerMoveState.Running || state == PlayerMoveState.Overheating)
+        {
+            OnPlayWallBumpSound?.Raise(this, _wallBumpSoundData);  
+        }
+        
     }
 
 }

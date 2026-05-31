@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
@@ -7,13 +8,14 @@ public class ActivatableTrigger : MonoBehaviour, IReset
 {
     [SerializeField] private List<GameObject> _activatables;
     [SerializeField] private bool _isDeactivator = false;
-
+    private bool _activated;
     private Collider2D _collider;
 
 
     public void Reset()
     {
         _collider.enabled = true;
+        _activated = false;
     }
 
     public void RegisterToManager()
@@ -24,11 +26,12 @@ public class ActivatableTrigger : MonoBehaviour, IReset
     {
         LevelManager.UnregisterResettable(this);
     }
-    void OnTriggerEnter2D(Collider2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<IPlayer>() == null) return;
-        
+        if (other.GetComponent<IPlayer>() == null) return;   
         if (_activatables.Count == 0) return;
+        if (_activated) return;
+
         foreach (Object obj in _activatables)
         {
             IActivatable activatable = obj.GetComponent<IActivatable>();
@@ -39,6 +42,7 @@ public class ActivatableTrigger : MonoBehaviour, IReset
             }
         }
         
+        _activated = true;
         _collider.enabled = false;
     }
     private void Awake()

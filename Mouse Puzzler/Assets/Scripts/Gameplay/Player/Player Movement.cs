@@ -1,13 +1,13 @@
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-    public enum PlayerMoveState
-    {
-        Idle = 0,
-        Walking = 1,
-        Running = 2,
-        Overheating = 3
-    }
+public enum PlayerMoveState
+{
+    Idle = 0,
+    Walking = 1,
+    Running = 2,
+    Overheating = 3
+}
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour, IMovement
@@ -19,10 +19,16 @@ public class PlayerMovement : MonoBehaviour, IMovement
     private Rigidbody2D _rb;
     private UnityEngine.Vector2 _accumulatedInput;
     private bool _isInputEnabled = true;
-
+    private bool _stoppedMoving;
     private float _currentSpeed; 
     public float GetCurrentSpeed() => _currentSpeed;
     private SpriteRenderer _sprite;
+
+    [Header("Sound")]
+    [SerializeField] private SoundData _startMovingSoundData;
+
+    [Header("Events")]
+    [SerializeField] private GameEvent OnPlaySound;
 
     public void ReadMouseInput(InputAction.CallbackContext context)
     {
@@ -102,11 +108,19 @@ public class PlayerMovement : MonoBehaviour, IMovement
     {
         if (_accumulatedInput != UnityEngine.Vector2.zero)
         {
-
             UnityEngine.Vector2 moveAmount = _accumulatedInput * _mouseSens * Time.fixedDeltaTime;
             UnityEngine.Vector2 targetPosition = _rb.position + moveAmount;
            
             _currentSpeed = moveAmount.magnitude / Time.fixedDeltaTime;
+
+            if (_stoppedMoving)
+            {
+                if (GetMoveState() != PlayerMoveState.Idle)
+                {
+                    OnPlaySound?.Raise(this, _startMovingSoundData);
+                }
+                _stoppedMoving = false;
+            }
 
             _rb.MovePosition(targetPosition);
 
@@ -119,6 +133,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
         else
         {
             _rb.linearVelocity = UnityEngine.Vector2.zero;
+            _stoppedMoving = true;
             _currentSpeed = 0;
         }
     } 
@@ -132,7 +147,5 @@ public class PlayerMovement : MonoBehaviour, IMovement
     {
         return (vectorB - vectorA).normalized;
     }
-
-    // public
 
 }

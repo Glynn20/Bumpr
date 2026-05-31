@@ -9,9 +9,12 @@ public class ProximityInvisibility : MonoBehaviour, IReset
 
     [SerializeField] private float _detectionRange = 0.5f;
 
+    private bool _revealed;
+
     public void Reset()
     {
         _renderer.enabled = false;
+        _revealed = false;
     }
     public void RegisterToManager()
     {
@@ -26,6 +29,7 @@ public class ProximityInvisibility : MonoBehaviour, IReset
         _renderer = GetComponent<SpriteRenderer>();
 
         _renderer.enabled = false;
+        _revealed = false;
         _detectionCollider.isTrigger = true;
         _detectionCollider.edgeRadius = _detectionRange;
     }
@@ -43,9 +47,10 @@ public class ProximityInvisibility : MonoBehaviour, IReset
         {
             return;
         }
-        else
+        else if (_revealed == false)
         {
             _renderer.enabled = true;
+            _revealed = true;
         }
     }
 }

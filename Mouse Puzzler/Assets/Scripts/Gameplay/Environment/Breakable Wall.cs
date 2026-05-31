@@ -7,7 +7,6 @@ public class BreakableWall : MonoBehaviour,
 IHealth,
 IReset 
 {
-
     public int CurrentHealth => _currentHealth;
     public int MaxHealth => _maxHealth;
 
@@ -20,6 +19,13 @@ IReset
     [SerializeField] private Color _lowHealthColour = new Color(195f, 171f, 0f, 1.0f);
     [Range(0,1)][SerializeField] private float _highHealthThreshold = 0.67f;
     [Range(0,1)][SerializeField] private float _mediumHealthThreshold = 0.34f;
+
+    [Header("Sound")]
+    [SerializeField] private SoundData _onHitSoundData;
+    [SerializeField] private SoundData _onBreakSoundData;
+
+    [Header("Events")]
+    [SerializeField] private GameEvent OnPlaySound;
 
     private int _currentHealth;
     private int _maxHealth;
@@ -49,15 +55,18 @@ IReset
         if (_currentHealth <= 0)
         {
             Die();
+            OnPlaySound?.Raise(this, _onBreakSoundData);
             return;
         }
+
+        OnPlaySound?.Raise(this, _onHitSoundData);
 
         if (HealthPercentage < _mediumHealthThreshold) 
         {
             ChangeColour(_lowHealthColour);
             return;
         } 
-        if (HealthPercentage < _highHealthThreshold)   
+        else if (HealthPercentage < _highHealthThreshold)   
         {
             ChangeColour(_mediumHealthColour);
             return;

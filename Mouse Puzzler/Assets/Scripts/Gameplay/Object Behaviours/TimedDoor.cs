@@ -11,8 +11,14 @@ public class TimedDoor : MonoBehaviour, IActivatable, IReset
     [Header("Behaviour")]
     [SerializeField] private float _timeBeforeOpen = 2.0f;
 
+    [Header("Sound")]
+    [SerializeField] private SoundData _doorOpenSoundData;
+
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI _timerText;
+
+    [Header("Events")]
+    [SerializeField] private GameEvent OnPlaySound;
 
     private SpriteRenderer _renderer;
     private Collider2D _collider;
@@ -85,6 +91,7 @@ public class TimedDoor : MonoBehaviour, IActivatable, IReset
     {
         _renderer.enabled = false;
         _collider.enabled = false;
+        OnPlaySound?.Raise(this, _doorOpenSoundData);
     }
     private void ResetTime()
     {

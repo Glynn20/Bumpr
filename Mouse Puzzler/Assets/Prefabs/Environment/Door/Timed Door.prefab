@@ -422,4 +422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimedDoor
   _timeBeforeOpen: 2
+  _doorOpenSoundData: {fileID: 11400000, guid: 611e0452473b9b745a0c8a250294cccc, type: 2}
   _timerText: {fileID: 7235981143936503072}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}

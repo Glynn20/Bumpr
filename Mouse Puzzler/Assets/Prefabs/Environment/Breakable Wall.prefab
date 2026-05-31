@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,8 +80,8 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: -3722003238996646333, guid: b4483f96608e74a4e92f45942b7803ca, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 7207976877712739445, guid: 5940fe26a9dbbcc46bc2d10f3e9f5176, type: 3}
   m_Color: {r: 0.8962264, g: 0.7747956, b: 0.3931559, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,6 +154,9 @@ MonoBehaviour:
   _config: {fileID: 11400000, guid: 6b44470fed0e94c429d1dbc154388fcf, type: 2}
   _highHealthColour: {r: 1, g: 0.87179494, b: 0, a: 1}
   _mediumHealthColour: {r: 0.9433962, g: 0.5772367, b: 0.048949808, a: 1}
-  _lowHealthColour: {r: 0.7490196, g: 0.23750918, b: 0, a: 1}
+  _lowHealthColour: {r: 0.92941177, g: 0.41568628, b: 0, a: 1}
   _highHealthThreshold: 0.67
   _mediumHealthThreshold: 0.34
+  _onHitSoundData: {fileID: 11400000, guid: 3a2c023b593a7284a9e83900efda4f54, type: 2}
+  _onBreakSoundData: {fileID: 11400000, guid: 821bea22a74507b43b07440e4a929ebb, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}

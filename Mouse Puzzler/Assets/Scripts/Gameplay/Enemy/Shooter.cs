@@ -18,6 +18,13 @@ public class Shooter : MonoBehaviour, IActivatable, IReset
     [Range(0.5f,10.0f)][SerializeField] private float _shotsPerSecond;
     [SerializeField] private float _shotSpeed;
     
+    [Header("Sound")]
+    [SerializeField] private SoundData _shooterShootSoundData;
+
+    [Header("Events")]
+    [SerializeField] private GameEvent OnPlaySound;
+
+
     [Header("Other")]
     [SerializeField] private Player _playerRef;
 
@@ -81,6 +88,8 @@ public class Shooter : MonoBehaviour, IActivatable, IReset
     {
         GameObject instance = Object.Instantiate(_projectilePrefab, _projectileSocket.position, _projectileSocket.rotation);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
+
+        OnPlaySound?.Raise(this, _shooterShootSoundData);
 
         if (rb == null || _playerRef == null)
         {

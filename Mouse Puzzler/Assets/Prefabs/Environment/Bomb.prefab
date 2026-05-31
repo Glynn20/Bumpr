@@ -52,6 +52,14 @@ MonoBehaviour:
   _explosionRadius: 3
   _spawnLocation: {fileID: 0}
   _timerText: {fileID: 792653928466231324}
+  _pickupSoundData: {fileID: 11400000, guid: 77831288aa7cd6f4786c1f9a784b611f, type: 2}
+  _FuseLowSoundData: {fileID: 11400000, guid: 9bceb8599d6e01341a04152e6ebf3eb1, type: 2}
+  _FuseMediumSoundData: {fileID: 11400000, guid: 4c0f684d6e5957244ac87980f26b5ec3, type: 2}
+  _FuseHighSoundData: {fileID: 11400000, guid: 92c1f995b09bdc14587db69ce94641f2, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnStopSound: {fileID: 11400000, guid: ff2f256edea3e9d45af56315fea4ea79, type: 2}
+  mediumFuseThreshold: 0.4
+  highFuseThreshold: 0.2
 --- !u!61 &2811044068135372907
 BoxCollider2D:
   m_ObjectHideFlags: 0

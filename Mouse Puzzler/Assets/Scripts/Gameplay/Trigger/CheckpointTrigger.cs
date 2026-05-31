@@ -4,6 +4,7 @@ public class CheckpointTrigger : MonoBehaviour, IReset
 {
     [Header("Events")]
     [SerializeField] private GameEvent _onCheckpointReached;
+    [SerializeField] private GameEvent OnPlaySound;
     
     [Header("Transforms")]
     [SerializeField] private Transform _camSnapPoint;
@@ -12,6 +13,10 @@ public class CheckpointTrigger : MonoBehaviour, IReset
     [Header("Sprites")]
     [SerializeField] private Sprite _preTriggerSprite;
     [SerializeField] private Sprite _onTriggerSprite;
+
+    [Header("Sound")]
+    [SerializeField] private SoundData _onTriggerSoundData;
+
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _collider;
 
@@ -57,6 +62,8 @@ public class CheckpointTrigger : MonoBehaviour, IReset
         }
 
         _onCheckpointReached?.Raise(this, new Checkpoint(_camSnapPoint, _spawnPoint));
+        OnPlaySound?.Raise(this, _onTriggerSoundData);
+
         _spriteRenderer.sprite = _onTriggerSprite;
         
         _collider.enabled = false;

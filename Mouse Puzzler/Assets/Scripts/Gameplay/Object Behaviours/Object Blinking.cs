@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ObjectBlinking : MonoBehaviour
+public class ObjectBlinking : MonoBehaviour, IReset
 {
     
     [SerializeField] private float _timeBeforeBlink;
@@ -12,6 +12,31 @@ public class ObjectBlinking : MonoBehaviour
     private float _remainingTime;
     private WaitForSeconds _blinkWait;
     private Coroutine _blinkCoroutine = null;
+
+ public void Reset()
+    {
+        StopAllCoroutines();
+        _blinkCoroutine = null;
+        ActivateObjects();
+        _remainingTime = _timeBeforeBlink;
+    }
+    public void RegisterToManager()
+    {
+        LevelManager.RegisterResettable(this);
+    }
+    public void UnregisterFromManager()
+    {
+        LevelManager.UnregisterResettable(this);
+    }
+
+    private void OnEnable()
+    {
+        RegisterToManager();
+    }
+    private void OnDisable()
+    {
+        UnregisterFromManager();
+    }
 
     void Awake()
     {

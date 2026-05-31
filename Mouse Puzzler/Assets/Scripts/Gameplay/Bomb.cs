@@ -1,8 +1,5 @@
 using System;
-using System.Data.Common;
-using System.Net.Sockets;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour, IReset
@@ -15,11 +12,34 @@ public class Bomb : MonoBehaviour, IReset
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI _timerText;
 
+    [Header("Sound")]
+    [SerializeField] private SoundData _pickupSoundData;
+    [SerializeField] private SoundData _FuseLowSoundData;
+    [SerializeField] private SoundData _FuseMediumSoundData;
+    [SerializeField] private SoundData _FuseHighSoundData;
+    private SoundData _currentSound;
+
+    [Header("Events")]
+    [SerializeField] private GameEvent OnPlaySound;
+    [SerializeField] private GameEvent OnStopSound;
+    [Space]
+    [SerializeField] private float mediumFuseThreshold = 0.67f;
+    [SerializeField] private float highFuseThreshold = 0.34f;
+
+    private float RemainingFusePercentage => (float)_remainingTime / _timeBeforeExplosion;
     private float _remainingTime;
     private bool _canAttach = true;
     private bool _timerEnabled = false;
     private Transform _transform;
     private ICanAttachBomb _currentSocket;
+    private FuseState _currentFuseState;
+    private enum FuseState
+    {   
+        Low = 0,
+        Medium = 1,
+        High = 2 
+    }
+
 
     public void Reset()
     {
@@ -27,6 +47,8 @@ public class Bomb : MonoBehaviour, IReset
         _canAttach = true;
         _transform.parent = null;
         
+        StopSound(_currentSound);
+        _currentFuseState = FuseState.Low;
         SetSpawn();
         
         StopTimer();
@@ -64,10 +86,11 @@ public class Bomb : MonoBehaviour, IReset
     {
         _transform = transform;
         _remainingTime = _timeBeforeExplosion;
-
+        _currentSound = null;
+        
         SetSpawn();
-
         UpdateTimerText();
+
     }
 
     void Update()
@@ -75,22 +98,37 @@ public class Bomb : MonoBehaviour, IReset
         if (!_timerEnabled) return;
 
         _remainingTime -= Time.deltaTime;
-        if (_timerText != null)
+        
+        UpdateTimerText();
+
+        FuseState targetState = CheckFuseState();
+        if (_currentFuseState != targetState)
         {
-            UpdateTimerText();
-        }
+            ChangeFuseState(targetState);
+        }        
         
         if (_remainingTime > 0f) return;
 
         Explode();
     }
+    private void PlaySound(SoundData soundToPlay)
+    {
+        OnPlaySound?.Raise(this, soundToPlay);
+        _currentSound = soundToPlay;
+    }
+    private void StopSound(SoundData soundToStop)
+    {
+        if (soundToStop == null) return;
 
+        OnStopSound?.Raise(this, soundToStop);
+        _currentSound = null;
+    }
     private void SetSpawn()
     {
-        if (_spawnLocation == null) _transform.position = _spawnLocation.position;
+        if (_spawnLocation == null) _transform.position = Vector2.zero;
         else                        _transform.position = _spawnLocation.position;
     }
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         ICanAttachBomb socket = other.gameObject.GetComponent<ICanAttachBomb>();
         
@@ -104,27 +142,60 @@ public class Bomb : MonoBehaviour, IReset
         {
             _canAttach = false;
             StopTimer();
+            StopSound(_currentSound);
         }
         else
         {
             StartTimer();
+            PlaySound(_FuseLowSoundData);
         }
     }
 
-    void UpdateTimerText()
+    private void UpdateTimerText()
     {
+        if (_timerText == null) return;
         _timerText.text = Math.Round(_remainingTime, 1).ToString();
     }
-    void StartTimer()
+
+    private FuseState CheckFuseState()
+    {
+        FuseState targetState = FuseState.Low;
+        if (RemainingFusePercentage < highFuseThreshold)
+        {
+            targetState = FuseState.High;
+        }
+        else if (RemainingFusePercentage < mediumFuseThreshold)
+        {
+            targetState = FuseState.Medium;
+        }
+        return targetState;
+    }
+    private void ChangeFuseState(FuseState newState)
+    {
+        switch (newState)
+        {
+            case FuseState.Medium:
+                _currentFuseState = newState;
+                StopSound(_FuseLowSoundData);
+                PlaySound(_FuseMediumSoundData);
+                return;
+            case FuseState.High:
+                _currentFuseState = newState;
+                StopSound(_FuseMediumSoundData);
+                PlaySound(_FuseHighSoundData);
+                return;
+        }
+    }
+    private void StartTimer()
     {
         _timerEnabled = true;
     }
 
-    void StopTimer()
+    private void StopTimer()
     {
         _timerEnabled = false;
     }
-    void ResetTimer()
+    private void ResetTimer()
     {
         _remainingTime = _timeBeforeExplosion;
     }

@@ -202,6 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26326545}
   - component: {fileID: 26326546}
+  - component: {fileID: 26326547}
   m_Layer: 0
   m_Name: C (63)
   m_TagString: Untagged
@@ -270,6 +271,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &26326547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26326544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &30412848
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30412849}
   - component: {fileID: 30412850}
+  - component: {fileID: 30412851}
   m_Layer: 0
   m_Name: C (65)
   m_TagString: Untagged
@@ -348,6 +364,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &30412851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30412848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &39255583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -631,6 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94718055}
   - component: {fileID: 94718056}
+  - component: {fileID: 94718057}
   m_Layer: 0
   m_Name: C (57)
   m_TagString: Untagged
@@ -699,6 +730,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &94718057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94718054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &111272550
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111272551}
   - component: {fileID: 111272552}
+  - component: {fileID: 111272553}
   m_Layer: 0
   m_Name: C (60)
   m_TagString: Untagged
@@ -777,6 +823,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &111272553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111272550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &121738440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -853,6 +913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124230183}
   - component: {fileID: 124230184}
+  - component: {fileID: 124230185}
   m_Layer: 0
   m_Name: C (77)
   m_TagString: Untagged
@@ -921,6 +982,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &124230185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124230182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &134457418
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +1006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134457419}
   - component: {fileID: 134457420}
+  - component: {fileID: 134457421}
   m_Layer: 0
   m_Name: C (49)
   m_TagString: Untagged
@@ -999,6 +1075,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 5.5}
   m_EdgeRadius: 0
+--- !u!114 &134457421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134457418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &143586054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 187100253}
   - component: {fileID: 187100254}
+  - component: {fileID: 187100255}
   m_Layer: 0
   m_Name: C (45)
   m_TagString: Untagged
@@ -1327,6 +1418,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &187100255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187100252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &188143088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1457,6 +1562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 205991337}
   - component: {fileID: 205991338}
+  - component: {fileID: 205991339}
   m_Layer: 0
   m_Name: C (30)
   m_TagString: Untagged
@@ -1525,6 +1631,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &205991339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205991336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &210604326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 231467234}
   - component: {fileID: 231467235}
+  - component: {fileID: 231467236}
   m_Layer: 0
   m_Name: C (34)
   m_TagString: Untagged
@@ -1875,6 +1996,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &231467236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231467233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &232537093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2021,6 +2156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 235747279}
   - component: {fileID: 235747280}
+  - component: {fileID: 235747281}
   m_Layer: 0
   m_Name: C (7)
   m_TagString: Untagged
@@ -2089,6 +2225,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &235747281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235747278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &243642138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2165,6 +2315,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8166489927404512277, guid: d24660d96fa1e18489243f89589b1846, type: 3}
+      propertyPath: _activatables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166489927404512277, guid: d24660d96fa1e18489243f89589b1846, type: 3}
+      propertyPath: '_activatables.Array.data[0]'
+      value: 
+      objectReference: {fileID: 259953996}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2180,6 +2338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252913655}
   - component: {fileID: 252913656}
+  - component: {fileID: 252913657}
   m_Layer: 0
   m_Name: C (11)
   m_TagString: Untagged
@@ -2248,6 +2407,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &252913657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252913654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &255485108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 277877287}
   - component: {fileID: 277877288}
+  - component: {fileID: 277877289}
   m_Layer: 0
   m_Name: C (21)
   m_TagString: Untagged
@@ -2688,6 +2862,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &277877289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277877286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &280006882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280006883}
   - component: {fileID: 280006884}
+  - component: {fileID: 280006885}
   m_Layer: 0
   m_Name: C (76)
   m_TagString: Untagged
@@ -2766,6 +2955,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &280006885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280006882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &282253442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 282253443}
   - component: {fileID: 282253444}
+  - component: {fileID: 282253445}
   m_Layer: 0
   m_Name: C (20)
   m_TagString: Untagged
@@ -2844,6 +3048,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 8, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &282253445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282253442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!4 &282410657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3558522438535151162, guid: 41e9ddc344e024745b12594c8de33c05, type: 3}
@@ -3275,6 +3493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350069804}
   - component: {fileID: 350069805}
+  - component: {fileID: 350069806}
   m_Layer: 0
   m_Name: C (67)
   m_TagString: Untagged
@@ -3343,6 +3562,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &350069806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350069803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &354378359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,6 +3586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354378360}
   - component: {fileID: 354378361}
+  - component: {fileID: 354378362}
   m_Layer: 0
   m_Name: C (69)
   m_TagString: Untagged
@@ -3421,6 +3655,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &354378362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354378359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &365307393
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,6 +3818,10 @@ PrefabInstance:
       propertyPath: _instantlyChaseWhenPlayerInRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3451551414231218898, guid: 5466085e317d70046863d8503f0eb744, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8921089927908655470, guid: 5466085e317d70046863d8503f0eb744, type: 3}
       propertyPath: m_Constraints
       value: 0
@@ -3594,6 +3846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367096748}
   - component: {fileID: 367096749}
+  - component: {fileID: 367096750}
   m_Layer: 0
   m_Name: C (8)
   m_TagString: Untagged
@@ -3662,6 +3915,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &367096750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367096747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &371505056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3672,6 +3939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371505057}
   - component: {fileID: 371505058}
+  - component: {fileID: 371505059}
   m_Layer: 0
   m_Name: C (17)
   m_TagString: Untagged
@@ -3740,6 +4008,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &371505059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371505056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &388303830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3873,6 +4155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 437528219}
   - component: {fileID: 437528220}
+  - component: {fileID: 437528221}
   m_Layer: 0
   m_Name: C (78)
   m_TagString: Untagged
@@ -3941,6 +4224,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &437528221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437528218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &450191715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4086,6 +4383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 469241212}
   - component: {fileID: 469241213}
+  - component: {fileID: 469241214}
   m_Layer: 0
   m_Name: C (26)
   m_TagString: Untagged
@@ -4154,6 +4452,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &469241214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469241211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &471206306
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,6 +4476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471206307}
   - component: {fileID: 471206308}
+  - component: {fileID: 471206309}
   m_Layer: 0
   m_Name: C (51)
   m_TagString: Untagged
@@ -4232,6 +4545,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 17, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &471206309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471206306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &488499069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4456,6 +4783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504518561}
   - component: {fileID: 504518562}
+  - component: {fileID: 504518563}
   m_Layer: 0
   m_Name: C (46)
   m_TagString: Untagged
@@ -4524,6 +4852,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &504518563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504518560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &507940016
 GameObject:
   m_ObjectHideFlags: 0
@@ -4534,6 +4876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507940017}
   - component: {fileID: 507940018}
+  - component: {fileID: 507940019}
   m_Layer: 0
   m_Name: C
   m_TagString: Untagged
@@ -4602,6 +4945,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &507940019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507940016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &508734735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5193,6 +5550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 536679324}
   - component: {fileID: 536679325}
+  - component: {fileID: 536679326}
   m_Layer: 0
   m_Name: C (56)
   m_TagString: Untagged
@@ -5261,6 +5619,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &536679326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536679323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &537941008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5271,6 +5643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537941009}
   - component: {fileID: 537941010}
+  - component: {fileID: 537941011}
   m_Layer: 0
   m_Name: C (10)
   m_TagString: Untagged
@@ -5339,6 +5712,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &537941011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537941008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &577287007
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,6 +5736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577287008}
   - component: {fileID: 577287009}
+  - component: {fileID: 577287010}
   m_Layer: 0
   m_Name: C (36)
   m_TagString: Untagged
@@ -5417,6 +5805,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &577287010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577287007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!4 &577698569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1298309398531743041, guid: 5f969b41ca772f543b8fb2052270eff8, type: 3}
@@ -5513,6 +5915,10 @@ PrefabInstance:
     - target: {fileID: 3326902597651709865, guid: 5466085e317d70046863d8503f0eb744, type: 3}
       propertyPath: _instantlyChaseWhenPlayerInRange
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451551414231218898, guid: 5466085e317d70046863d8503f0eb744, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8921089927908655470, guid: 5466085e317d70046863d8503f0eb744, type: 3}
       propertyPath: m_Constraints
@@ -5884,6 +6290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642711220}
   - component: {fileID: 642711221}
+  - component: {fileID: 642711222}
   m_Layer: 0
   m_Name: C (27)
   m_TagString: Untagged
@@ -5952,6 +6359,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &642711222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642711219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &649384380
 GameObject:
   m_ObjectHideFlags: 0
@@ -5962,6 +6383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 649384381}
   - component: {fileID: 649384382}
+  - component: {fileID: 649384383}
   m_Layer: 0
   m_Name: C (31)
   m_TagString: Untagged
@@ -6030,6 +6452,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &649384383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649384380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &655109495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6113,6 +6549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671841492}
   - component: {fileID: 671841493}
+  - component: {fileID: 671841494}
   m_Layer: 0
   m_Name: C (71)
   m_TagString: Untagged
@@ -6181,6 +6618,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &671841494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671841491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &674168123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6288,6 +6739,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8166489927404512277, guid: d24660d96fa1e18489243f89589b1846, type: 3}
+      propertyPath: _activatables.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166489927404512277, guid: d24660d96fa1e18489243f89589b1846, type: 3}
+      propertyPath: '_activatables.Array.data[0]'
+      value: 
+      objectReference: {fileID: 805198050}
+    - target: {fileID: 8166489927404512277, guid: d24660d96fa1e18489243f89589b1846, type: 3}
+      propertyPath: '_activatables.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1437157589}
+    - target: {fileID: 8166489927404512277, guid: d24660d96fa1e18489243f89589b1846, type: 3}
+      propertyPath: '_activatables.Array.data[2]'
+      value: 
+      objectReference: {fileID: 617166769}
+    - target: {fileID: 8166489927404512277, guid: d24660d96fa1e18489243f89589b1846, type: 3}
+      propertyPath: '_activatables.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1374659895}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6303,6 +6774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712360845}
   - component: {fileID: 712360846}
+  - component: {fileID: 712360847}
   m_Layer: 0
   m_Name: C (74)
   m_TagString: Untagged
@@ -6371,6 +6843,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &712360847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712360844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &718334599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6461,6 +6947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740250316}
   - component: {fileID: 740250317}
+  - component: {fileID: 740250318}
   m_Layer: 0
   m_Name: C (6)
   m_TagString: Untagged
@@ -6529,6 +7016,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &740250318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740250315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &759183932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6620,6 +7121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 778223047}
   - component: {fileID: 778223048}
+  - component: {fileID: 778223049}
   m_Layer: 0
   m_Name: C (25)
   m_TagString: Untagged
@@ -6688,6 +7190,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &778223049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778223046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &805198050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9033780947084641449, guid: 41e9ddc344e024745b12594c8de33c05, type: 3}
@@ -6703,6 +7219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 806240624}
   - component: {fileID: 806240625}
+  - component: {fileID: 806240626}
   m_Layer: 0
   m_Name: C (9)
   m_TagString: Untagged
@@ -6771,6 +7288,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &806240626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806240623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &839382468
 GameObject:
   m_ObjectHideFlags: 0
@@ -6781,6 +7312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839382469}
   - component: {fileID: 839382470}
+  - component: {fileID: 839382471}
   m_Layer: 0
   m_Name: C (47)
   m_TagString: Untagged
@@ -6849,6 +7381,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &839382471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839382468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &856581704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7042,6 +7588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 911937780}
   - component: {fileID: 911937781}
+  - component: {fileID: 911937782}
   m_Layer: 0
   m_Name: C (40)
   m_TagString: Untagged
@@ -7110,6 +7657,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &911937782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911937779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &920136141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7197,6 +7758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 922541244}
   - component: {fileID: 922541245}
+  - component: {fileID: 922541246}
   m_Layer: 0
   m_Name: C (16)
   m_TagString: Untagged
@@ -7265,6 +7827,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &922541246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922541243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &928327517
 GameObject:
   m_ObjectHideFlags: 0
@@ -16165,6 +16741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974729692}
   - component: {fileID: 974729693}
+  - component: {fileID: 974729694}
   m_Layer: 0
   m_Name: C (3)
   m_TagString: Untagged
@@ -16233,6 +16810,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &974729694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974729691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &976783939
 GameObject:
   m_ObjectHideFlags: 0
@@ -16243,6 +16834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 976783940}
   - component: {fileID: 976783941}
+  - component: {fileID: 976783942}
   m_Layer: 0
   m_Name: C (33)
   m_TagString: Untagged
@@ -16311,6 +16903,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &976783942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976783939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!4 &977215430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5583565495070072966, guid: 49e49601e1407de439a539abd971d34e, type: 3}
@@ -18326,6 +18932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1078726930}
   - component: {fileID: 1078726931}
+  - component: {fileID: 1078726932}
   m_Layer: 0
   m_Name: C (79)
   m_TagString: Untagged
@@ -18394,6 +19001,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1078726932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078726929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1081137360
 GameObject:
   m_ObjectHideFlags: 0
@@ -29015,6 +29636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095704158}
   - component: {fileID: 1095704159}
+  - component: {fileID: 1095704160}
   m_Layer: 0
   m_Name: C (62)
   m_TagString: Untagged
@@ -29083,6 +29705,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1095704160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095704157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1100144301
 GameObject:
   m_ObjectHideFlags: 0
@@ -29093,6 +29729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100144302}
   - component: {fileID: 1100144303}
+  - component: {fileID: 1100144304}
   m_Layer: 0
   m_Name: C (2)
   m_TagString: Untagged
@@ -29161,6 +29798,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1100144304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100144301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!4 &1101299737 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3558522438535151162, guid: 41e9ddc344e024745b12594c8de33c05, type: 3}
@@ -29176,6 +29827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106326379}
   - component: {fileID: 1106326380}
+  - component: {fileID: 1106326381}
   m_Layer: 0
   m_Name: C (64)
   m_TagString: Untagged
@@ -29244,6 +29896,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1106326381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106326378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1114883626
 GameObject:
   m_ObjectHideFlags: 0
@@ -29254,6 +29920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114883627}
   - component: {fileID: 1114883628}
+  - component: {fileID: 1114883629}
   m_Layer: 0
   m_Name: C (68)
   m_TagString: Untagged
@@ -29322,6 +29989,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1114883629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114883626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1117913309
 GameObject:
   m_ObjectHideFlags: 0
@@ -32561,6 +33242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1211307749}
   - component: {fileID: 1211307750}
+  - component: {fileID: 1211307751}
   m_Layer: 0
   m_Name: C (14)
   m_TagString: Untagged
@@ -32629,6 +33311,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &1211307751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211307748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1225379499
 GameObject:
   m_ObjectHideFlags: 0
@@ -32639,6 +33335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225379500}
   - component: {fileID: 1225379501}
+  - component: {fileID: 1225379502}
   m_Layer: 0
   m_Name: C (41)
   m_TagString: Untagged
@@ -32707,6 +33404,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &1225379502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225379499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1234535838
 GameObject:
   m_ObjectHideFlags: 0
@@ -32779,6 +33490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246649388}
   - component: {fileID: 1246649389}
+  - component: {fileID: 1246649390}
   m_Layer: 0
   m_Name: C (43)
   m_TagString: Untagged
@@ -32847,6 +33559,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1246649390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246649387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1253610941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32923,6 +33649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261505411}
   - component: {fileID: 1261505412}
+  - component: {fileID: 1261505413}
   m_Layer: 0
   m_Name: C (53)
   m_TagString: Untagged
@@ -32991,6 +33718,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1261505413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261505410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1270316930
 GameObject:
   m_ObjectHideFlags: 0
@@ -33001,6 +33742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270316931}
   - component: {fileID: 1270316932}
+  - component: {fileID: 1270316933}
   m_Layer: 0
   m_Name: C (55)
   m_TagString: Untagged
@@ -33069,6 +33811,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1270316933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270316930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1289776230
 GameObject:
   m_ObjectHideFlags: 0
@@ -33079,6 +33835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289776231}
   - component: {fileID: 1289776232}
+  - component: {fileID: 1289776233}
   m_Layer: 0
   m_Name: C (32)
   m_TagString: Untagged
@@ -33147,6 +33904,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1289776233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289776230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1313235919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33258,6 +34029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315516272}
   - component: {fileID: 1315516273}
+  - component: {fileID: 1315516274}
   m_Layer: 0
   m_Name: C (35)
   m_TagString: Untagged
@@ -33326,6 +34098,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 8.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1315516274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315516271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1331548536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33461,6 +34247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347659185}
   - component: {fileID: 1347659186}
+  - component: {fileID: 1347659187}
   m_Layer: 0
   m_Name: C (75)
   m_TagString: Untagged
@@ -33529,6 +34316,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &1347659187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347659184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1352958668
 GameObject:
   m_ObjectHideFlags: 0
@@ -33606,6 +34407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1379835966}
   - component: {fileID: 1379835967}
+  - component: {fileID: 1379835968}
   m_Layer: 0
   m_Name: C (23)
   m_TagString: Untagged
@@ -33674,6 +34476,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1379835968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379835965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1400582829
 GameObject:
   m_ObjectHideFlags: 0
@@ -33684,6 +34500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400582830}
   - component: {fileID: 1400582831}
+  - component: {fileID: 1400582832}
   m_Layer: 0
   m_Name: C (26)
   m_TagString: Untagged
@@ -33752,6 +34569,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1400582832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400582829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1405439858
 GameObject:
   m_ObjectHideFlags: 0
@@ -33762,6 +34593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405439859}
   - component: {fileID: 1405439860}
+  - component: {fileID: 1405439861}
   m_Layer: 0
   m_Name: C (1)
   m_TagString: Untagged
@@ -33830,6 +34662,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1405439861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405439858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!4 &1410805169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7767182627277791967, guid: b029e494f5de4a043b604b1df83022b6, type: 3}
@@ -33845,6 +34691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425845038}
   - component: {fileID: 1425845039}
+  - component: {fileID: 1425845040}
   m_Layer: 0
   m_Name: C (66)
   m_TagString: Untagged
@@ -33913,6 +34760,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1425845040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425845037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1437157589 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9033780947084641449, guid: 41e9ddc344e024745b12594c8de33c05, type: 3}
@@ -33928,6 +34789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449539543}
   - component: {fileID: 1449539544}
+  - component: {fileID: 1449539545}
   m_Layer: 0
   m_Name: C (73)
   m_TagString: Untagged
@@ -33996,6 +34858,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1449539545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449539542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1461621052
 GameObject:
   m_ObjectHideFlags: 0
@@ -34096,6 +34972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471122336}
   - component: {fileID: 1471122337}
+  - component: {fileID: 1471122338}
   m_Layer: 0
   m_Name: C (72)
   m_TagString: Untagged
@@ -34164,6 +35041,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1471122338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471122335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1478689006
 GameObject:
   m_ObjectHideFlags: 0
@@ -34210,6 +35101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486550826}
   - component: {fileID: 1486550827}
+  - component: {fileID: 1486550828}
   m_Layer: 0
   m_Name: C (58)
   m_TagString: Untagged
@@ -34278,6 +35170,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1486550828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486550825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1500364282
 GameObject:
   m_ObjectHideFlags: 0
@@ -34437,6 +35343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551301357}
   - component: {fileID: 1551301358}
+  - component: {fileID: 1551301359}
   m_Layer: 0
   m_Name: C (52)
   m_TagString: Untagged
@@ -34505,6 +35412,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 17, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1551301359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551301356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1555748243
 GameObject:
   m_ObjectHideFlags: 0
@@ -34515,6 +35436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555748244}
   - component: {fileID: 1555748245}
+  - component: {fileID: 1555748246}
   m_Layer: 0
   m_Name: C (44)
   m_TagString: Untagged
@@ -34583,6 +35505,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1555748246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555748243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1569597961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34718,6 +35654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588668147}
   - component: {fileID: 1588668148}
+  - component: {fileID: 1588668149}
   m_Layer: 0
   m_Name: C (48)
   m_TagString: Untagged
@@ -34786,6 +35723,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1588668149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588668146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1604694451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35355,6 +36306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1659611182}
   - component: {fileID: 1659611183}
+  - component: {fileID: 1659611184}
   m_Layer: 0
   m_Name: C (13)
   m_TagString: Untagged
@@ -35423,6 +36375,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1659611184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659611181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1661461453
 GameObject:
   m_ObjectHideFlags: 0
@@ -35464,6 +36430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1661966722}
   - component: {fileID: 1661966723}
+  - component: {fileID: 1661966724}
   m_Layer: 0
   m_Name: C (39)
   m_TagString: Untagged
@@ -35532,6 +36499,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1661966724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661966721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1672572924
 GameObject:
   m_ObjectHideFlags: 0
@@ -35542,6 +36523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1672572925}
   - component: {fileID: 1672572926}
+  - component: {fileID: 1672572927}
   m_Layer: 0
   m_Name: C (50)
   m_TagString: Untagged
@@ -35610,6 +36592,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &1672572927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672572924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1687950288
 GameObject:
   m_ObjectHideFlags: 0
@@ -35717,6 +36713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696771525}
   - component: {fileID: 1696771526}
+  - component: {fileID: 1696771527}
   m_Layer: 0
   m_Name: C (24)
   m_TagString: Untagged
@@ -35785,6 +36782,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1696771527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696771524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1710053305
 GameObject:
   m_ObjectHideFlags: 0
@@ -35795,6 +36806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710053306}
   - component: {fileID: 1710053307}
+  - component: {fileID: 1710053308}
   m_Layer: 0
   m_Name: C (25)
   m_TagString: Untagged
@@ -35863,6 +36875,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &1710053308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710053305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1711654196
 GameObject:
   m_ObjectHideFlags: 0
@@ -35904,6 +36930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1713915798}
   - component: {fileID: 1713915799}
+  - component: {fileID: 1713915800}
   m_Layer: 0
   m_Name: C (29)
   m_TagString: Untagged
@@ -35972,6 +36999,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1713915800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713915797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1714050295
 GameObject:
   m_ObjectHideFlags: 0
@@ -36232,6 +37273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747648050}
   - component: {fileID: 1747648051}
+  - component: {fileID: 1747648052}
   m_Layer: 0
   m_Name: C (70)
   m_TagString: Untagged
@@ -36300,6 +37342,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1747648052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747648049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1754078597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36385,6 +37441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764848647}
   - component: {fileID: 1764848648}
+  - component: {fileID: 1764848649}
   m_Layer: 0
   m_Name: C (18)
   m_TagString: Untagged
@@ -36453,6 +37510,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &1764848649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764848646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1775870562
 GameObject:
   m_ObjectHideFlags: 0
@@ -37097,6 +38168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1859681055}
   - component: {fileID: 1859681056}
+  - component: {fileID: 1859681057}
   m_Layer: 0
   m_Name: C (5)
   m_TagString: Untagged
@@ -37165,6 +38237,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1859681057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859681054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1882857797
 GameObject:
   m_ObjectHideFlags: 0
@@ -37175,6 +38261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882857798}
   - component: {fileID: 1882857799}
+  - component: {fileID: 1882857800}
   m_Layer: 0
   m_Name: C (4)
   m_TagString: Untagged
@@ -37243,6 +38330,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1882857800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882857797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1889073927
 GameObject:
   m_ObjectHideFlags: 0
@@ -37253,6 +38354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1889073928}
   - component: {fileID: 1889073929}
+  - component: {fileID: 1889073930}
   m_Layer: 0
   m_Name: C (54)
   m_TagString: Untagged
@@ -37321,6 +38423,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1889073930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889073927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1889433174
 GameObject:
   m_ObjectHideFlags: 0
@@ -37642,6 +38758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940847026}
   - component: {fileID: 1940847027}
+  - component: {fileID: 1940847028}
   m_Layer: 0
   m_Name: C (59)
   m_TagString: Untagged
@@ -37710,6 +38827,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &1940847028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940847025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1957395807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37871,6 +39002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963398427}
   - component: {fileID: 1963398428}
+  - component: {fileID: 1963398429}
   m_Layer: 0
   m_Name: C (37)
   m_TagString: Untagged
@@ -37939,6 +39071,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 5}
   m_EdgeRadius: 0
+--- !u!114 &1963398429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963398426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1966732053
 GameObject:
   m_ObjectHideFlags: 0
@@ -37949,6 +39095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966732054}
   - component: {fileID: 1966732055}
+  - component: {fileID: 1966732056}
   m_Layer: 0
   m_Name: C (38)
   m_TagString: Untagged
@@ -38017,6 +39164,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1966732056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966732053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1967813387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38192,6 +39353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969932016}
   - component: {fileID: 1969932017}
+  - component: {fileID: 1969932018}
   m_Layer: 0
   m_Name: C (12)
   m_TagString: Untagged
@@ -38260,6 +39422,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1969932018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969932015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &1972911761
 GameObject:
   m_ObjectHideFlags: 0
@@ -38270,6 +39446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972911762}
   - component: {fileID: 1972911763}
+  - component: {fileID: 1972911764}
   m_Layer: 0
   m_Name: C (15)
   m_TagString: Untagged
@@ -38338,6 +39515,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1972911764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972911761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1976065667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38633,6 +39824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991458765}
   - component: {fileID: 1991458766}
+  - component: {fileID: 1991458767}
   m_Layer: 0
   m_Name: C (42)
   m_TagString: Untagged
@@ -38701,6 +39893,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1991458767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991458764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &1991575691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38903,6 +40109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2022834865}
   - component: {fileID: 2022834866}
+  - component: {fileID: 2022834867}
   m_Layer: 0
   m_Name: C (28)
   m_TagString: Untagged
@@ -38971,6 +40178,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2022834867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022834864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1001 &2022837187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39530,6 +40751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2103548887}
   - component: {fileID: 2103548888}
+  - component: {fileID: 2103548889}
   m_Layer: 0
   m_Name: C (19)
   m_TagString: Untagged
@@ -39598,6 +40820,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &2103548889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103548886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!1 &2107683622
 GameObject:
   m_ObjectHideFlags: 0
@@ -39802,6 +41038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116730320}
   - component: {fileID: 2116730321}
+  - component: {fileID: 2116730322}
   m_Layer: 0
   m_Name: C (22)
   m_TagString: Untagged
@@ -39870,6 +41107,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &2116730322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116730319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c9be04b65f32b4ca3ad7325023f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
+  OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
 --- !u!61 &143331152567462352
 BoxCollider2D:
   m_ObjectHideFlags: 0
