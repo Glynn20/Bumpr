@@ -52,7 +52,7 @@ public class Player : MonoBehaviour,
     } 
     public void Die()
     {  
-        _playerDeathEvent?.Raise(this, null);
+        _playerDeathEvent?.Raise(this, new DeathInfo(_transform));
         OnPlayPlayerDeathSound?.Raise(this, _playerDeathSoundData);
         Debug.Log("Player Died.", this); return;
     }

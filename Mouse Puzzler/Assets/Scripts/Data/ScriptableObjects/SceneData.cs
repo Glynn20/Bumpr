@@ -5,4 +5,6 @@ public class SceneData : ScriptableObject
 {
     public string SceneName;
     public int LevelNumber;
+    public bool IsUnlocked = false;
+    public SoundData BGMTrack;
 }

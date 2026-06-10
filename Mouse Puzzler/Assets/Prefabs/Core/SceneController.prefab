@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
   registry: {fileID: 11400000, guid: 838bc4fdb79e4d64295fcdb40bfb3044, type: 2}
+  OnLevelLoadComplete: {fileID: 0}
 --- !u!114 &3035822977558815825
 MonoBehaviour:
   m_ObjectHideFlags: 0

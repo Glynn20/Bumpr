@@ -12,16 +12,18 @@ public enum PlayerMoveState
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour, IMovement
 {
+    public float GetCurrentSpeed() => _currentSpeed;
     [SerializeField] private float _mouseSens; 
     [SerializeField] private PlayerMovementConfig _config;
     private float _minMouseSens = 0.01f;
     private float _maxMouseSens = 1.0f;
     private Rigidbody2D _rb;
     private UnityEngine.Vector2 _accumulatedInput;
+    private UnityEngine.Vector2 _direction;
     private bool _isInputEnabled = true;
     private bool _stoppedMoving;
     private float _currentSpeed; 
-    public float GetCurrentSpeed() => _currentSpeed;
+    private UnityEngine.Vector2 _lastPosition;
     private SpriteRenderer _sprite;
 
     [Header("Sound")]
@@ -95,6 +97,8 @@ public class PlayerMovement : MonoBehaviour, IMovement
         _rb = GetComponent<Rigidbody2D>();  
         _sprite = GetComponentInChildren<SpriteRenderer>();
 
+        _lastPosition = _rb.position;
+
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
         _mouseSens = Mathf.Clamp(_mouseSens, _minMouseSens, _maxMouseSens);
@@ -106,27 +110,26 @@ public class PlayerMovement : MonoBehaviour, IMovement
     }
     void AdjustPosition()
     {
+        float actualDistanceMoved = UnityEngine.Vector2.Distance(_rb.position, _lastPosition);
+        _currentSpeed = actualDistanceMoved / Time.fixedDeltaTime;
+
+        if (_stoppedMoving)
+        {
+            if (actualDistanceMoved > _config.minDistanceToPlaySound) 
+            {
+                OnPlaySound?.Raise(this, _startMovingSoundData);
+                _stoppedMoving = false;
+            }
+        }
+            
         if (_accumulatedInput != UnityEngine.Vector2.zero)
         {
             UnityEngine.Vector2 moveAmount = _accumulatedInput * _mouseSens * Time.fixedDeltaTime;
             UnityEngine.Vector2 targetPosition = _rb.position + moveAmount;
            
-            _currentSpeed = moveAmount.magnitude / Time.fixedDeltaTime;
-
-            if (_stoppedMoving)
-            {
-                if (GetMoveState() != PlayerMoveState.Idle)
-                {
-                    OnPlaySound?.Raise(this, _startMovingSoundData);
-                }
-                _stoppedMoving = false;
-            }
-
             _rb.MovePosition(targetPosition);
-
-            UnityEngine.Vector2 direction = GetDirection(transform.position, targetPosition);
-            if (direction.x < 0) _sprite.flipX = true;
-            else                 _sprite.flipX = false;
+            _direction = GetDirection(transform.position, targetPosition);
+            _sprite.flipX = _direction.x < 0;
 
             ResetAccumulatedInputs();
         }
@@ -136,6 +139,8 @@ public class PlayerMovement : MonoBehaviour, IMovement
             _stoppedMoving = true;
             _currentSpeed = 0;
         }
+
+        _lastPosition = _rb.position;
     } 
 
     void ResetAccumulatedInputs()

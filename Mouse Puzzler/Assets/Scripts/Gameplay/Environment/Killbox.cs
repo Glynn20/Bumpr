@@ -1,15 +1,21 @@
 using System.Security;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class Killbox : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private GameObject _shadow;
+    SpriteRenderer _renderer;
+
+    private void Start()
     {
-        // Must specifically be the Player
-        IHealth killable = other.gameObject.GetComponentInChildren<IHealth>();
-        if (other.gameObject.GetComponentInChildren<IPlayer>() == null) return;
-        
-        killable.Die();
+        _renderer = GetComponent<SpriteRenderer>();
+
+        if (_shadow != null)
+        {
+            SpriteRenderer shadowSprite = _shadow.GetComponent<SpriteRenderer>(); 
+            shadowSprite.size = new Vector2(_renderer.size.x, _renderer.size.y); 
+        }
     }
 }

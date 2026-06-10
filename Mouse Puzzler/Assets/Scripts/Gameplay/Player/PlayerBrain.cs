@@ -9,7 +9,8 @@ public class PlayerBrain: Brain<PlayerStateMachine, PlayerStateMachine.PlayerSta
     {
         return new PlayerContext(
             GetComponentInChildren<Player>(),
-            GetComponentInChildren<PlayerMovement>()
+            GetComponentInChildren<PlayerMovement>(),
+            GetComponentInChildren<PlayerAnimations>()
             );
     }
     
@@ -17,12 +18,14 @@ public class PlayerBrain: Brain<PlayerStateMachine, PlayerStateMachine.PlayerSta
     {
         _stateMachine.TransitionToState(PlayerStateMachine.PlayerState.Dead);
         _context.Movement.DisableInput();
+        _context.Animations.TriggerDeath();
     }
     
     public void OnPlayerContinue()
     {
         _stateMachine.TransitionToState(_stateMachine.InitialKey);
         _context.Movement.EnableInput();
+        _context.Animations.ResetToEnterState();
     }
 
 }

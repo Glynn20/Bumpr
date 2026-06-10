@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 8565726555041180529}
   - component: {fileID: 7799968231322267873}
   - component: {fileID: 5551014371305690970}
+  - component: {fileID: 7545179848209632608}
   m_Layer: 5
   m_Name: Next level Button
   m_TagString: Untagged
@@ -416,6 +417,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7545179848209632608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222914712856692415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7fd69c8b78aa44c81b7dd40c23da16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonAudio
+  UIClickSound: {fileID: 11400000, guid: ba0167dc187417e4591f3dd3d88c432e, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
 --- !u!1 &1443108668098778473
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,8 +720,8 @@ GameObject:
   - component: {fileID: 4787811184747848462}
   - component: {fileID: 8800330588057119817}
   - component: {fileID: 4232225472258932948}
-  - component: {fileID: 3256608089655592565}
   - component: {fileID: 6465112805324119639}
+  - component: {fileID: 3256608089655592565}
   - component: {fileID: 8162259942808995579}
   m_Layer: 5
   m_Name: Canvas Pause
@@ -828,6 +843,14 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!222 &6465112805324119639
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762933503037546717}
+  m_CullTransparentMesh: 1
 --- !u!114 &3256608089655592565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,14 +863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d618b7a2e14f58e4bba8a8ebdc1d3280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
---- !u!222 &6465112805324119639
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3762933503037546717}
-  m_CullTransparentMesh: 1
 --- !u!114 &8162259942808995579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,6 +1114,7 @@ GameObject:
   - component: {fileID: 5872998818313673307}
   - component: {fileID: 5017436985943567857}
   - component: {fileID: 4026488620764954740}
+  - component: {fileID: 7735264165978077939}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -1220,6 +1236,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7735264165978077939}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7735264165978077939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7904928100365893258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7fd69c8b78aa44c81b7dd40c23da16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonAudio
+  UIClickSound: {fileID: 11400000, guid: 1dbb9898abe632b4c974c029c1db45af, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
 --- !u!1 &8059675766022573356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1591,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8697ac1cb3ceb674b9b9666e06539cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventCallButton
+  UIClickSound: {fileID: 0}
   OnClickEvent: {fileID: 11400000, guid: 750983fbcbc5a2a42a63847aebbbb518, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
 --- !u!1 &8926871571573834405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,4 +1742,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneSwitchButton
   OnRequestLoadScene: {fileID: 11400000, guid: 2e0786b62c910b4428deb52ce63198fc, type: 2}
   OnRequestLoadNextScene: {fileID: 11400000, guid: c96ea4849ae02cc41879cf3dca8901d3, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  UIClickSound: {fileID: 11400000, guid: ba0167dc187417e4591f3dd3d88c432e, type: 2}
   sceneSwitchIndex: 0
