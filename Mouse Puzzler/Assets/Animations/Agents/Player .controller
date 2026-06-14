@@ -35,7 +35,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 1.8
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5321278588943356444}
   m_Solo: 0
@@ -291,9 +291,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_TransitionDuration: 0.2526582
+  m_TransitionOffset: 0.0011784727
+  m_ExitTime: 0.75117844
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
