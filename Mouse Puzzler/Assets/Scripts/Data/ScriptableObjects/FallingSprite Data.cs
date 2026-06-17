@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 
 public class FallingSpriteData : ScriptableObject
 {
-    public int OrderInLayer = 1;
+    public int OrderInLayer = 4;
     public float MinFallSpeed = 0.8f;
     public float MaxFallSpeed = 2.2f;
     public float MinSize = 2.5f;

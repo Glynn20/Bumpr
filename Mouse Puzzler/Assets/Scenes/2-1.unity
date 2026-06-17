@@ -4816,6 +4816,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breakable Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3424171177037929135, guid: 04bbdd9b469bdc14a8d6674965f34769, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424171177037929135, guid: 04bbdd9b469bdc14a8d6674965f34769, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6241602845343625219, guid: 04bbdd9b469bdc14a8d6674965f34769, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
