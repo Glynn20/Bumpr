@@ -14,7 +14,7 @@ public class Player : MonoBehaviour,
 
     [Header("Data")]
     [SerializeField] private PlayerData _data;
-    [SerializeField] private SoundData _playerDeathSoundData;
+
 
     [Header("Bomb Implementation")]
     [SerializeField] private Transform _bombAttachPoint;
@@ -22,7 +22,6 @@ public class Player : MonoBehaviour,
 
     [Header("Game Events")]
     [SerializeField] private GameEvent _playerDeathEvent;
-    [SerializeField] private GameEvent OnPlayPlayerDeathSound;
 
     private Transform _transform;
     private int _currentHealth;
@@ -53,8 +52,6 @@ public class Player : MonoBehaviour,
     public void Die()
     {  
         _playerDeathEvent?.Raise(this, new DeathInfo(_transform));
-        OnPlayPlayerDeathSound?.Raise(this, _playerDeathSoundData);
-        Debug.Log("Player Died.", this); return;
     }
 
 }

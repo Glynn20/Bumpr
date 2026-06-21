@@ -211,7 +211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &51365204
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +306,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &112055918
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &128484030
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &141332840
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &143586054
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +765,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &149049161
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +860,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &160791984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1090,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &188594486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &236800582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1280,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &261961809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1444,7 +1464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &283140047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1559,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &287872718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1654,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &326142245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +1749,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &335601977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1844,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &352639417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,7 +1939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &388233519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,7 +2034,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &393662125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2252,7 +2286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &418549696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2402,7 +2438,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &477909140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,7 +2533,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &482097492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,7 +2628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &486358156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,7 +2723,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &498647828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2818,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,7 +3433,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &575770064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3625,7 +3673,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3802,7 +3852,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &637371910
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,7 +3947,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &664907981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4188,7 +4242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &694361321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4281,7 +4337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &710318939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,7 +4588,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &893365092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &904636740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4877,7 +4939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &910316955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5115,7 +5179,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &982022580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5365,7 +5431,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &1027817805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5627,7 +5695,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1053624338
 GameObject:
   m_ObjectHideFlags: 0
@@ -5720,7 +5790,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1065953802
 GameObject:
   m_ObjectHideFlags: 0
@@ -5813,7 +5885,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1117913309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5937,7 +6011,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1142213879
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,7 +6106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1146749266
 GameObject:
   m_ObjectHideFlags: 0
@@ -6123,7 +6201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1151213782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6216,7 +6296,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1202916978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7760906760015242316, guid: 0326dcff20b613747a6040b2413d643a, type: 3}
@@ -6314,7 +6396,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1275576935 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7679279291538465853, guid: 287a4c51be424a5419d192fc129b24be, type: 3}
@@ -6537,7 +6621,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1312676180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6630,7 +6716,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1316911044
 GameObject:
   m_ObjectHideFlags: 0
@@ -6723,7 +6811,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1352958668
 GameObject:
   m_ObjectHideFlags: 0
@@ -6847,7 +6937,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1467851258
 GameObject:
   m_ObjectHideFlags: 0
@@ -6940,7 +7032,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1475124298
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,7 +7158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1530135075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7157,7 +7253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1553857458
 GameObject:
   m_ObjectHideFlags: 0
@@ -7250,7 +7348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1574310913
 GameObject:
   m_ObjectHideFlags: 0
@@ -7562,7 +7662,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1623437875
 GameObject:
   m_ObjectHideFlags: 0
@@ -7810,7 +7912,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1675422544
 GameObject:
   m_ObjectHideFlags: 0
@@ -7903,7 +8007,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1687950288
 GameObject:
   m_ObjectHideFlags: 0
@@ -8256,7 +8362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1813960136
 GameObject:
   m_ObjectHideFlags: 0
@@ -8349,7 +8457,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1820175115
 GameObject:
   m_ObjectHideFlags: 0
@@ -9102,7 +9212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &2029889124
 GameObject:
   m_ObjectHideFlags: 0
@@ -9195,7 +9307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1001 &2033566579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9345,7 +9459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &2093102788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9469,7 +9585,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &2108767747
 GameObject:
   m_ObjectHideFlags: 0
@@ -9562,7 +9680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wall
   OnPlayWallBumpSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
 --- !u!1 &1279500603413356935
 GameObject:
   m_ObjectHideFlags: 0

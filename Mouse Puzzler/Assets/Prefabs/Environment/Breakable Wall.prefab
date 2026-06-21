@@ -159,4 +159,6 @@ MonoBehaviour:
   _mediumHealthThreshold: 0.34
   _onHitSoundData: {fileID: 11400000, guid: 3a2c023b593a7284a9e83900efda4f54, type: 2}
   _onBreakSoundData: {fileID: 11400000, guid: 821bea22a74507b43b07440e4a929ebb, type: 2}
+  _wallHitFX: {fileID: 11400000, guid: ff6a9829172288345957106bf663f1f3, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayHitParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}

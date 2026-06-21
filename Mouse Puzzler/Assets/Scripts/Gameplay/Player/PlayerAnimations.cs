@@ -1,17 +1,21 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
     private Animator _animator;
+    private Transform _transform;
     [SerializeField] private PlayerMovement _movement;
-    [SerializeField] private ParticleSystem _deathFX;
-
+    [SerializeField] private SoundData _playerDeathSoundData;
+    [SerializeField] private ParticleData _playerDeathFX;
+    [SerializeField] private GameEvent OnPlayPlayerDeathSound;
+    [SerializeField] private GameEvent OnPlayPlayerDeathParticle;
     public void TriggerDeath() // Called as GameEvent response via inspector
     {
-        Debug.Log("Trigger death called");
         _animator.SetTrigger("Died"); // Plays Death Anim
-        _deathFX?.Play();
+        OnPlayPlayerDeathSound?.Raise(this, _playerDeathSoundData);
+        OnPlayPlayerDeathParticle?.Raise(this, _playerDeathFX, new Vector2(_transform.position.x, _transform.position.y));
     }
 
     public void ResetToEnterState()
@@ -21,6 +25,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void Awake()
     {
+        _transform = transform;
         _animator = GetComponent<Animator>();
         if (_movement == null) _movement = GetComponent<PlayerMovement>();
     }

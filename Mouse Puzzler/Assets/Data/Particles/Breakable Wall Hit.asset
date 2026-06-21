@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600206481a177da4794d12da6bb4137a, type: 3}
+  m_Name: Breakable Wall Hit
+  m_EditorClassIdentifier: Assembly-CSharp::ParticleData
+  defaultPoolSize: 3
+  prefab: {fileID: 6484451288372954208, guid: 9491591bffa4d34409a816707da2b81c, type: 3}

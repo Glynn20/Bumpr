@@ -13,13 +13,15 @@ public enum PlayerMoveState
 public class PlayerMovement : MonoBehaviour, IMovement
 {
     public float GetCurrentSpeed() => _currentSpeed;
-    [SerializeField] private float _mouseSens; 
+    [SerializeField] protected float _mouseSens; 
     [SerializeField] private PlayerMovementConfig _config;
+    [SerializeField] private bool _flipSprite;
     private float _minMouseSens = 0.01f;
     private float _maxMouseSens = 1.0f;
     private Rigidbody2D _rb;
     private UnityEngine.Vector2 _accumulatedInput;
     private UnityEngine.Vector2 _direction;
+    private Transform _transform;
     private bool _isInputEnabled = true;
     private bool _stoppedMoving;
     private float _currentSpeed; 
@@ -28,9 +30,11 @@ public class PlayerMovement : MonoBehaviour, IMovement
 
     [Header("Sound")]
     [SerializeField] private SoundData _startMovingSoundData;
+    [SerializeField] private ParticleData _startMovingParticle;
 
     [Header("Events")]
     [SerializeField] private GameEvent OnPlaySound;
+    [SerializeField] private GameEvent OnPlayParticleEffect;
 
     public void ReadMouseInput(InputAction.CallbackContext context)
     {
@@ -61,7 +65,16 @@ public class PlayerMovement : MonoBehaviour, IMovement
         _isInputEnabled = state;
         ResetAccumulatedInputs();    
     }
-
+    public void HideCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+    public void ShowCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;   
+    }
     public PlayerMoveState GetMoveState()
     {
         if (_currentSpeed > _config.RunToOverheatThreshold)
@@ -92,22 +105,24 @@ public class PlayerMovement : MonoBehaviour, IMovement
             }
         }
     }
-    void Awake()
-    {
-        _rb = GetComponent<Rigidbody2D>();  
-        _sprite = GetComponentInChildren<SpriteRenderer>();
 
-        _lastPosition = _rb.position;
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
-        _mouseSens = Mathf.Clamp(_mouseSens, _minMouseSens, _maxMouseSens);
-    }    
-    void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         if (_isInputEnabled == false) return;
         AdjustPosition();
     }
+
+    void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();  
+        _sprite = GetComponentInChildren<SpriteRenderer>();
+        _transform = transform;
+        _lastPosition = _rb.position;
+
+        HideCursor();
+        _mouseSens = Mathf.Clamp(_mouseSens, _minMouseSens, _maxMouseSens);
+    }    
+
     void AdjustPosition()
     {
         float actualDistanceMoved = UnityEngine.Vector2.Distance(_rb.position, _lastPosition);
@@ -118,6 +133,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
             if (actualDistanceMoved > _config.minDistanceToPlaySound) 
             {
                 OnPlaySound?.Raise(this, _startMovingSoundData);
+                OnPlayParticleEffect?.Raise(this, _startMovingParticle, new UnityEngine.Vector2(_transform.position.x, _transform.position.y));
                 _stoppedMoving = false;
             }
         }
@@ -129,7 +145,9 @@ public class PlayerMovement : MonoBehaviour, IMovement
            
             _rb.MovePosition(targetPosition);
             _direction = GetDirection(transform.position, targetPosition);
-            _sprite.flipX = _direction.x < 0;
+            
+            if (_flipSprite) _sprite.flipX = _direction.x < 0;
+
 
             ResetAccumulatedInputs();
         }

@@ -24,8 +24,11 @@ IReset
     [SerializeField] private SoundData _onHitSoundData;
     [SerializeField] private SoundData _onBreakSoundData;
 
+    [Header("ParticleFX")]
+    [SerializeField] private ParticleData _wallHitFX;
     [Header("Events")]
     [SerializeField] private GameEvent OnPlaySound;
+    [SerializeField] private GameEvent OnPlayHitParticle;
 
     private int _currentHealth;
     private int _maxHealth;
@@ -88,7 +91,7 @@ IReset
         UnregisterFromManager();
     }
 
-    void Awake()
+    private void Awake()
     {
         _maxHealth = _config.MaxHealth;
         _currentHealth = _maxHealth;
@@ -96,7 +99,7 @@ IReset
         ChangeColour(_highHealthColour);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
          IMovement mover = other.gameObject.GetComponent<IMovement>();
         if ( mover == null ) return;
@@ -104,10 +107,15 @@ IReset
         if ( mover.GetMoveState() == PlayerMoveState.Overheating )
         {
             TakeDamage();
+            PlayHitFX(other.contacts[0].point);
         }
     }
-
-    void ChangeColour(Color newColour)
+    private void PlayHitFX(Vector2 position)
+    {
+        if (_wallHitFX == null) return; 
+        OnPlayHitParticle?.Raise(this, _wallHitFX, position); 
+    }
+    private void ChangeColour(Color newColour)
     {
         _renderer.color = newColour;
     }

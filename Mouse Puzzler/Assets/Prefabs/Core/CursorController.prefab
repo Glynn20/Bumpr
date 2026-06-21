@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 326208206138888587}
   - component: {fileID: 5741964041341301918}
   - component: {fileID: 6762032190317245778}
+  - component: {fileID: 3779140037799630147}
   m_Layer: 0
   m_Name: CursorController
   m_TagString: Untagged
@@ -116,6 +117,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
   gameEvent: {fileID: 11400000, guid: 62158e6d11d961f4187e68235358d4b2, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8357653016752753262}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: DisableCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3779140037799630147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2973302594685416502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 2bc11d2df0be9764e8ae861d55ba5aa8, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:

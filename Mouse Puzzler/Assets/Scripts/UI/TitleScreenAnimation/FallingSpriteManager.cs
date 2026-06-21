@@ -13,6 +13,12 @@ public class FallingSpriteManager : MonoBehaviour
     [SerializeField] private FallingSpriteData _data;
     private float _timeBeforeSpriteSpawn;
     private List<GameObject> FallingSpritePool = new List<GameObject>();
+    bool StopRespawningSprites = false;
+
+    public void OnNewGamePressed()
+    {
+        StopRespawningSprites = true;
+    }
 
     private void Awake()
     {
@@ -33,7 +39,7 @@ public class FallingSpriteManager : MonoBehaviour
 
         _timeBeforeSpriteSpawn = 1 / _spritesPerSecond;
 
-        ActivateNextAvailablePoolObject();
+        if (!StopRespawningSprites) ActivateNextAvailablePoolObject();
     }
 
     /* Destroys Falling Sprites at the bottom of the screen */

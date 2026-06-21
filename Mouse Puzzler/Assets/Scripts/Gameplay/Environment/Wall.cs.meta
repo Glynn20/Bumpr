@@ -4,8 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - _onPlayWallBumpSound: {instanceID: 0}
+  - OnPlayWallBumpSound: {instanceID: 0}
   - _wallBumpSoundData: {instanceID: 0}
+  - _wallHitFX: {fileID: 6484451288372954208, guid: d06ce6076969666428246b59fe4cf611, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
