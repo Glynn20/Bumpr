@@ -4340,6 +4340,67 @@ MonoBehaviour:
   OnPlayWallBumpParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
   _wallBumpSoundData: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
   _wallHitFX: {fileID: 11400000, guid: 28dd7d8b331a2cc46b57a8a162971eb1, type: 2}
+--- !u!1001 &698710090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1262699561426839300, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.205956
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.15383768
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000004470348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762146489400435613, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839811772457480968, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
+      propertyPath: m_Name
+      value: Starfield
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 261e0ab7d39fa3d47bba1d97de93a231, type: 3}
 --- !u!1 &710318939
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,6 +6536,10 @@ PrefabInstance:
     - target: {fileID: 1299813128626044902, guid: 49e49601e1407de439a539abd971d34e, type: 3}
       propertyPath: m_Name
       value: Background (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006778463279495930, guid: 49e49601e1407de439a539abd971d34e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5583565495070072966, guid: 49e49601e1407de439a539abd971d34e, type: 3}
       propertyPath: m_LocalScale.x
@@ -11084,7 +11149,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
   m_Origin: {x: -10, y: -19, z: 0}
   m_Size: {x: 93, y: 34, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -16774,7 +16839,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_Origin: {x: -10, y: -23, z: 0}
   m_Size: {x: 107, y: 38, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -17553,7 +17618,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.627451}
   m_Origin: {x: -10, y: -19, z: 0}
   m_Size: {x: 66, y: 33, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -26105,7 +26170,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 0.2509804}
+  m_Color: {r: 0.627451, g: 0.627451, b: 0.627451, a: 0.5019608}
   m_Origin: {x: -10, y: -19, z: 0}
   m_Size: {x: 93, y: 35, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -26138,6 +26203,10 @@ PrefabInstance:
     - target: {fileID: 1299813128626044902, guid: 49e49601e1407de439a539abd971d34e, type: 3}
       propertyPath: m_Name
       value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006778463279495930, guid: 49e49601e1407de439a539abd971d34e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5583565495070072966, guid: 49e49601e1407de439a539abd971d34e, type: 3}
       propertyPath: m_LocalScale.x
@@ -26319,6 +26388,7 @@ SceneRoots:
   - {fileID: 1695601724}
   - {fileID: 674168124}
   - {fileID: 8192874277329480567}
+  - {fileID: 698710090}
   - {fileID: 1475124299}
   - {fileID: 1646529681}
   - {fileID: 1574310914}

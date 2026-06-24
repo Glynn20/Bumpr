@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
   SceneName: MainMenu
   LevelNumber: 0
+  isMainMenu: 1
   IsUnlocked: 0
   BGMTrack: {fileID: 11400000, guid: dfaccb0f3bdf30e4f94129c13afc5895, type: 2}

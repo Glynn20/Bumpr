@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 7799968231322267873}
   - component: {fileID: 5551014371305690970}
   - component: {fileID: 7545179848209632608}
+  - component: {fileID: 4388956406810620059}
   m_Layer: 5
   m_Name: Next level Button
   m_TagString: Untagged
@@ -477,6 +478,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4388956406810620059}
+        m_TargetAssemblyTypeName: SceneSwitchButton, Assembly-CSharp
+        m_MethodName: SwitchToNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7545179848209632608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +504,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIButtonAudio
   UIClickSound: {fileID: 11400000, guid: ba0167dc187417e4591f3dd3d88c432e, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+--- !u!114 &4388956406810620059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222914712856692415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2721872da5b4349af664ee3b6944b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitchButton
+  OnRequestLoadScene: {fileID: 11400000, guid: 2e0786b62c910b4428deb52ce63198fc, type: 2}
+  OnRequestLoadNextScene: {fileID: 11400000, guid: c96ea4849ae02cc41879cf3dca8901d3, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  UIClickSound: {fileID: 11400000, guid: ba0167dc187417e4591f3dd3d88c432e, type: 2}
+  sceneSwitchOnClick: {fileID: 0}
 --- !u!1 &1443108668098778473
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8895777828584730440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2129,9 +2159,9 @@ RectTransform:
   - {fileID: 2805730782342693746}
   m_Father: {fileID: 1699659532365322632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5890269650888594621
@@ -2414,9 +2444,9 @@ RectTransform:
   - {fileID: 7184890416610981114}
   m_Father: {fileID: 1699659532365322632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8601863529397548330
@@ -2503,7 +2533,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8827767392904743627}
         m_TargetAssemblyTypeName: SceneSwitchButton, Assembly-CSharp
-        m_MethodName: SwitchToSceneByNumber
+        m_MethodName: SwitchToScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2529,7 +2559,7 @@ MonoBehaviour:
   OnRequestLoadNextScene: {fileID: 11400000, guid: c96ea4849ae02cc41879cf3dca8901d3, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   UIClickSound: {fileID: 11400000, guid: ba0167dc187417e4591f3dd3d88c432e, type: 2}
-  sceneSwitchIndex: 0
+  sceneSwitchOnClick: {fileID: 11400000, guid: a27c959ded3e3364fa039f1b2fbb55f4, type: 2}
 --- !u!1 &9118803957303975601
 GameObject:
   m_ObjectHideFlags: 0

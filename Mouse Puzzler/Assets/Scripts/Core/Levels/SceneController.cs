@@ -35,7 +35,7 @@ public class SceneController : Singleton<SceneController>
     public void LoadLevel(Component sender, params object[] data)
     {
         if (_isLoading) return;
-
+        /*
         if (data.Length > 0 && data[0] is int levelNumber)
         {
             SceneData sceneData = registry.GetLevelByNumber(levelNumber);
@@ -45,6 +45,15 @@ public class SceneController : Singleton<SceneController>
         else
         {
             Debug.Log("LevelLoad failed. Bad data passed via event.");
+        }
+        */
+        if (data.Length > 0 && data[0] is SceneData nextSceneData)
+        {
+            if (registry.AllLevels.Contains(nextSceneData))
+            {
+                _currentScene = nextSceneData;
+                StartCoroutine(TransitionScene(nextSceneData));
+            }
         }
     }
 

@@ -56,7 +56,6 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
     public void OnNextLevelButtonClicked()
     {
         CloseMenu();
-        OnRequestLoadNextLevel?.Raise(this, null);
     }
 
 /*

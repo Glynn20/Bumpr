@@ -102,7 +102,6 @@ public class AudioManager : Singleton<AudioManager>
         {
             if (AudioSourcePool[i].isPlaying == false)
             {
-                Debug.Log($"audio source found at i = {i}");
                 ConfigureAndPlay(AudioSourcePool[i], data);
                 return;
             }

@@ -10,9 +10,9 @@ public class CursorManager : MonoBehaviour
 
     public void SetCursorEnabled(Component sender, params object[] data)
     {
-        if (data.Length == 1 && data[0] is bool isNowPaused)
+        if (data.Length == 1 && data[0] is bool enable)
         {
-            if (isNowPaused)
+            if (enable)
             {
                 EnableCursor();
             }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProximityInvisibility : MonoBehaviour, IReset
 {
-    private SpriteRenderer _renderer;
+    private SpriteRenderer[] _renderers;
     [SerializeField] private BoxCollider2D _detectionCollider;
 
     [SerializeField] private float _detectionRange = 0.5f;
@@ -13,7 +13,7 @@ public class ProximityInvisibility : MonoBehaviour, IReset
 
     public void Reset()
     {
-        _renderer.enabled = false;
+        SetRenderersEnabled(false);
         _revealed = false;
     }
     public void RegisterToManager()
@@ -26,9 +26,9 @@ public class ProximityInvisibility : MonoBehaviour, IReset
     }
     void Awake()
     {
-        _renderer = GetComponent<SpriteRenderer>();
+        _renderers = GetComponentsInChildren<SpriteRenderer>();
 
-        _renderer.enabled = false;
+        SetRenderersEnabled(false);
         _revealed = false;
         _detectionCollider.isTrigger = true;
         _detectionCollider.edgeRadius = _detectionRange;
@@ -49,8 +49,16 @@ public class ProximityInvisibility : MonoBehaviour, IReset
         }
         else if (_revealed == false)
         {
-            _renderer.enabled = true;
+            SetRenderersEnabled(true);
             _revealed = true;
+        }
+    }
+
+    private void SetRenderersEnabled(bool state)
+    {
+        foreach (SpriteRenderer spr in _renderers)
+        {
+            spr.enabled = state;
         }
     }
 }
