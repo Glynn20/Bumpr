@@ -12,8 +12,12 @@ public class NewGameHandler : MonoBehaviour
     [SerializeField] private GameObject _dummyCursor;
     [SerializeField] private GameObject _bumprModel;
     [SerializeField] private SceneData _sceneToLoad;
+    [SerializeField] private SoundData _wakeUpTextUISound;
+    [SerializeField] private SoundData _bumprReviveExplosionSound;
+
     [Header("Events")]
     [SerializeField] private GameEvent OnRequestLoadScene;
+    [SerializeField] private GameEvent OnPlaySound;
     private BumprNewGameSprite _bumpr;
     private Animator _animator;
     private Coroutine _bumprReviveCoroutine;
@@ -23,6 +27,8 @@ public class NewGameHandler : MonoBehaviour
         _animator = GetComponent<Animator>();
         _bumpr = _bumprModel.GetComponent<BumprNewGameSprite>();
     }
+
+    // Sequence of Events (in order)
     public void BeginNewGame()
     {
         _animator.Play(_newGameAnimName);
@@ -33,26 +39,34 @@ public class NewGameHandler : MonoBehaviour
         _animator.Play(_bumpRFallSequenceAnimName);
         _bumpr.PlayFallAnim();
     }
+    public void PlayBumperReviveSequence()
+    {
+        OnPlaySound?.Raise(this, _bumprReviveExplosionSound);
+        _animator.Play(_bumprReviveEffectAnimName);
+        DisableDummyCursor();
+    }
 
+
+    // Animation Keyframe Events
+    public void WakeUpTextShown()
+    {
+        OnPlaySound?.Raise(this, _wakeUpTextUISound);
+    }
     public void EnableDummyCursor()
     {
         _dummyCursor?.SetActive(true);
     }
+    public void DisableDummyCursor()
+    {
+        _dummyCursor?.SetActive(false);
+    }
+    public void LoadNextScene()
+    {
+        OnRequestLoadScene?.Raise(this, _sceneToLoad);
+    }
     public void OnMouseTouchBumprModel()
     {
-        if (_bumprReviveCoroutine == null)
-        {
-            _bumprReviveCoroutine = StartCoroutine(BumprReviveCoroutine());
-        }
+        PlayBumperReviveSequence();
     }
 
-    private IEnumerator BumprReviveCoroutine(float timeBeforeSceneSwitch = 2f)
-    {
-        Debug.Log("Next Scene Requested", this);
-        _animator.Play(_bumprReviveEffectAnimName);
-        yield return new WaitForSeconds(timeBeforeSceneSwitch);
-        _bumprReviveCoroutine = null;
-        OnRequestLoadScene?.Raise(this, _sceneToLoad);
-        
-    }
 }

@@ -15,11 +15,13 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
     [SerializeField] private GameEvent OnMenuClose;
     [SerializeField] private float _deathCountCoroutineLength = 1f;
     [SerializeField] private TextMeshProUGUI _deathCounterText;
+    [SerializeField] private TextMeshProUGUI _levelRatingText;
 
     private Canvas _canvas;
     private Coroutine _levelCompleteCoroutine;
     private Animator _animator;
     private float _totalPlayerDeaths = 0f;
+    private float _levelTime = 0f;
 
     void Awake()
     {
@@ -29,7 +31,14 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
         CloseMenu();
         _levelCompleteCoroutine = null;
     }
-
+    private void ResetLevelTimer()
+    {
+        _levelTime = 0f;
+    }
+    private void Update()
+    {
+        _levelTime += Time.deltaTime;
+    }
     public void OnPlayerDeath()
     {
         ++_totalPlayerDeaths;

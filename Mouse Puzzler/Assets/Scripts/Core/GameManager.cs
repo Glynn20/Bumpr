@@ -6,6 +6,7 @@ public class GameManager : Singleton<GameManager>
     public bool GamePaused => _gamePaused;
     private bool _gamePaused = false;
     private static GameManager _instance;
+    
 
     [Header("Events")]
     [SerializeField] private GameEvent PauseStateChanged;
@@ -40,4 +41,9 @@ public class GameManager : Singleton<GameManager>
             Debug.Log(Time.timeScale);
         }
     }
+    public void OnLevelBegin()
+    {
+        
+    }
+
 }

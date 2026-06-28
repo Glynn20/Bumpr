@@ -6,6 +6,10 @@ public class BumprNewGameSprite : MonoBehaviour
     [SerializeField] private ParticleSystem[] _onTouchFX;
     [SerializeField] private string _reviveAnimName;
     [SerializeField] private string _fallAnimName;
+
+    [SerializeField] private GameEvent OnPlaySound;
+    [SerializeField] private SoundData _bumprJumpUpSound;
+    [SerializeField] private SoundData _bumprJumpDownSound;
     private Animator _animator;
     
     public void PlayReviveAnim()
@@ -32,5 +36,16 @@ public class BumprNewGameSprite : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
     }
-     
+    
+    // Anim Keyframe Sounds
+
+    public void PlayJumpUpSound()
+    {
+        OnPlaySound?.Raise(this, _bumprJumpUpSound);
+    }
+
+    public void PlayJumpDownSound()
+    {
+        OnPlaySound?.Raise(this, _bumprJumpDownSound);
+    }
 }

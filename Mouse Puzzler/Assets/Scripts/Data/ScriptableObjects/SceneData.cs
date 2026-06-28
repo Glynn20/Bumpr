@@ -8,4 +8,10 @@ public class SceneData : ScriptableObject
     public bool isMainMenu;
     public bool IsUnlocked = false;
     public SoundData BGMTrack;
+
+    // Time to beat Rankings
+    public float STime;
+    public float ATime;
+    public float BTime;
+    public float CTime;
 }

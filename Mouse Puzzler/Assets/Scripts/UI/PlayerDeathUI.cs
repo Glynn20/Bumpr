@@ -5,6 +5,7 @@ public class PlayerDeathUI : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _blackOverlay;
     [SerializeField] private TextMeshProUGUI _deathText;
+    [SerializeField] private GameObject _blinkingMousePrompt;
 
     public void OnPlayerDeath()
     {
@@ -24,11 +25,13 @@ public class PlayerDeathUI : MonoBehaviour
     {
         _blackOverlay.enabled = false;
         _deathText.enabled = false;  
+        _blinkingMousePrompt.SetActive(false);
     }
 
     private void EnableOverlay()
     {
         _blackOverlay.enabled = true;
         _deathText.enabled = true; 
+        _blinkingMousePrompt.SetActive(true);
     }
 }
