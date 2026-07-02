@@ -38,7 +38,6 @@ public class GameManager : Singleton<GameManager>
             _gamePaused = false;
             Time.timeScale = 1.0f;
             PauseStateChanged?.Raise(this, _gamePaused);
-            Debug.Log(Time.timeScale);
         }
     }
     public void OnLevelBegin()

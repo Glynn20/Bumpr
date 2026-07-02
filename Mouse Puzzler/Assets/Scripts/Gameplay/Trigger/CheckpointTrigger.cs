@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CheckpointTrigger : MonoBehaviour, IReset
+public class CheckpointTrigger : MonoBehaviour//, IReset
 {
     [Header("Events")]
     [SerializeField] private GameEvent _onCheckpointReached;
@@ -19,8 +19,9 @@ public class CheckpointTrigger : MonoBehaviour, IReset
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _collider;
+    private bool _triggered = false;
 
-
+/*
     public void Reset()
     {
         _collider.enabled = true;
@@ -43,7 +44,7 @@ public class CheckpointTrigger : MonoBehaviour, IReset
     {
         UnregisterFromManager();
     }
-    
+    */
     private void Awake()
     {
         _collider = GetComponent<BoxCollider2D>();
@@ -54,13 +55,14 @@ public class CheckpointTrigger : MonoBehaviour, IReset
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponentInChildren<IPlayer>() == null) return;
-
+        if (_triggered) return;
         if (_camSnapPoint == null || _spawnPoint == null)
         {
             Debug.LogWarning("Invalid Checkpoint. Set transforms in inspector.", this);
             return;
         }
 
+        _triggered = true;
         _onCheckpointReached?.Raise(this, new Checkpoint(_camSnapPoint, _spawnPoint));
         OnPlaySound?.Raise(this, _onTriggerSoundData);
 

@@ -605,7 +605,6 @@ GameObject:
   - component: {fileID: 818138850847798499}
   - component: {fileID: 9066196511219473167}
   - component: {fileID: 8468459237191601752}
-  - component: {fileID: 2035018172821957998}
   - component: {fileID: 474498639183233759}
   - component: {fileID: 7817655882632153179}
   - component: {fileID: 4553664516994203885}
@@ -902,19 +901,6 @@ MonoBehaviour:
   _playerDeathFX: {fileID: 11400000, guid: 808e8196cf8a1c74b8a4ac8171bda490, type: 2}
   OnPlayPlayerDeathSound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   OnPlayPlayerDeathParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
---- !u!114 &2035018172821957998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7760906760015242316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 061c597132fda2a409b281a9daabef73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerColour
-  OnPlayerChangeColour: {fileID: 11400000, guid: 378299c794246c7428d956d64bfe3298, type: 2}
 --- !u!114 &474498639183233759
 MonoBehaviour:
   m_ObjectHideFlags: 0

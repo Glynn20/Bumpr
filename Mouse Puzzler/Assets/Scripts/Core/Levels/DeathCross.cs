@@ -6,6 +6,7 @@ public class DeathCross : MonoBehaviour
     [SerializeField] private GameObject _prefab;
 
     [SerializeField] private int _poolLength;
+
     private List<GameObject> CrossPool = new List<GameObject>();    
     private Vector2 _nextSpawnLocation;
 

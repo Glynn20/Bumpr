@@ -24,6 +24,7 @@ public class Player : MonoBehaviour,
     [SerializeField] private GameEvent _playerDeathEvent;
 
     private Transform _transform;
+    private Collider2D _collider;
     private int _currentHealth;
     private int _maxHealth = 1;
 
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour,
     {
         _transform = transform;
         _maxHealth = _data.MaxHealth;
+        _collider = GetComponent<BoxCollider2D>();
     }
     
     public void TeleportTo(Transform destination)
@@ -49,6 +51,14 @@ public class Player : MonoBehaviour,
         
         if (_currentHealth <= 0) Die();
     } 
+    public void DisableCollider()
+    {
+        _collider.enabled = false;
+    }
+    public void EnableCollider()
+    {
+        _collider.enabled = true;
+    }
     public void Die()
     {  
         _playerDeathEvent?.Raise(this, new DeathInfo(_transform));

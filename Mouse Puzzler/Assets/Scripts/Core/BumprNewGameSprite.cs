@@ -2,16 +2,22 @@ using UnityEngine;
 
 public class BumprNewGameSprite : MonoBehaviour
 {
+    [Header("Events")]
     [SerializeField] private GameEvent OnMouseTouchBumprSprite;
+    [SerializeField] private GameEvent OnPlaySound;
+
+    [Header("Animation")]
     [SerializeField] private ParticleSystem[] _onTouchFX;
     [SerializeField] private string _reviveAnimName;
     [SerializeField] private string _fallAnimName;
 
-    [SerializeField] private GameEvent OnPlaySound;
+    [Header("Sounds")]
     [SerializeField] private SoundData _bumprJumpUpSound;
     [SerializeField] private SoundData _bumprJumpDownSound;
+    [SerializeField] private SoundData _bumprFallSound;
+    [SerializeField] private SoundData _bumprThudSound;
     private Animator _animator;
-    
+
     public void PlayReviveAnim()
     {
         _animator?.Play(_reviveAnimName);
@@ -47,5 +53,13 @@ public class BumprNewGameSprite : MonoBehaviour
     public void PlayJumpDownSound()
     {
         OnPlaySound?.Raise(this, _bumprJumpDownSound);
+    }
+    public void PlayFallSound()
+    {
+        OnPlaySound?.Raise(this, _bumprFallSound);
+    }    
+    public void PlayThudSound()
+    {
+        OnPlaySound?.Raise(this, _bumprThudSound);
     }
 }

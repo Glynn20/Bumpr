@@ -22088,14 +22088,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 583471126295339191, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 7aa8f0dcc1ea32441a22bac3fe310669, type: 2}
-    - target: {fileID: 583471126295339191, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3322134347622919086, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -22136,10 +22128,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3762933503037546717, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3801685301875401919, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22171,14 +22159,6 @@ PrefabInstance:
     - target: {fileID: 4645467240146223497, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144896226926208934, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 7aa8f0dcc1ea32441a22bac3fe310669, type: 2}
-    - target: {fileID: 5144896226926208934, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8059675766022573356, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_Name
@@ -22415,6 +22395,10 @@ PrefabInstance:
       propertyPath: _playerObject
       value: 
       objectReference: {fileID: 7760906760985689293}
+    - target: {fileID: 6297200834420783437, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
+      propertyPath: _currentSceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: c4faf2ad1ccd2634082690da418dbd9a, type: 2}
     - target: {fileID: 6297200834420783437, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
       propertyPath: _initialSpawnPoint
       value: 

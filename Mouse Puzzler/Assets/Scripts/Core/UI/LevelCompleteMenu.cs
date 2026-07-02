@@ -16,28 +16,31 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
     [SerializeField] private float _deathCountCoroutineLength = 1f;
     [SerializeField] private TextMeshProUGUI _deathCounterText;
     [SerializeField] private TextMeshProUGUI _levelRatingText;
+    [SerializeField] private TextMeshProUGUI _levelTimeText;
 
     private Canvas _canvas;
     private Coroutine _levelCompleteCoroutine;
     private Animator _animator;
     private float _totalPlayerDeaths = 0f;
     private float _levelTime = 0f;
+    private SceneData _currentSceneData;
 
-    void Awake()
+    public void OnLevelBegin(Component sender, params object[] data)
     {
-        _canvas = GetComponent<Canvas>();
-        _animator = GetComponent<Animator>();
-        
-        CloseMenu();
-        _levelCompleteCoroutine = null;
+        if (data != null && data[0] is SceneData newSceneData)
+        {
+            _currentSceneData = newSceneData;
+            ResetLevelTimer();
+        }    
     }
-    private void ResetLevelTimer()
+
+    public void SetLevelTimeText()
     {
-        _levelTime = 0f;
+        _levelTimeText.text = ConvertLevelTimeToString();
     }
-    private void Update()
+    public void StartDeathCountCoroutine()
     {
-        _levelTime += Time.deltaTime;
+        _levelCompleteCoroutine = StartCoroutine(DeathCountCoroutine());
     }
     public void OnPlayerDeath()
     {
@@ -61,22 +64,29 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
     public void OnLevelComplete(Component sender, params object[] data)
     {
         OpenMenu();
+        SetLevelTimeText();
+        GetLevelRating(); 
     }
     public void OnNextLevelButtonClicked()
     {
         CloseMenu();
     }
 
-/*
-enable canvas
-Start Coroutine
-Finish Coroutine
-
-when finished, crown should be visible, death counter visible, overall score calculated and displayed
-*/
-    public void StartDeathCountCoroutine()
+    void Awake()
     {
-        _levelCompleteCoroutine = StartCoroutine(DeathCountCoroutine());
+        _canvas = GetComponent<Canvas>();
+        _animator = GetComponent<Animator>();
+        
+        CloseMenu();
+        _levelCompleteCoroutine = null;
+    }
+    private void ResetLevelTimer()
+    {
+        _levelTime = 0f;
+    }
+    private void Update()
+    {
+        _levelTime += Time.deltaTime;
     }
     private IEnumerator DeathCountCoroutine()
     {
@@ -101,6 +111,41 @@ when finished, crown should be visible, death counter visible, overall score cal
         _levelCompleteCoroutine = null;
         yield return null;
     }
+    private void GetLevelRating()
+    {
+        if ( _levelTime < _currentSceneData.STime)
+        {
+            _levelRatingText.text = "S";
+        }
+        else if (_levelTime < _currentSceneData.ATime)
+        {
+            _levelRatingText.text = "A";
+        }
+        else if (_levelTime < _currentSceneData.BTime)
+        {
+            _levelRatingText.text = "B";
+        }
+        else if (_levelTime < _currentSceneData.CTime)
+        {
+            _levelRatingText.text = "C";
+        }
+        else { _levelRatingText.text = "D";}
+    }
+    private string ConvertLevelTimeToString()
+    {
+        if (_levelTime < 0) return "Invalid";
 
-    
+        int seconds = (int) _levelTime % 60;
+        int minutes = 0;
+
+        if (_levelTime < 60)
+        {
+            return seconds < 10 ? $"00:0{seconds}" : $"00:{seconds}";
+        }
+        
+        minutes = ((int) _levelTime - seconds) / 60;
+
+        return minutes < 10 ? $"0{minutes}:{seconds}" : $"{minutes}:{seconds}";
+
+    }
 }

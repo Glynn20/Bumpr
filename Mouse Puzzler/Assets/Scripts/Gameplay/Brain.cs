@@ -9,7 +9,7 @@ public abstract class Brain<TStateMachine, EState, TContext> : MonoBehaviour
     [SerializeField] protected TStateMachine _stateMachine;
     protected TContext _context;
 
-    protected virtual void Awake()
+    protected virtual void Start()
     {
         if (_stateMachine == null) 
         {

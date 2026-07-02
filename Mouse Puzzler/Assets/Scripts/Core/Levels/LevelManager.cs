@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking.PlayerConnection;
@@ -8,6 +9,13 @@ public class LevelManager : MonoBehaviour
     
     [SerializeField] private GameObject _playerObject;
     [SerializeField] private GameObject _cameraObject;
+
+    [Header("Scene")]
+    [SerializeField] private SceneData _currentSceneData;
+    [SerializeField] private GameObject _transitionObject;
+    [SerializeField] private string _transitionStartAnimName;
+    [SerializeField] private string _transitionEndAnimName;
+    private Animator _transitionObjectAnimator;
     
     [Header("Events")]
     [SerializeField] private GameEvent OnLevelBegin;
@@ -21,10 +29,6 @@ public class LevelManager : MonoBehaviour
     private IPannableCamera _mainCamera;
     private static List<IReset> AllResettables = new List<IReset>();
 
-    public void OnPlayerDeath()
-    {
-        // Not Sure yet
-    }
 
     public void OnPlayerContinue()
     {
@@ -65,10 +69,13 @@ public class LevelManager : MonoBehaviour
     {
         if (_initialCamPosition == null || _initialSpawnPoint == null)
         {
-            Debug.LogError("Initial Checkpoint paramters must be set in inspector", this);
+            Debug.LogWarning("Initial Checkpoint parameters must be set in inspector", this);
             return;
         }
         _currentCheckpoint = new Checkpoint(_initialCamPosition, _initialSpawnPoint);
+
+        if (_transitionObject == null) return;
+        _transitionObjectAnimator = _transitionObject.GetComponent<Animator>(); 
     }
     void Start()
     {
@@ -78,10 +85,11 @@ public class LevelManager : MonoBehaviour
         if (_mainCamera == null || _player == null)
         {
             Debug.LogWarning("Level Manager missing Player and/or Camera reference.", this);
+            return;
         }
-
+        PlayTransitionEndAnimation();
         MovePlayerAndCamToCheckpoint();
-        OnLevelBegin?.Raise(this, null);
+        OnLevelBegin?.Raise(this, _currentSceneData);
     }
 
     private void MovePlayerAndCamToCheckpoint()
@@ -101,5 +109,17 @@ public class LevelManager : MonoBehaviour
                 r.Reset();
             }
         }
+    }
+
+    public void PlayTransitionStartAnimation()
+    {
+        if (_transitionObjectAnimator == null) return;
+        _transitionObjectAnimator.Play(_transitionStartAnimName);
+    }
+
+    public void PlayTransitionEndAnimation()
+    {
+        if (_transitionObjectAnimator == null) return;
+        _transitionObjectAnimator.Play(_transitionEndAnimName);
     }
 }

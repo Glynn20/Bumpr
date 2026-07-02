@@ -1445,14 +1445,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_fontStyle: 0
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3077,13 +3077,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BumprNewGameSprite
   OnMouseTouchBumprSprite: {fileID: 11400000, guid: 60d29b048758ddf4b885172b2b2b4289, type: 2}
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   _onTouchFX:
   - {fileID: 946647937}
   _reviveAnimName: Revive
   _fallAnimName: Fall
-  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   _bumprJumpUpSound: {fileID: 11400000, guid: 65eee361dbf553446b14b95dee871758, type: 2}
   _bumprJumpDownSound: {fileID: 11400000, guid: 7050d2c18932912439273c20ef601d10, type: 2}
+  _bumprFallSound: {fileID: 11400000, guid: 57d23680172ecb4468c27588f3d115a8, type: 2}
+  _bumprThudSound: {fileID: 11400000, guid: fe292f3df05b5404eb90f85733f5723a, type: 2}
 --- !u!95 &1558110351
 Animator:
   serializedVersion: 7
