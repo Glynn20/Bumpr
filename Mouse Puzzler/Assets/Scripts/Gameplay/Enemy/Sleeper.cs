@@ -1,6 +1,5 @@
 using JetBrains.Annotations;
 using TMPro;
-using UnityEditor.Callbacks;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
