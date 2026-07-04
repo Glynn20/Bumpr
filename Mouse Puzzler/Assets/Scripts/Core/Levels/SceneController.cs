@@ -1,9 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using UnityEngine.Rendering;
-using DG.Tweening;
-using Unity.VisualScripting;
 
 public class SceneController : Singleton<SceneController>
 {
@@ -77,7 +74,12 @@ public class SceneController : Singleton<SceneController>
     private IEnumerator TransitionScene(SceneData newScene) // TO DO
     {
         _isLoading = true;
-        SceneManager.LoadScene(newScene.SceneName);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(newScene.SceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
 
         _isLoading = false;
         OnLevelLoadComplete?.Raise(this, newScene);

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioManager : Singleton<AudioManager>
 {
     public SoundData CurrentMusicTrack { get {return _currentMusicTrackData;} }
@@ -106,6 +106,10 @@ public class AudioManager : Singleton<AudioManager>
                 return;
             }
         }
+
+        CreateNewPoolElement();
+
+        ConfigureAndPlay(AudioSourcePool[AudioSourcePool.Count - 1], data);
     }
 
     private void StopSoundClip(SoundData data)

@@ -100,6 +100,7 @@ public class LevelManager : MonoBehaviour
     
     private void ResetAllResettables()
     {
+        AllResettables.RemoveAll(resettable => resettable == null || (resettable is MonoBehaviour mb && mb == null));
         List<IReset> resettablesCopyList = new List<IReset>(AllResettables);
 
         foreach (IReset r in resettablesCopyList)
