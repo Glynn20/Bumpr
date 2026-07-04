@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
   SceneName: 1-3
   LevelNumber: 3
+  isMainMenu: 0
+  IsUnlocked: 0
+  BGMTrack: {fileID: 0}
+  STime: 60
+  ATime: 90
+  BTime: 120
+  CTime: 210
