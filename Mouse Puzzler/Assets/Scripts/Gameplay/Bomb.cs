@@ -66,6 +66,7 @@ public class Bomb : MonoBehaviour, IReset
     public void Explode()
     {
         StopTimer();
+        ResetTimer();
         Collider2D[] hits = Physics2D.OverlapCircleAll(_transform.position, _explosionRadius);
         foreach( Collider2D hit in hits)
         {

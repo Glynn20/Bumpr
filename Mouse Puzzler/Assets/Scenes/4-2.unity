@@ -2825,35 +2825,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3801685301875401919, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3801685301875401919, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3801685301875401919, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3801685301875401919, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4645467240146223497, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4645467240146223497, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4645467240146223497, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4645467240146223497, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6296850580444880846, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2865,7 +2865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059675766022573356, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41506,7 +41506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraPanTrigger
   _nextSnapPoint: {fileID: 1122507790}
-  _queuedSnapPoint: {fileID: 632857739}
+  _lerpTransition: 0
 --- !u!1 &2022834864
 GameObject:
   m_ObjectHideFlags: 0
