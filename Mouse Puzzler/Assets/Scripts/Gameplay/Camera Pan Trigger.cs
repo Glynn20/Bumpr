@@ -1,39 +1,16 @@
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
-public class CameraPanTrigger : MonoBehaviour, IReset
+public class CameraPanTrigger : MonoBehaviour
 {
     [SerializeField] private Transform _nextSnapPoint;
-    [SerializeField] private Transform _queuedSnapPoint;
-
+    [SerializeField] private bool _lerpTransition;
     private IPannableCamera cam;
-    private bool _isAlternated = false;
 
-    public void Reset()
-    {
-        if (_isAlternated) SwitchSnapPoints();
-    }
-    public void RegisterToManager()
-    {
-        LevelManager.RegisterResettable(this);
-    }
-    public void UnregisterFromManager()
-    {
-        LevelManager.UnregisterResettable(this);
-    }
 
     private void Start()
     {
         cam = Camera.main.GetComponent<IPannableCamera>();
-    }
-
-    private void OnEnable()
-    {
-        RegisterToManager();
-    }
-    private void OnDisable()
-    {
-        UnregisterFromManager();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,17 +23,17 @@ public class CameraPanTrigger : MonoBehaviour, IReset
             return;
         }
 
-        cam.SnapToPoint(_nextSnapPoint);
-        SwitchSnapPoints();
+        if (_lerpTransition)
+        {
+            cam.SnapToPoint(_nextSnapPoint);    
+        }
+        else
+        {
+            cam.SnapToPointInstant(_nextSnapPoint);
+        }
+        
     }
 
-    private void SwitchSnapPoints()
-    {
-        Transform temp = _nextSnapPoint;
-        _nextSnapPoint = _queuedSnapPoint;
-        _queuedSnapPoint = temp;
 
-        _isAlternated = !_isAlternated;
-    }
 
 }
