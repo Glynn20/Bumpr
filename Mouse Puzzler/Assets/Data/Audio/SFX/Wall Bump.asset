@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d6a255bb7bce44398b434124b34c2e, type: 3}
   m_Name: Wall Bump
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  clip: {fileID: 8300000, guid: 5b83302df3884d441b3339e9f6c11d00, type: 3}
+  clip: {fileID: 8300000, guid: c257d01939129ab46852ce92eeb721b4, type: 3}
   outputGroup: {fileID: 3307128015867110440, guid: 506ec5a3c5a434d499400e4f40cb0337, type: 2}
-  volume: 0.15
+  volume: 0.45
   pitch: 0.8
   pitchVariance: 0.25
   looping: 0

@@ -18,6 +18,7 @@ public class NewGameHandler : MonoBehaviour
     [Header("Events")]
     [SerializeField] private GameEvent OnRequestLoadScene;
     [SerializeField] private GameEvent OnPlaySound;
+    [SerializeField] private GameEvent OnSetCursorEnabled;
     private BumprNewGameSprite _bumpr;
     private Animator _animator;
     private Coroutine _bumprReviveCoroutine;
@@ -28,10 +29,25 @@ public class NewGameHandler : MonoBehaviour
         _bumpr = _bumprModel.GetComponent<BumprNewGameSprite>();
     }
 
+    private void Start()
+    {
+        RequestCursorEnable();
+    }
+
+    public void RequestCursorEnable()
+    {
+        OnSetCursorEnabled?.Raise(this, true);
+    }
+    public void RequestCursorDisable()
+    {
+        OnSetCursorEnabled?.Raise(this, false);
+    }
+
     // Sequence of Events (in order)
     public void BeginNewGame()
     {
         _animator.Play(_newGameAnimName);
+        RequestCursorDisable();
     }
 
     public void PlayBumprFallSequence()

@@ -18,7 +18,6 @@ public class PlayerBrain: Brain<PlayerStateMachine, PlayerStateMachine.PlayerSta
     {
         _stateMachine.TransitionToState(PlayerStateMachine.PlayerState.Dead);
         _context.Movement.DisableInput();
-        _context.Player.DisableCollider();
         _context.Animations.TriggerDeath();
     }
     
@@ -26,7 +25,7 @@ public class PlayerBrain: Brain<PlayerStateMachine, PlayerStateMachine.PlayerSta
     {
         _stateMachine.TransitionToState(_stateMachine.InitialKey);
         _context.Movement.EnableInput();
-        _context.Player.EnableCollider();
+        _context.Player.Respawn();
         _context.Animations.ResetToEnterState();
     }
 

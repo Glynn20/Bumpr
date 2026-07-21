@@ -27,8 +27,26 @@ public class AudioManager : Singleton<AudioManager>
             {
                 ChangeBGMTrack(sceneData.BGMTrack);
             }
+
+            StopAllClips();
         }
     }
+
+    public void OnPauseStateChanged(Component sender, params object[] data)
+    {
+        if (data != null && data[0] is bool isNowPaused)
+        {
+            if (isNowPaused)
+            {
+                PauseAllClips();    
+            }
+            else
+            {
+                ResumeAllClips();
+            }
+        }
+    }
+
     public void OnAudioTriggerCalled(Component sender, params object[] data)
     {
         if (data.Length == 1 && data[0] is SoundData soundData)
@@ -78,6 +96,29 @@ public class AudioManager : Singleton<AudioManager>
                 AudioSourcePool[i].clip = null;
             }
         }
+    }   
+
+    public void PauseAllClips()
+    {
+        for (int i = 0; i < AudioSourcePool.Count; ++i)
+        {
+            if (AudioSourcePool[i].isPlaying) 
+            {
+                AudioSourcePool[i].Pause();
+            }
+        }
+    }
+
+    public void ResumeAllClips()
+    {
+        for (int i = 0; i < AudioSourcePool.Count; ++i)
+        {
+            AudioSource source = AudioSourcePool[i];
+            if (!source.isPlaying && source.time != 0f) 
+            {
+                AudioSourcePool[i].Play();
+            }
+        }   
     }
 
     protected override void Awake()
@@ -100,15 +141,25 @@ public class AudioManager : Singleton<AudioManager>
     {
         for (int i = 0; i < AudioSourcePool.Count; ++i)
         {
-            if (AudioSourcePool[i].isPlaying == false)
+            if (AudioSourcePool[i].clip == null)
             {
                 ConfigureAndPlay(AudioSourcePool[i], data);
                 return;
             }
         }
 
-        CreateNewPoolElement();
+        for (int i = 0; i < AudioSourcePool.Count; ++i)
+        {
+            AudioSource source = AudioSourcePool[i];    
+            if (!source.loop && source.time == 0f)
+            {
+                ConfigureAndPlay(source, data);
+                return;
+            }
+        }
 
+        // All slots taken and unable to be overridden
+        CreateNewPoolElement();
         ConfigureAndPlay(AudioSourcePool[AudioSourcePool.Count - 1], data);
     }
 

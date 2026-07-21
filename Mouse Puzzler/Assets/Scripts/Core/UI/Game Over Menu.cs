@@ -19,14 +19,22 @@ public class GameOverMenu : MonoBehaviour, IMenu
 
     public void OpenMenu()
     {
+        if (_canvas.enabled) return;
+
         OnMenuOpen?.Raise(this, null);
         _canvas.enabled = true;
     }
 
     public void CloseMenu()
     {
+        if (!_canvas.enabled) return;
+        
         OnMenuClose?.Raise(this, null);
         _canvas.enabled = false;
+    }
+    public void OnDisable()
+    {
+        CloseMenu();
     }
     
     public void OnContinueButtonClicked()

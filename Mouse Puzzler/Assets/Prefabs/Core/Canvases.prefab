@@ -1134,6 +1134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d618b7a2e14f58e4bba8a8ebdc1d3280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  OnMenuOpen: {fileID: 11400000, guid: b42fa6dd13d637644997a3db0f794830, type: 2}
+  OnMenuClose: {fileID: 11400000, guid: 62158e6d11d961f4187e68235358d4b2, type: 2}
 --- !u!114 &8162259942808995579
 MonoBehaviour:
   m_ObjectHideFlags: 0

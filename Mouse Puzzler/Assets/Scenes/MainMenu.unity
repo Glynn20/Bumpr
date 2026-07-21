@@ -1050,50 +1050,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651830382}
   m_CullTransparentMesh: 1
---- !u!1 &681789814 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8268312952795135456, guid: c520ab684cd3e3c42831269cfb065e80, type: 3}
-  m_PrefabInstance: {fileID: 1682062158352128254}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &681789815 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5544601208205928303, guid: c520ab684cd3e3c42831269cfb065e80, type: 3}
-  m_PrefabInstance: {fileID: 1682062158352128254}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681789814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52c4d22aab6fae243a5ff2720edb7158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ParticleManager
---- !u!114 &681789817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681789814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
-  gameEvent: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 681789815}
-        m_TargetAssemblyTypeName: ParticleManager, Assembly-CSharp
-        m_MethodName: PlayFX
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &691766097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,6 +3218,7 @@ MonoBehaviour:
   _bumprReviveExplosionSound: {fileID: 11400000, guid: 5262ece502ae3ba4a9412a6701f8d3ce, type: 2}
   OnRequestLoadScene: {fileID: 11400000, guid: 2e0786b62c910b4428deb52ce63198fc, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnSetCursorEnabled: {fileID: 11400000, guid: f9a7d72cfa283e9468ade8d3398e638a, type: 2}
 --- !u!114 &1559600427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5991,10 +5948,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8268312952795135456, guid: c520ab684cd3e3c42831269cfb065e80, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 681789817}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c520ab684cd3e3c42831269cfb065e80, type: 3}
 --- !u!1 &1693996478494492858
 GameObject:
@@ -6407,6 +6361,14 @@ PrefabInstance:
     - target: {fileID: 2973302594685416502, guid: 7da9149c8406dec48811e716429ec941, type: 3}
       propertyPath: m_Name
       value: CursorController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RequestEnableCursor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762032190317245778, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RemoveRequestEnableCursor
       objectReference: {fileID: 0}
     - target: {fileID: 8328448754950319910, guid: 7da9149c8406dec48811e716429ec941, type: 3}
       propertyPath: m_LocalPosition.x

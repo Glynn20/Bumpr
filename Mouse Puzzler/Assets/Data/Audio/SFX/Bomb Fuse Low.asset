@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d6a255bb7bce44398b434124b34c2e, type: 3}
   m_Name: Bomb Fuse Low
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  clip: {fileID: 8300000, guid: 41775d7904d8bda48ba20ee14ce1ca39, type: 3}
+  clip: {fileID: 8300000, guid: b470d16cae2aefd4fa4b51155668f99d, type: 3}
   outputGroup: {fileID: 3307128015867110440, guid: 506ec5a3c5a434d499400e4f40cb0337, type: 2}
-  volume: 0.3
+  volume: 0.48
   pitch: 1
   pitchVariance: 0
   looping: 1

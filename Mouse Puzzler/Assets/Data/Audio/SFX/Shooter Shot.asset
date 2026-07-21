@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d6a255bb7bce44398b434124b34c2e, type: 3}
   m_Name: Shooter Shot
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  clip: {fileID: 8300000, guid: aa53cd6ef5577d6418ea4bd265b943ae, type: 3}
+  clip: {fileID: 8300000, guid: 1420c63a93d22b84981c1d0ebc68c194, type: 3}
   outputGroup: {fileID: 3307128015867110440, guid: 506ec5a3c5a434d499400e4f40cb0337, type: 2}
-  volume: 0.18
-  pitch: 0.74
-  pitchVariance: 0
+  volume: 0.36
+  pitch: 0.85
+  pitchVariance: 0.15
   looping: 0
-  allowRandomPitch: 0
+  allowRandomPitch: 1

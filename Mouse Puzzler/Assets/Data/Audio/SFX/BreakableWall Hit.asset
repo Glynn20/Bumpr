@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d6a255bb7bce44398b434124b34c2e, type: 3}
   m_Name: BreakableWall Hit
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  clip: {fileID: 8300000, guid: 7fc1f3e985d8e50418524de07306df9d, type: 3}
+  clip: {fileID: 8300000, guid: 7250757801205c2479b141366ad32120, type: 3}
   outputGroup: {fileID: 3307128015867110440, guid: 506ec5a3c5a434d499400e4f40cb0337, type: 2}
-  volume: 0.25
+  volume: 0.6
   pitch: 1
   pitchVariance: 0.05
   looping: 0
-  allowRandomPitch: 0
+  allowRandomPitch: 1

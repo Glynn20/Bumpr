@@ -17,7 +17,11 @@ public class CheckpointTrigger : MonoBehaviour//, IReset
     [Header("Sound")]
     [SerializeField] private SoundData _onTriggerSoundData;
 
-    private SpriteRenderer _spriteRenderer;
+    [Header("Animations")]
+    
+    [SerializeField] private string _animNameCheckpointReached;
+
+    private Animator _animator;
     private BoxCollider2D _collider;
     private bool _triggered = false;
 
@@ -48,25 +52,26 @@ public class CheckpointTrigger : MonoBehaviour//, IReset
     private void Awake()
     {
         _collider = GetComponent<BoxCollider2D>();
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        _spriteRenderer.sprite = _preTriggerSprite;
+        _animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponentInChildren<IPlayer>() == null) return;
         if (_triggered) return;
+
         if (_camSnapPoint == null || _spawnPoint == null)
         {
             Debug.LogWarning("Invalid Checkpoint. Set transforms in inspector.", this);
             return;
         }
 
+
         _triggered = true;
         _onCheckpointReached?.Raise(this, new Checkpoint(_camSnapPoint, _spawnPoint));
         OnPlaySound?.Raise(this, _onTriggerSoundData);
 
-        _spriteRenderer.sprite = _onTriggerSprite;
+        _animator.Play(_animNameCheckpointReached);
         
         _collider.enabled = false;
     }

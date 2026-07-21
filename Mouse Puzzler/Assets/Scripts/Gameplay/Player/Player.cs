@@ -11,6 +11,7 @@ public class Player : MonoBehaviour,
     public int MaxHealth => _maxHealth;
     public Transform BombAttachPoint => _bombAttachPoint;
     public bool IsPermanentAttachPoint => _isPermanentAttachPoint;
+    public bool IsDead => _isDead;
 
     [Header("Data")]
     [SerializeField] private PlayerData _data;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour,
     private Collider2D _collider;
     private int _currentHealth;
     private int _maxHealth = 1;
+    private bool _isDead;
 
     void Awake()
     {
@@ -39,11 +41,10 @@ public class Player : MonoBehaviour,
     {
         _transform.position = destination.position;
     }
-    public void Respawn(Transform respawnPoint)
+    public void Respawn()
     {
-        //Placeholder for now
-        TeleportTo(respawnPoint);
-        //
+        _isDead = false;
+        EnableCollider();
     }
     public void TakeDamage() 
     {
@@ -60,7 +61,9 @@ public class Player : MonoBehaviour,
         _collider.enabled = true;
     }
     public void Die()
-    {  
+    { 
+        _isDead = true;
+        DisableCollider();
         _playerDeathEvent?.Raise(this, new DeathInfo(_transform));
     }
 

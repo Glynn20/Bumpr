@@ -49,16 +49,25 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
 
     public void OpenMenu() // TODO   Called on Level Completed
     {
+        if (_canvas.enabled) return;
+        
         if (_levelCompleteCoroutine != null) Debug.LogWarning("Level Complete anim could not run. Coroutine not null.");
         _canvas.enabled = true;
         _animator.Play("LevelComplete");
         OnMenuOpen?.Raise(this, null);
     }
 
-    public void CloseMenu() //TODO
+    public void CloseMenu()
     {
+        if (!_canvas.enabled) return;
+
         OnMenuClose?.Raise(this, null);
         _canvas.enabled = false;
+    }
+
+    public void OnDisable()
+    {
+        CloseMenu();
     }
 
     public void OnLevelComplete(Component sender, params object[] data)

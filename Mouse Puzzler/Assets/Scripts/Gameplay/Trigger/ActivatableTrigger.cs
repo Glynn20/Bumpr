@@ -34,11 +34,14 @@ public class ActivatableTrigger : MonoBehaviour, IReset
 
         foreach (Object obj in _activatables)
         {
-            IActivatable activatable = obj.GetComponent<IActivatable>();
-            if (activatable != null)
+            IActivatable[] activatables = obj.GetComponents<IActivatable>();
+            if (activatables != null)
             {
-                if (_isDeactivator) activatable.Deactivate();
-                else                activatable.Activate();
+                foreach (IActivatable a in activatables)
+                {
+                    if (_isDeactivator) a.Deactivate();
+                    else                a.Activate();
+                }
             }
         }
         

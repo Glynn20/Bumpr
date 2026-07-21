@@ -24,7 +24,6 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         HideAndDestroy();
-        Debug.Log(other.gameObject.layer);
     }
 
     private void HideAndDestroy()

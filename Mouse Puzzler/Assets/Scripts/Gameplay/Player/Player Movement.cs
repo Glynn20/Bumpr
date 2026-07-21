@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     private float _currentSpeed; 
     private UnityEngine.Vector2 _lastPosition;
     private SpriteRenderer _sprite;
+    private Player _playerRef;
 
     [Header("Sound")]
     [SerializeField] private SoundData _startMovingSoundData;
@@ -65,16 +66,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
         _isInputEnabled = state;
         ResetAccumulatedInputs();    
     }
-    public void HideCursor()
-    {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
-    }
-    public void ShowCursor()
-    {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;   
-    }
+
     public PlayerMoveState GetMoveState()
     {
         if (_currentSpeed > _config.RunToOverheatThreshold)
@@ -95,7 +87,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     {
         if (data.Length == 1 && data[0] is bool isNowPaused)
         {
-            if (isNowPaused)
+            if (isNowPaused || _playerRef.IsDead)
             {
                 DisableInput();
             }
@@ -116,10 +108,10 @@ public class PlayerMovement : MonoBehaviour, IMovement
     {
         _rb = GetComponent<Rigidbody2D>();  
         _sprite = GetComponentInChildren<SpriteRenderer>();
+        _playerRef = GetComponentInChildren<Player>();
         _transform = transform;
         _lastPosition = _rb.position;
 
-        HideCursor();
         _mouseSens = Mathf.Clamp(_mouseSens, _minMouseSens, _maxMouseSens);
     }    
 
