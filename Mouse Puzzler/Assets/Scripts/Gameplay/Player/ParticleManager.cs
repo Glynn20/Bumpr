@@ -10,7 +10,7 @@ public class ParticleManager : Singleton<ParticleManager>
     /// Your event listener method matching your AudioManager signature.
     /// Expects: data[0] = ParticleData, data[1] = Vector2 (position)
     /// </summary>
-    public void PlayFX(Component sender, params object[] data)
+    public void PlayFX(Component sender, params object[] data) // ParticleData, Vector2
     {
         if (data != null && data.Length >= 2 
             && data[0] is ParticleData fxData 

@@ -8,6 +8,8 @@ public class ConveyorBelt : MonoBehaviour, IReset
 {
     [SerializeField] private GameObject _prefab;
     [SerializeField] private Transform[] _path;
+
+    // Spawn interval must be sum of timebetweenmove and oscillationduration to look realistic
     [Range(0.05f, 10.0f)][SerializeField] private float _spawninterval = 1.0f;
     [Range(0.01f,10.0f)][SerializeField] private float _timeBetweenMove = 1.0f;
     [Range(0.01f,10.0f)][SerializeField] private float _oscillationDuration = 1.0f;

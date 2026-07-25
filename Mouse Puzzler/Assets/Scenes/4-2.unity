@@ -1991,6 +1991,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f9fff49491b41c439484aec48f615f8, type: 3}
+--- !u!114 &230051424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -3508570721208810961, guid: 5f9fff49491b41c439484aec48f615f8, type: 3}
+  m_PrefabInstance: {fileID: 230051423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40c4fb6c7ceee24cb6aaec47d14057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleporterOut
 --- !u!1 &230386782
 GameObject:
   m_ObjectHideFlags: 0
@@ -42705,7 +42716,7 @@ PrefabInstance:
     - target: {fileID: 5684978015111673578, guid: 5f969b41ca772f543b8fb2052270eff8, type: 3}
       propertyPath: _destination
       value: 
-      objectReference: {fileID: 331278393}
+      objectReference: {fileID: 230051424}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

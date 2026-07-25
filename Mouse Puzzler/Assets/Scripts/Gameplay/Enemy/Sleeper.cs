@@ -21,20 +21,38 @@ public class Sleeper : MonoBehaviour, IActivatable, IReset
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private Transform _spawnLocation; 
 
+    [Header("Events")]
+    [SerializeField] private GameEvent OnPlaySound;
+
+    [Header("Sounds")]
+    [SerializeField] private SoundData _aggroSound;
+
+    [Header("Animator")]
+    [SerializeField] private string _idleAnimName;
+    [SerializeField] private string _aggroAnimName;
+
     private bool _playerInRange = false;
     private PlayerMovement _playerMovement;
     private Rigidbody2D _rb;
     private Transform _transform;
     private Vector2 _chaseDirection;
+    private Animator _animator;
 
     // Default Values
     private bool _defaultIsActivatedOnStart;
 
+    public void PlayAggroSound()
+    {
+        OnPlaySound?.Raise(this, _aggroSound);
+    }
+
     public void Reset()
     {
+        Debug.Log("Resetted");
         _transform.position = _spawnLocation.position;
         IsAggro = false;
         _rb.linearVelocity = Vector2.zero;
+        _animator?.Play(_idleAnimName);
 
         if (_defaultIsActivatedOnStart) Activate();
         else                            Deactivate();
@@ -64,7 +82,6 @@ public class Sleeper : MonoBehaviour, IActivatable, IReset
     {
         IsActivated = false;
         IsAggro = false;
-
         _rb.linearVelocity = Vector2.zero;
     }
     public void OnPlayerDeath()
@@ -74,6 +91,7 @@ public class Sleeper : MonoBehaviour, IActivatable, IReset
 
     void Awake()
     {
+        _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
         _transform = transform;
         _defaultIsActivatedOnStart = IsActivatedOnStart;
@@ -91,18 +109,7 @@ public class Sleeper : MonoBehaviour, IActivatable, IReset
     {
         if (!IsActivated) return;
 
-        if (IsAggro)
-        {
-            ChasePlayer();
-            return;
-        }
-        else
-        {
-            if (_playerInRange)
-            {
-                CheckForPlayerRunning();
-            }
-        }
+        if (IsAggro) ChasePlayer();
     }
 
     private void SetSpawn()
@@ -116,32 +123,21 @@ public class Sleeper : MonoBehaviour, IActivatable, IReset
         Debug.Log("OnTriggerEnter2D detected.", this);
         if (other.gameObject.GetComponent<PlayerMovement>() != null)
         {
-            _playerInRange = true;
-            if (_instantlyChaseWhenPlayerInRange) IsAggro = true;
+            if (IsAggro) return;
+
+            else
+            {
+                IsAggro = true;
+                _animator?.Play(_aggroAnimName);
+            }
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.GetComponent<PlayerMovement>() != null)
-        {
-            _playerInRange = false;
-        }
-    }
     private void ChasePlayer()
     {
         _chaseDirection = (_playerMovement.transform.position - _transform.position).normalized;
         _rb.linearVelocity = _chaseDirection * _moveSpeed; 
-        //_transform.position = Vector2.MoveTowards(_transform.position, _playerMovement.transform.position, _moveSpeed * Time.deltaTime);
+
     }
     
-    private void CheckForPlayerRunning()
-    {
-        PlayerMoveState state = _playerMovement.GetMoveState();
-        if (state == PlayerMoveState.Running ||
-            state == PlayerMoveState.Overheating)
-        {
-            IsAggro = true;
-        }
-    }
 }

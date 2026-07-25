@@ -106,7 +106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Teleporter
   _destination: {fileID: 0}
   _teleporterUsedSoundData: {fileID: 11400000, guid: 346d6cda97aa04b49a15188ffbb64323, type: 2}
+  _teleporterFX: {fileID: 11400000, guid: d2419a5c0a1fd2c4e9db6cfca7e6bf72, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayTeleporterParticleFX: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
 --- !u!58 &4002102320977724546
 CircleCollider2D:
   m_ObjectHideFlags: 0
