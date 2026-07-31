@@ -13,19 +13,17 @@ public class SceneSwitchButton : MonoBehaviour
     [Header("Other")]
     [SerializeField] private SceneData sceneSwitchOnClick;
 
-    
 
     public void OnClick()
     {
-        SwitchToScene();
         OnPlaySound?.Raise(this, UIClickSound);
+        
+
+        SwitchToScene();
     }
     public void SwitchToScene()
     {
         OnRequestLoadScene?.Raise(this, sceneSwitchOnClick);
     }
-    public void SwitchToNextScene()
-    {
-        OnRequestLoadNextScene?.Raise(this, null);
-    }
+
 }

@@ -5077,6 +5077,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4388956406810620059, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: sceneSwitchOnClick
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a8b5bd5cdcb34f44a4cbdfcdabebd11, type: 2}
     - target: {fileID: 4645467240146223497, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

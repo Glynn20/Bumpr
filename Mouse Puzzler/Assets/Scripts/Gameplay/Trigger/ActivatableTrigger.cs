@@ -9,10 +9,10 @@ public class ActivatableTrigger : MonoBehaviour, IReset
     [SerializeField] private List<GameObject> _activatables;
     [SerializeField] private bool _isDeactivator = false;
     private bool _activated;
-    private Collider2D _collider;
+    protected Collider2D _collider;
 
 
-    public void Reset()
+    public virtual void Reset()
     {
         _collider.enabled = true;
         _activated = false;
@@ -48,7 +48,7 @@ public class ActivatableTrigger : MonoBehaviour, IReset
         _activated = true;
         _collider.enabled = false;
     }
-    private void Awake()
+    protected virtual void Awake()
     {
         _collider = GetComponent<Collider2D>();
     }

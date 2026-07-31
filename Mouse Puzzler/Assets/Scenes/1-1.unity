@@ -22310,6 +22310,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4388956406810620059, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: sceneSwitchOnClick
+      value: 
+      objectReference: {fileID: 11400000, guid: 09334fe0217c7b94196dd02a3b1e91ea, type: 2}
     - target: {fileID: 4645467240146223497, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22604,7 +22608,7 @@ PrefabInstance:
     - target: {fileID: 8243278476663081157, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8717730767282819092}
+      objectReference: {fileID: 0}
     - target: {fileID: 8243278476663081157, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetNextCrossLocation
@@ -22618,17 +22622,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
---- !u!114 &8717730767282819092 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4366584997470868170, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
-  m_PrefabInstance: {fileID: 8717730767282819091}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dda14af0b927dd4bb93ad8fd0b718f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeathCross
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

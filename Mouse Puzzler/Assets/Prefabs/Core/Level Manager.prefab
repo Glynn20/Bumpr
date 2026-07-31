@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4370188896176024170}
   - component: {fileID: 6297200834420783437}
-  - component: {fileID: 4366584997470868170}
+  - component: {fileID: 6416209659095709364}
   - component: {fileID: 8243278476663081157}
   - component: {fileID: 8936396427073716264}
   - component: {fileID: 5618307617250488856}
@@ -157,7 +157,7 @@ MonoBehaviour:
   OnLevelBegin: {fileID: 11400000, guid: 789346a56ddaccb4b9c73479aa341aa9, type: 2}
   _initialCamPosition: {fileID: 0}
   _initialSpawnPoint: {fileID: 0}
---- !u!114 &4366584997470868170
+--- !u!114 &6416209659095709364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,8 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeathCross
   _prefab: {fileID: 2280810276966420709, guid: ffb1991cc610bd84e9170ef9d88aa05d, type: 3}
   _poolLength: 50
-  _sortOrderMin: 0
-  _sortOrderMax: 0
 --- !u!114 &8243278476663081157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,19 +187,7 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6297200834420783437}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: OnPlayerDeath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4366584997470868170}
+      - m_Target: {fileID: 6416209659095709364}
         m_TargetAssemblyTypeName: DeathCross, Assembly-CSharp
         m_MethodName: SetNextCrossLocation
         m_Mode: 0
@@ -241,7 +227,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4366584997470868170}
+      - m_Target: {fileID: 6416209659095709364}
         m_TargetAssemblyTypeName: DeathCross, Assembly-CSharp
         m_MethodName: PlaceNextCross
         m_Mode: 1

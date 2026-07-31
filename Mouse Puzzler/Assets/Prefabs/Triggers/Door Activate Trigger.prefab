@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -8882549042931521272, guid: 5940fe26a9dbbcc46bc2d10f3e9f5176, type: 3}
+  m_Sprite: {fileID: -2126958817917324646, guid: 3f127a2b1a6cf69498f9e92529f33ca2, type: 3}
   m_Color: {r: 0, g: 1, b: 0.77702427, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,6 +108,8 @@ MonoBehaviour:
   _isDeactivator: 0
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   _onTriggerSoundData: {fileID: 11400000, guid: 77831288aa7cd6f4786c1f9a784b611f, type: 2}
+  _normalSprite: {fileID: -2126958817917324646, guid: 3f127a2b1a6cf69498f9e92529f33ca2, type: 3}
+  _pressedSprite: {fileID: -4672620830915354684, guid: 3f127a2b1a6cf69498f9e92529f33ca2, type: 3}
 --- !u!61 &8675933184213358772
 BoxCollider2D:
   m_ObjectHideFlags: 0
