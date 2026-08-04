@@ -76,11 +76,6 @@ public class LevelCompleteMenu : MonoBehaviour, IMenu
         SetLevelTimeText();
         GetLevelRating(); 
     }
-    public void OnNextLevelButtonClicked()
-    {
-        CloseMenu();
-    }
-
     void Awake()
     {
         _canvas = GetComponent<Canvas>();

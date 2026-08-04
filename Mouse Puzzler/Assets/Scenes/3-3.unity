@@ -3966,6 +3966,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.45983887
       objectReference: {fileID: 0}
+    - target: {fileID: 7628269528965320428, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: sceneSwitchOnClick
+      value: 
+      objectReference: {fileID: 11400000, guid: 33a08797ca63af742b87bdfe6bc34c24, type: 2}
     - target: {fileID: 8059675766022573356, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_Name
       value: Canvases
