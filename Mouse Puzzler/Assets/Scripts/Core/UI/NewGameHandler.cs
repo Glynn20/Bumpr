@@ -8,6 +8,7 @@ public class NewGameHandler : MonoBehaviour
     [SerializeField] private string _newGameAnimName;
     [SerializeField] private string _bumpRFallSequenceAnimName;
     [SerializeField] private string _bumprReviveEffectAnimName;
+
     [Header("Other")]
     [SerializeField] private GameObject _dummyCursor;
     [SerializeField] private GameObject _bumprModel;
@@ -19,6 +20,10 @@ public class NewGameHandler : MonoBehaviour
     [SerializeField] private GameEvent OnRequestLoadScene;
     [SerializeField] private GameEvent OnPlaySound;
     [SerializeField] private GameEvent OnSetCursorEnabled;
+
+    [Header("SFX")]
+    [SerializeField] private SoundData _newGameSound;
+
     private BumprNewGameSprite _bumpr;
     private Animator _animator;
     private Coroutine _bumprReviveCoroutine;
@@ -46,6 +51,7 @@ public class NewGameHandler : MonoBehaviour
     // Sequence of Events (in order)
     public void BeginNewGame()
     {
+        OnPlaySound?.Raise(this, _newGameSound);
         _animator.Play(_newGameAnimName);
         RequestCursorDisable();
     }
