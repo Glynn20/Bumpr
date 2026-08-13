@@ -2210,8 +2210,36 @@ PrefabInstance:
       value: CursorController
       objectReference: {fileID: 0}
     - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 815144487}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RequestEnableCursor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetMenuType
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CursorManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741964041341301918, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6762032190317245778, guid: 7da9149c8406dec48811e716429ec941, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2323,6 +2351,7 @@ GameObject:
   - component: {fileID: 537272361}
   - component: {fileID: 537272360}
   - component: {fileID: 537272365}
+  - component: {fileID: 537272366}
   m_Layer: 5
   m_Name: Settings Canvas
   m_TagString: Untagged
@@ -2438,10 +2467,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuSettings
   hideUnderlyingMenus: 1
+  IsPartOfPauseMenu: 0
   OnMenuOpen: {fileID: 11400000, guid: b42fa6dd13d637644997a3db0f794830, type: 2}
   OnMenuClose: {fileID: 11400000, guid: 62158e6d11d961f4187e68235358d4b2, type: 2}
   _UIButtonSound: {fileID: 11400000, guid: 1dbb9898abe632b4c974c029c1db45af, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+--- !u!114 &537272366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537272354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 2bc11d2df0be9764e8ae861d55ba5aa8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 537272365}
+        m_TargetAssemblyTypeName: MenuSettings, Assembly-CSharp
+        m_MethodName: OnNewGamePressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &585079756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3028,6 +3086,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &815144487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8357653016752753262, guid: 7da9149c8406dec48811e716429ec941, type: 3}
+  m_PrefabInstance: {fileID: 504687359}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d490983e75ce0eb4f9be2f49c7e9df4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
 --- !u!1 &822283862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,6 +4399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuMainMenuBase
   hideUnderlyingMenus: 1
+  IsPartOfPauseMenu: 0
   OnMenuOpen: {fileID: 11400000, guid: b42fa6dd13d637644997a3db0f794830, type: 2}
   OnMenuClose: {fileID: 11400000, guid: 62158e6d11d961f4187e68235358d4b2, type: 2}
   _UIButtonSound: {fileID: 11400000, guid: 1dbb9898abe632b4c974c029c1db45af, type: 2}
@@ -6330,6 +6400,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1581264665}
   - component: {fileID: 1581264664}
+  - component: {fileID: 1581264667}
+  - component: {fileID: 1581264666}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -6365,6 +6437,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1581264666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581264663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: c96ea4849ae02cc41879cf3dca8901d3, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1581264664}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: CloseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1581264667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581264663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 2e0786b62c910b4428deb52ce63198fc, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1581264664}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: CloseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1606614628
 GameObject:
   m_ObjectHideFlags: 0
@@ -7500,7 +7628,7 @@ GameObject:
   - component: {fileID: 1729211985}
   - component: {fileID: 1729211984}
   m_Layer: 5
-  m_Name: Content
+  m_Name: Level List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7548,6 +7676,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4a8b5bd5cdcb34f44a4cbdfcdabebd11, type: 2}
   - {fileID: 11400000, guid: 33a08797ca63af742b87bdfe6bc34c24, type: 2}
   - {fileID: 11400000, guid: 2f85a95e6af608c499d68aae6dfba64c, type: 2}
+  - {fileID: 11400000, guid: 5af2fe8cbc6a7ab42bd3a8fa2c484214, type: 2}
   _listItemPrefab: {fileID: 3942281808958501209, guid: 8beb3d9b99999a5438537e4bd80d608d, type: 3}
 --- !u!114 &1729211985
 MonoBehaviour:
@@ -8171,6 +8300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuLevelSelect
   hideUnderlyingMenus: 1
+  IsPartOfPauseMenu: 0
   OnMenuOpen: {fileID: 11400000, guid: b42fa6dd13d637644997a3db0f794830, type: 2}
   OnMenuClose: {fileID: 11400000, guid: 62158e6d11d961f4187e68235358d4b2, type: 2}
   _UIButtonSound: {fileID: 11400000, guid: 1dbb9898abe632b4c974c029c1db45af, type: 2}

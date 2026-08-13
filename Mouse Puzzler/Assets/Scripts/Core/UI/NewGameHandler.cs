@@ -34,26 +34,11 @@ public class NewGameHandler : MonoBehaviour
         _bumpr = _bumprModel.GetComponent<BumprNewGameSprite>();
     }
 
-    private void Start()
-    {
-        RequestCursorEnable();
-    }
-
-    public void RequestCursorEnable()
-    {
-        OnSetCursorEnabled?.Raise(this, true);
-    }
-    public void RequestCursorDisable()
-    {
-        OnSetCursorEnabled?.Raise(this, false);
-    }
-
     // Sequence of Events (in order)
     public void BeginNewGame()
     {
         OnPlaySound?.Raise(this, _newGameSound);
         _animator.Play(_newGameAnimName);
-        RequestCursorDisable();
     }
 
     public void PlayBumprFallSequence()

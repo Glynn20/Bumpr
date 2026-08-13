@@ -2532,12 +2532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 542f7caf67f21714ca8fe77ed4b4be46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextLevelButton
-  OnRequestLoadScene: {fileID: 11400000, guid: 2e0786b62c910b4428deb52ce63198fc, type: 2}
-  OnRequestLoadNextScene: {fileID: 11400000, guid: c96ea4849ae02cc41879cf3dca8901d3, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
   OnNextLevelButtonPressed: {fileID: 11400000, guid: 42d7ef0f811d46c4aa07a7bb87a00732, type: 2}
   UIClickSound: {fileID: 11400000, guid: ba0167dc187417e4591f3dd3d88c432e, type: 2}
-  sceneSwitchOnClick: {fileID: 0}
 --- !u!224 &6703210051555066819
 RectTransform:
   m_ObjectHideFlags: 0

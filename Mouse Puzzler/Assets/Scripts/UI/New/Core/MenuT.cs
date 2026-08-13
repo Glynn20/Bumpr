@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public abstract class Menu<T> : Menu where T : Menu<T>
 {
     public static T Instance {get; private set;}
+    
 
     [Header("SFX")]   
     [SerializeField] protected SoundData _UIButtonSound;

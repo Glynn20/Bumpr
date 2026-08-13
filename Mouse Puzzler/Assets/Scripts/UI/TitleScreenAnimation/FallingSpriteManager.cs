@@ -45,7 +45,6 @@ public class FallingSpriteManager : MonoBehaviour
     /* Destroys Falling Sprites at the bottom of the screen */
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision Detected");
         if (other.gameObject.GetComponent<FallingSprite>() != null)
         {
             DeactivatePoolObject(other.gameObject);

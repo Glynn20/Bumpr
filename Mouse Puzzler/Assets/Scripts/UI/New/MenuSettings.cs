@@ -17,4 +17,9 @@ public class MenuSettings : Menu<MenuSettings>
     {
         Hide();
     }
+
+    public void OnNewGamePressed()
+    {
+        Hide();
+    }
 }

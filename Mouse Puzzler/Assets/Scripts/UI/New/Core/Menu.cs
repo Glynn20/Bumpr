@@ -5,6 +5,7 @@ public abstract class Menu : MonoBehaviour
 {
     [Header("Config")]
     public bool hideUnderlyingMenus = true;
+    public bool IsPartOfPauseMenu = false;
 
     [Header("Events")]
     [SerializeField] private GameEvent OnMenuOpen;

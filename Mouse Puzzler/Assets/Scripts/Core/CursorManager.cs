@@ -11,6 +11,11 @@ public class CursorManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
     }
+    
+    public void GetMenuRequesterType(Component sender, params object[] data) 
+    {
+        Debug.Log(sender.GetType());
+    }
 
     public void SetCursorEnabled(Component sender, params object[] data)
     {
@@ -19,6 +24,7 @@ public class CursorManager : MonoBehaviour
             if (enable)
             {
                 RequestEnableCursor();
+                Debug.Log(sender.GetType());
             }
             else
             {
@@ -32,6 +38,7 @@ public class CursorManager : MonoBehaviour
         ++_openRequests;
         EvaluateCursorState();
     }
+
     public void RemoveRequestEnableCursor()
     {
         --_openRequests;
@@ -40,6 +47,13 @@ public class CursorManager : MonoBehaviour
 
         EvaluateCursorState();
     }
+
+    public void RemoveAllRequests()
+    {
+        _openRequests = 0;
+        EvaluateCursorState();
+    }
+
     private void EvaluateCursorState()
     {
         if (_openRequests > 0)

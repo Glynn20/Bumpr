@@ -1,47 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance { get; private set; }
-
     [SerializeField] private Menu _initialMenu;
     private readonly Stack<Menu> menuStack = new Stack<Menu>();
+    private bool _isClosingPauseMenus = false;
 
-    private void Awake()
+    public void OnPauseStateChanged(Component sender, params object[] data)
     {
-        if (Instance != null && Instance != this)
+        if (data.Length == 1 && data[0] is bool isNowPaused)
         {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
-
-    private void Start()
-    {
-        if (_initialMenu != null)
-        {
-            OpenMenu(_initialMenu);
+            if (!isNowPaused)
+            {
+                ClosePauseMenus();
+            }
         }
     }
-
-    private void Update()
-    {
-        // TO CHANGE to update with unity event driven input 
-    }
-
     public void OpenMenu(Menu menu)
     {
+        if (menuStack.Count > 0 && menuStack.Peek() == menu) return;
+        
         if (menuStack.Count > 0)
         {
-            Menu topMenu = menuStack.Peek();
+            menuStack.Peek().OnPause();
+        }
 
-            if (topMenu == menu) return;
-
-            topMenu.OnPause();
+        if (menuStack.Contains(menu))
+        {
+            RemoveFromStack(menu);
         }
 
         menuStack.Push(menu);
@@ -74,6 +63,90 @@ public class MenuManager : MonoBehaviour
         {
             Menu menu = menuStack.Pop();
             menu.OnClose();
+        }
+    }
+
+    public void ClosePauseMenus()
+    {
+        if (_isClosingPauseMenus) return;
+        _isClosingPauseMenus = true; 
+
+        while (menuStack.Count > 0)
+        {
+            CleanupDeadReferences();
+
+            Menu topMenu = menuStack.Peek();
+
+            if (topMenu.IsPartOfPauseMenu == false)
+            {
+                break;
+            }
+
+            topMenu = menuStack.Pop();
+            topMenu.OnClose();
+        }
+
+        _isClosingPauseMenus  = false;
+        CleanupDeadReferences();
+        if (menuStack.Count > 0)
+        {
+            menuStack.Peek().OnResume();
+        }
+        
+    }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Debug.Log("Deleting Duplicate");
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        if (_initialMenu != null)
+        {
+            OpenMenu(_initialMenu);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
+
+    private void CleanupDeadReferences()
+    {
+        while (menuStack.Count > 0 && menuStack.Peek() == null)
+        {
+            menuStack.Pop();
+        }
+    }
+
+    private void RemoveFromStack(Menu targetMenu)
+    {
+        Stack<Menu> tempStack = new Stack<Menu>();
+
+        while (menuStack.Count > 0)
+        {
+            Menu popped = menuStack.Pop();
+
+            if (popped != targetMenu)
+            {
+                tempStack.Push(popped);
+            }
+        }
+
+        while (tempStack.Count > 0)
+        {
+            menuStack.Push(tempStack.Pop());
         }
     }
 }

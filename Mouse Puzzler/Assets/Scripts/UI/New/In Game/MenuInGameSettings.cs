@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MenuGameOver : Menu<MenuGameOver>
+public class MenuInGameSettings : Menu<MenuInGameSettings>
 {
     public override void OnBackPressed()
     {
