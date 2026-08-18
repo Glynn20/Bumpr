@@ -12,7 +12,6 @@ public class LevelManager : MonoBehaviour
 
     [Header("Scene")]
     [SerializeField] private SceneData _currentSceneData;
-    [SerializeField] private GameObject _transitionObject;
     [SerializeField] private string _transitionStartAnimName;
     [SerializeField] private string _transitionEndAnimName;
     private Animator _transitionObjectAnimator;
@@ -74,8 +73,6 @@ public class LevelManager : MonoBehaviour
         }
         _currentCheckpoint = new Checkpoint(_initialCamPosition, _initialSpawnPoint);
 
-        if (_transitionObject == null) return;
-        _transitionObjectAnimator = _transitionObject.GetComponent<Animator>(); 
     }
     void Start()
     {
@@ -88,7 +85,6 @@ public class LevelManager : MonoBehaviour
             return;
         }
         PlayTransitionEndAnimation();
-        MovePlayerAndCamToCheckpoint();
         OnLevelBegin?.Raise(this, _currentSceneData);
     }
 

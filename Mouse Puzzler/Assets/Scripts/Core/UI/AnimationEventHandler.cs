@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimationEventHandler : MonoBehaviour
+public class BasicEventTriggerHandler : MonoBehaviour
 {
     [Header("Event")]
     [SerializeField] private GameEvent OnAnimationEvent;

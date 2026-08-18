@@ -8,11 +8,6 @@ public class SceneRegistry : ScriptableObject
 {
     public List<SceneData> AllLevels;
 
-    public SceneData GetLevelByNumber(int levelNumber)
-    {
-        return AllLevels.Find(s => s.LevelNumber == levelNumber);
-    }
-
     public SceneData GetLevelByName(string levelName)
     {
         return AllLevels.Find(s => s.SceneName == levelName);

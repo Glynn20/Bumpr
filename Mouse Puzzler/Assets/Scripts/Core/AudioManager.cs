@@ -1,11 +1,15 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : Singleton<AudioManager>
 {
     public SoundData CurrentMusicTrack { get {return _currentMusicTrackData;} }
+    [SerializeField] private AudioMixer _mainMixer;
+    [SerializeField] private string _masterVolumeVariableName;
 
     [Header("SFX")]
     [SerializeField] private int _poolSize = 15; 
@@ -13,6 +17,7 @@ public class AudioManager : Singleton<AudioManager>
     
     [Header("BGM")]
     [SerializeField] private SoundData _titleScreenTrackData;
+
     private AudioSource _BGMSource;
     private SoundData _currentMusicTrackData;
     public void OnLevelLoadComplete(Component sender, params object[] data)
@@ -29,6 +34,14 @@ public class AudioManager : Singleton<AudioManager>
             }
 
             StopAllClips();
+        }
+    }
+
+    public void OnRequestSetMasterVolume(Component sender, params object [] data)
+    {
+        if (data.Length == 1 && data[0] is float requestedVolume)
+        {
+            SetMasterVolume(requestedVolume);
         }
     }
 
@@ -135,6 +148,11 @@ public class AudioManager : Singleton<AudioManager>
         ConfigureAudioSourceAndData(_BGMSource, _titleScreenTrackData);
         _currentMusicTrackData = _titleScreenTrackData;
         PlayBGMTrack();
+    }
+
+    private void SetMasterVolume(float sliderValue)
+    {
+        _mainMixer.SetFloat(_masterVolumeVariableName, Mathf.Clamp01(sliderValue));
     }
 
     private void PlaySoundClip(SoundData data)

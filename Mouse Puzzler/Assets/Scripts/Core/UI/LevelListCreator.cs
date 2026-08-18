@@ -22,8 +22,7 @@ public class LevelListCreator : MonoBehaviour
         GameObject newListItem = Instantiate(_listItemPrefab, this.transform);
         LevelButton button = newListItem.GetComponent<LevelButton>();
 
-        button.SceneOnClick = scene;
-        button.Text.text = scene.SceneName; 
+        button.Initialize(scene);
     }
 
 }

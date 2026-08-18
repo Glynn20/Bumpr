@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6675923156196508808}
   - component: {fileID: 9000470046249340539}
   - component: {fileID: 45228257470828499}
+  - component: {fileID: 75178675520247536}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -53,6 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea265823c3edbc41813d2a889abc338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  _mainMixer: {fileID: 24100000, guid: 506ec5a3c5a434d499400e4f40cb0337, type: 2}
+  _masterVolumeVariableName: 
   _poolSize: 32
   _titleScreenTrackData: {fileID: 11400000, guid: dfaccb0f3bdf30e4f94129c13afc5895, type: 2}
 --- !u!82 &7290560798972268953
@@ -367,6 +370,34 @@ MonoBehaviour:
       - m_Target: {fileID: 5753470619321772723}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: OnPauseStateChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &75178675520247536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7490466982493492176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9c2620875f5bafc41a2ab09dcd8b8a5d, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5753470619321772723}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: OnRequestSetMasterVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

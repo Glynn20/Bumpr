@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf0380e67c4eb4f4eb502d9f2e417b89, type: 3}
-  m_Name: 4-1 Data
+  m_Name: 1X Data
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
-  SceneName: 4-1
-  LevelNumber: 9
-  isMainMenu: 0
-  IsUnlocked: 0
+  SceneName: 1X
   BGMTrack: {fileID: 0}
-  STime: 90
-  ATime: 140
-  BTime: 200
-  CTime: 400
+  ColourData: {fileID: 11400000, guid: 9065952467edb4a47a609475782f9578, type: 2}
+  levelType: 1
+  STime: 50
+  ATime: 75
+  BTime: 110
+  CTime: 180

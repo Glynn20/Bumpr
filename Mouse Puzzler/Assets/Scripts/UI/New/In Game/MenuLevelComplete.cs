@@ -5,6 +5,15 @@ using System.Collections;
 using System;
 public class MenuLevelComplete : Menu<MenuLevelComplete>
 {
+    /*
+    FLOW
+    next level triggers anim
+    nextlevel button shows
+    button click causes scene transition anim
+    anim triggers event
+    this responds and requests load scene
+    */
+
 
     [Header("Events")]
     [SerializeField] private GameEvent OnRequestLoadScene;
@@ -17,6 +26,9 @@ public class MenuLevelComplete : Menu<MenuLevelComplete>
     [SerializeField] private TextMeshProUGUI _levelRatingText;
     [SerializeField] private TextMeshProUGUI _levelTimeText;
 
+    [Header("External")]
+    [SerializeField] private LevelTimer levelTimer;
+
     private Coroutine _levelCompleteCoroutine;
     private Animator _animator;
     private float _totalPlayerDeaths = 0f;
@@ -27,6 +39,7 @@ public class MenuLevelComplete : Menu<MenuLevelComplete>
     {
         Hide();
     }
+
     public void OnSceneTransitionInAnimEnd()
     {
         OnRequestLoadScene?.Raise(this, _sceneToLoad);
@@ -51,7 +64,7 @@ public class MenuLevelComplete : Menu<MenuLevelComplete>
         if (_levelCompleteCoroutine != null) Debug.LogWarning("Level Complete anim could not run. Coroutine not null.");
 
         _animator.Play(_levelCompleteAnimName);
-        _levelTimeText.text = ConvertLevelTimeToString();
+        _levelTimeText.text = levelTimer?.GetClockTime();
         _levelRatingText.text = GetLevelRating(); 
     }
     public void StartDeathCountCoroutine()
@@ -74,11 +87,6 @@ public class MenuLevelComplete : Menu<MenuLevelComplete>
     }
     private IEnumerator DeathCountCoroutine()
     {
-        /*
-        Enable Animation Object (contains crown, death counter, gravestone)
-        Play Number tick coroutine
-        Once it ends, enable screen-wide click to continue button
-        */
         float t = 0;
         float initialt = 0;
         float displayNum = 0;
@@ -114,22 +122,5 @@ public class MenuLevelComplete : Menu<MenuLevelComplete>
             return "C";
         }
         return "D";
-    }
-    private string ConvertLevelTimeToString()
-    {
-        if (_levelTime < 0) return "Invalid";
-
-        int seconds = (int) _levelTime % 60;
-        int minutes = 0;
-
-        if (_levelTime < 60)
-        {
-            return seconds < 10 ? $"00:0{seconds}" : $"00:{seconds}";
-        }
-        
-        minutes = ((int) _levelTime - seconds) / 60;
-
-        return minutes < 10 ? $"0{minutes}:{seconds}" : $"{minutes}:{seconds}";
-
     }
 }

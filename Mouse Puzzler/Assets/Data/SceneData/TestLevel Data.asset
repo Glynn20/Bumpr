@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: TestLevel Data
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
   SceneName: TestLevel
-  LevelNumber: 11
-  isMainMenu: 0
-  IsUnlocked: 0
   BGMTrack: {fileID: 0}
+  ColourData: {fileID: 11400000, guid: 9065952467edb4a47a609475782f9578, type: 2}
+  levelType: 1
   STime: 0
   ATime: 0
   BTime: 0
