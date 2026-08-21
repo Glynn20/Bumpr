@@ -2012,7 +2012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230386783}
   m_Layer: 7
-  m_Name: Sleeper sp
+  m_Name: Chaser sp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2972,7 +2972,7 @@ PrefabInstance:
     - target: {fileID: 8794780756810002135, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: _sceneToLoad
       value: 
-      objectReference: {fileID: 11400000, guid: a27c959ded3e3364fa039f1b2fbb55f4, type: 2}
+      objectReference: {fileID: 11400000, guid: 33a08797ca63af742b87bdfe6bc34c24, type: 2}
     - target: {fileID: 9219331589112641378, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3568,7 +3568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 337683143}
   m_Layer: 7
-  m_Name: Sleeper sp (1)
+  m_Name: Chaser sp 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35510,9 +35510,13 @@ PrefabInstance:
       propertyPath: _moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3805622856084198300, guid: 02020100e4283ef468a67d6df1f04e9c, type: 3}
+      propertyPath: _spawnLocation
+      value: 
+      objectReference: {fileID: 337683143}
     - target: {fileID: 4763868696663862640, guid: 02020100e4283ef468a67d6df1f04e9c, type: 3}
       propertyPath: m_Name
-      value: Chaser (1)
+      value: Chaser 1
       objectReference: {fileID: 0}
     - target: {fileID: 6997440176770424475, guid: 02020100e4283ef468a67d6df1f04e9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36292,6 +36296,10 @@ PrefabInstance:
       propertyPath: _moveSpeed
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3805622856084198300, guid: 02020100e4283ef468a67d6df1f04e9c, type: 3}
+      propertyPath: _spawnLocation
+      value: 
+      objectReference: {fileID: 230386783}
     - target: {fileID: 4763868696663862640, guid: 02020100e4283ef468a67d6df1f04e9c, type: 3}
       propertyPath: m_Name
       value: Chaser

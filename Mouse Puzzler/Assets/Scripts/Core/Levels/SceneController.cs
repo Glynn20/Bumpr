@@ -25,7 +25,7 @@ public class SceneController : Singleton<SceneController>
 
         if (data.Length > 0 && data[0] is SceneData nextSceneData)
         {
-            if (registry.AllLevels.Contains(nextSceneData))
+            if (registry.AllScenes.Contains(nextSceneData))
             {
                 _currentScene = nextSceneData;
                 StartCoroutine(TransitionScene(nextSceneData));

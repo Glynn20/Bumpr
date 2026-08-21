@@ -5309,6 +5309,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8794780756810002135, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: _sceneToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a8b5bd5cdcb34f44a4cbdfcdabebd11, type: 2}
     - target: {fileID: 9219331589112641378, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7832,7 +7836,7 @@ PrefabInstance:
     - target: {fileID: 7807439216556625367, guid: 2347416a642696244939c502a0156ce8, type: 3}
       propertyPath: _camSnapPoint
       value: 
-      objectReference: {fileID: 1967507348}
+      objectReference: {fileID: 967548202}
     - target: {fileID: 8804298768047253088, guid: 2347416a642696244939c502a0156ce8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5

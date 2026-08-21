@@ -85,6 +85,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
         PlayTransitionEndAnimation();
+        _mainCamera.SnapToPointInstant(_currentCheckpoint.CamSnapPoint);
         OnLevelBegin?.Raise(this, _currentSceneData);
     }
 

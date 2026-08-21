@@ -124,6 +124,7 @@ public class MenuManager : MonoBehaviour
 
     private void CleanupDeadReferences()
     {
+        if (menuStack.Count == 0) return;
         while (menuStack.Count > 0 && menuStack.Peek() == null)
         {
             menuStack.Pop();
@@ -141,6 +142,10 @@ public class MenuManager : MonoBehaviour
             if (popped != targetMenu)
             {
                 tempStack.Push(popped);
+            }
+            else
+            {
+                popped.OnClose();
             }
         }
 

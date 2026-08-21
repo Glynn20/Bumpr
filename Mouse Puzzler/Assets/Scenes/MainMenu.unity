@@ -2218,18 +2218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed8a13c95782424b925fdc1fe229d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelListCreator
-  _levelList:
-  - {fileID: 11400000, guid: c4faf2ad1ccd2634082690da418dbd9a, type: 2}
-  - {fileID: 11400000, guid: 09334fe0217c7b94196dd02a3b1e91ea, type: 2}
-  - {fileID: 11400000, guid: 51ffa7a51dc5dd142955b1773c03cb59, type: 2}
-  - {fileID: 11400000, guid: ad3b74a50c9b2224e8bba0deadc92ff8, type: 2}
-  - {fileID: 11400000, guid: 2495059e601c5cc49945eb15c151d727, type: 2}
-  - {fileID: 11400000, guid: 5699c8beb78ebe346bdac7dae936f04d, type: 2}
-  - {fileID: 11400000, guid: 438dd936c8a898c46b70f674815e6533, type: 2}
-  - {fileID: 11400000, guid: 4a8b5bd5cdcb34f44a4cbdfcdabebd11, type: 2}
-  - {fileID: 11400000, guid: 33a08797ca63af742b87bdfe6bc34c24, type: 2}
-  - {fileID: 11400000, guid: 2f85a95e6af608c499d68aae6dfba64c, type: 2}
-  - {fileID: 11400000, guid: 5af2fe8cbc6a7ab42bd3a8fa2c484214, type: 2}
+  _sceneRegistry: {fileID: 11400000, guid: 838bc4fdb79e4d64295fcdb40bfb3044, type: 2}
   _listItemPrefab: {fileID: 3942281808958501209, guid: 8beb3d9b99999a5438537e4bd80d608d, type: 3}
 --- !u!114 &335619417
 MonoBehaviour:
@@ -2737,7 +2726,7 @@ MonoBehaviour:
   _bumprReviveEffectAnimName: BumpRRevive
   _dummyCursor: {fileID: 1666568185}
   _bumprModel: {fileID: 1043987105}
-  _sceneToLoad: {fileID: 11400000, guid: c4faf2ad1ccd2634082690da418dbd9a, type: 2}
+  _sceneToLoad: {fileID: 11400000, guid: 7f46919f87b8d6d4ea198654dafcad9f, type: 2}
   _wakeUpTextUISound: {fileID: 11400000, guid: 77831288aa7cd6f4786c1f9a784b611f, type: 2}
   _bumprReviveExplosionSound: {fileID: 11400000, guid: 5262ece502ae3ba4a9412a6701f8d3ce, type: 2}
   OnRequestLoadScene: {fileID: 11400000, guid: 2e0786b62c910b4428deb52ce63198fc, type: 2}
@@ -3713,7 +3702,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneController
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4280856658228057786, guid: 47e249ee71047234090c92f8a2dcc453, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
