@@ -6,8 +6,8 @@ using UnityEngine;
 public class ObjectBlinking : MonoBehaviour, IReset
 {
     
-    [SerializeField] private float _timeBeforeBlink;
-    [SerializeField] private float _blinkDuration;
+    [SerializeField] private float _visibleDuration;
+    [SerializeField] private float _invisibleDuration;
     [SerializeField] private GameObject[] _controlledObjects;
     private float _remainingTime;
     private WaitForSeconds _blinkWait;
@@ -18,7 +18,7 @@ public class ObjectBlinking : MonoBehaviour, IReset
         StopAllCoroutines();
         _blinkCoroutine = null;
         ActivateObjects();
-        _remainingTime = _timeBeforeBlink;
+        _remainingTime = _visibleDuration;
     }
     public void RegisterToManager()
     {
@@ -46,8 +46,8 @@ public class ObjectBlinking : MonoBehaviour, IReset
             return;
         }
         ActivateObjects();
-        _blinkWait = new WaitForSeconds(_blinkDuration);
-        _remainingTime = _timeBeforeBlink;
+        _blinkWait = new WaitForSeconds(_invisibleDuration);
+        _remainingTime = _visibleDuration;
     }
 
     void Update()
@@ -105,7 +105,7 @@ public class ObjectBlinking : MonoBehaviour, IReset
         yield return _blinkWait;
         ActivateObjects();
 
-        _remainingTime = _timeBeforeBlink;
+        _remainingTime = _visibleDuration;
         _blinkCoroutine = null;
         yield return null;
     }

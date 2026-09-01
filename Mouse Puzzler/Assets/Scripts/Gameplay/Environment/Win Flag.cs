@@ -21,6 +21,7 @@ public class WinFlag : MonoBehaviour
             OnLevelComplete?.Raise(this, null);
             OnPlayLevelCompleteSound?.Raise(this, _levelCompleteSoundData);
             _levelCompleteText.enabled = true;
+            gameObject.GetComponent<Collider2D>().enabled = false;
         }
     }
 }
