@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 8477734583677110068}
   - component: {fileID: 653426121586561121}
   - component: {fileID: 8019236662292469304}
+  - component: {fileID: 7476981510055791464}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -848,7 +849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320fe1f1db9b183448188a059b3f9ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  _mouseSens: 0.1
   _config: {fileID: 11400000, guid: f1fdd02bbe31bb74aae01cf73883a5aa, type: 2}
   _flipSprite: 1
   _startMovingSoundData: {fileID: 11400000, guid: 65eee361dbf553446b14b95dee871758, type: 2}
@@ -1059,6 +1059,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnLevelBegin
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7476981510055791464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760906760015242316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: efaa538d145d3c54ab8add381e1e250d, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6999756984491312457}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnSensitivityChanged
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

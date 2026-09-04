@@ -20,6 +20,7 @@ public class AudioManager : Singleton<AudioManager>
 
     private AudioSource _BGMSource;
     private SoundData _currentMusicTrackData;
+
     public void OnLevelLoadComplete(Component sender, params object[] data)
     {
         if (data != null && data.Length == 1 && data[0] is SceneData sceneData)
@@ -150,9 +151,14 @@ public class AudioManager : Singleton<AudioManager>
         PlayBGMTrack();
     }
 
-    private void SetMasterVolume(float sliderValue)
+    private void SetMasterVolume(float linearVolume)
     {
-        _mainMixer.SetFloat(_masterVolumeVariableName, Mathf.Clamp01(sliderValue));
+        linearVolume = Mathf.Clamp(linearVolume, 0.0001f, 1f);
+        float decibelVolume = 20f * Mathf.Log10(linearVolume);
+        _mainMixer.SetFloat(_masterVolumeVariableName, decibelVolume);
+        
+        PlayerPrefs.SetFloat(GameSettings.KEY_VOLUME, linearVolume);
+        PlayerPrefs.Save();
     }
 
     private void PlaySoundClip(SoundData data)

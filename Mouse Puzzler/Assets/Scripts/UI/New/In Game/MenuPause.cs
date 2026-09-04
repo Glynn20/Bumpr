@@ -38,6 +38,6 @@ public class MenuPause : Menu<MenuPause>
     }
     public void ButtonPressedSettings()
     {
-        MenuInGameSettings.Show();
+        MenuSettings.Show();
     }
 }

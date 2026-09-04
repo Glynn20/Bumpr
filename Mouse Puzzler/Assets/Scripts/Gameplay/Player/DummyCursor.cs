@@ -16,24 +16,6 @@ public class DummyCursor : PlayerMovement
     private float _distanceToBumpr;
     private float _originalBaseSens; // Stores the starting value of _mouseSens
 
-    private void Start()
-    {
-        // Capture the initial base sensitivity from the parent script at startup
-        _originalBaseSens = _mouseSens;
-    }
-
-    public override void FixedUpdate()
-    {
-        base.FixedUpdate();
-
-        GetDistanceToBumpr();
-
-        float currentMultiplier = CalculateSensMultiplier();
-
-        // Apply the multiplier to the original base value, overwriting the current _mouseSens
-        _mouseSens = _originalBaseSens * currentMultiplier;
-    }
-
     private void GetDistanceToBumpr()
     {
         _distanceToBumpr = Vector2.Distance(transform.position, BumprModel.transform.position);

@@ -13,7 +13,7 @@ public enum PlayerMoveState
 public class PlayerMovement : MonoBehaviour, IMovement
 {
     public float GetCurrentSpeed() => _currentSpeed;
-    [SerializeField] protected float _mouseSens; 
+
     [SerializeField] private PlayerMovementConfig _config;
     [SerializeField] private bool _flipSprite;
     private float _minMouseSens = 0.01f;
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
     private UnityEngine.Vector2 _lastPosition;
     private SpriteRenderer _sprite;
     private Player _playerRef;
+    private float _mouseSens; 
 
     [Header("Sound")]
     [SerializeField] private SoundData _startMovingSoundData;
@@ -37,6 +38,13 @@ public class PlayerMovement : MonoBehaviour, IMovement
     [SerializeField] private GameEvent OnPlaySound;
     [SerializeField] private GameEvent OnPlayParticleEffect;
 
+    public void OnSensitivityChanged(Component sender, params object[] data)
+    {
+        if (data.Length == 1 && data[0] is float newSens)
+        {
+            SetMouseSensitivity(newSens);
+        }
+    }
     public void ReadMouseInput(InputAction.CallbackContext context)
     {
         if (_isInputEnabled == false) return;
@@ -104,7 +112,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
         AdjustPosition();
     }
 
-    void Awake()
+    private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();  
         _sprite = GetComponentInChildren<SpriteRenderer>();
@@ -115,7 +123,17 @@ public class PlayerMovement : MonoBehaviour, IMovement
         _mouseSens = Mathf.Clamp(_mouseSens, _minMouseSens, _maxMouseSens);
     }    
 
-    void AdjustPosition()
+    private void Start()
+    {
+        SetMouseSensitivity(PlayerPrefs.GetFloat(GameSettings.KEY_SENSITIVITY, GameSettings.DEFAULT_SENSITIVITY));
+    }
+
+    private void SetMouseSensitivity(float newValue)
+    {
+        _mouseSens = Mathf.Clamp(newValue, _minMouseSens, _maxMouseSens);
+    }
+
+    private void AdjustPosition()
     {
         float actualDistanceMoved = UnityEngine.Vector2.Distance(_rb.position, _lastPosition);
         _currentSpeed = actualDistanceMoved / Time.fixedDeltaTime;
@@ -153,7 +171,7 @@ public class PlayerMovement : MonoBehaviour, IMovement
         _lastPosition = _rb.position;
     } 
 
-    void ResetAccumulatedInputs()
+    private void ResetAccumulatedInputs()
     {
         _accumulatedInput = UnityEngine.Vector2.zero;
     }

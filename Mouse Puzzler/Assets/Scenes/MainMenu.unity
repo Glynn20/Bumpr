@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 58066566}
   - component: {fileID: 58066567}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Sensitivity Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,7 +917,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58066565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -976,13 +976,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 327962184}
   m_HandleRect: {fileID: 892002573}
   m_Direction: 0
-  m_MinValue: 0.1
-  m_MaxValue: 10
+  m_MinValue: 0.01
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.25
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 726124727}
+        m_TargetAssemblyTypeName: MenuSettings, Assembly-CSharp
+        m_MethodName: OnSensitivitySliderValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &87698773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,9 +1178,8 @@ GameObject:
   m_Component:
   - component: {fileID: 130813468}
   - component: {fileID: 130813469}
-  - component: {fileID: 130813470}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Volume Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1247,9 +1258,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 130813470}
-        m_TargetAssemblyTypeName: SliderEventHandler, Assembly-CSharp
-        m_MethodName: RaiseAnimationEvent
+      - m_Target: {fileID: 726124727}
+        m_TargetAssemblyTypeName: MenuSettings, Assembly-CSharp
+        m_MethodName: OnVolumeSliderValueChanged
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1259,19 +1270,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &130813470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130813467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9145cc1cc99d624abc07546595f4d6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SliderEventHandler
-  Event: {fileID: 11400000, guid: 9c2620875f5bafc41a2ab09dcd8b8a5d, type: 2}
 --- !u!1 &144416750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +1754,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216126339}
   m_CullTransparentMesh: 1
+--- !u!1 &221006036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221006038}
+  - component: {fileID: 221006037}
+  m_Layer: 0
+  m_Name: SettingsInitiailizer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &221006037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221006036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81227a6dca4949f4fa2057c5e8d605c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsInitializer
+  OnRequestSetMasterVolume: {fileID: 11400000, guid: 9c2620875f5bafc41a2ab09dcd8b8a5d, type: 2}
+--- !u!4 &221006038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221006036}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46261, y: -1.72023, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &234264598
 GameObject:
   m_ObjectHideFlags: 0
@@ -3447,6 +3490,12 @@ MonoBehaviour:
   OnMenuClose: {fileID: 11400000, guid: 62158e6d11d961f4187e68235358d4b2, type: 2}
   _UIButtonSound: {fileID: 11400000, guid: 1dbb9898abe632b4c974c029c1db45af, type: 2}
   OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  volumeSlider: {fileID: 130813469}
+  volumeText: {fileID: 1670946919}
+  sensitivitySlider: {fileID: 58066567}
+  sensitivityText: {fileID: 1928961756}
+  OnRequestSetMasterVolume: {fileID: 11400000, guid: 9c2620875f5bafc41a2ab09dcd8b8a5d, type: 2}
+  OnSensitivityChanged: {fileID: 11400000, guid: efaa538d145d3c54ab8add381e1e250d, type: 2}
 --- !u!114 &726124728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7314,7 +7363,7 @@ GameObject:
   - component: {fileID: 1670946920}
   - component: {fileID: 1670946919}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Volume Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8257,7 +8306,7 @@ GameObject:
   - component: {fileID: 1928961757}
   - component: {fileID: 1928961756}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Sensitivity Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8974,3 +9023,4 @@ SceneRoots:
   - {fileID: 1780315668}
   - {fileID: 970824497}
   - {fileID: 742194973}
+  - {fileID: 221006038}
