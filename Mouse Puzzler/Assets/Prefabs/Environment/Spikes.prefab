@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 7767182627277791967}
   - component: {fileID: 903742384746617661}
   - component: {fileID: 6285463273373512313}
+  - component: {fileID: -2260846282505939235}
   m_Layer: 6
   m_Name: Spikes
   m_TagString: Untagged
@@ -182,3 +183,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 1484798160877695667}
+--- !u!114 &-2260846282505939235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510028870022153595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6285463273373512313}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

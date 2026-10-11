@@ -20,6 +20,7 @@ public class AudioManager : Singleton<AudioManager>
 
     private AudioSource _BGMSource;
     private SoundData _currentMusicTrackData;
+    private bool _gamePaused = false;
 
     public void OnLevelLoadComplete(Component sender, params object[] data)
     {
@@ -52,10 +53,12 @@ public class AudioManager : Singleton<AudioManager>
         {
             if (isNowPaused)
             {
+                _gamePaused = true;
                 PauseAllClips();    
             }
             else
             {
+                _gamePaused = false;
                 ResumeAllClips();
             }
         }
@@ -107,8 +110,8 @@ public class AudioManager : Singleton<AudioManager>
             if (AudioSourcePool[i].isPlaying) 
             {
                 AudioSourcePool[i].Stop();
-                AudioSourcePool[i].clip = null;
             }
+            AudioSourcePool[i].clip = null;
         }
     }   
 
@@ -128,9 +131,12 @@ public class AudioManager : Singleton<AudioManager>
         for (int i = 0; i < AudioSourcePool.Count; ++i)
         {
             AudioSource source = AudioSourcePool[i];
-            if (!source.isPlaying && source.time != 0f) 
+            if (source.clip != null && !source.isPlaying) 
             {
-                AudioSourcePool[i].Play();
+                if (!source.isPlaying && source.time != 0f)
+                {
+                    source.Play();
+                }
             }
         }   
     }
@@ -165,9 +171,10 @@ public class AudioManager : Singleton<AudioManager>
     {
         for (int i = 0; i < AudioSourcePool.Count; ++i)
         {
-            if (AudioSourcePool[i].clip == null)
+            AudioSource source = AudioSourcePool[i];    
+            if (source.clip == null)
             {
-                ConfigureAndPlay(AudioSourcePool[i], data);
+                ConfigureAndPlay(source, data);
                 return;
             }
         }
@@ -176,6 +183,17 @@ public class AudioManager : Singleton<AudioManager>
         {
             AudioSource source = AudioSourcePool[i];    
             if (!source.loop && source.time == 0f)
+            {
+                ConfigureAndPlay(source, data);
+                return;
+            }
+        }     
+
+        for (int i = 0; i < AudioSourcePool.Count; ++i)
+        {
+            AudioSource source = AudioSourcePool[i];    
+            Debug.Log($"{source.time},{source.clip.length}");
+            if (!source.loop && source.time >= source.clip.length)
             {
                 ConfigureAndPlay(source, data);
                 return;

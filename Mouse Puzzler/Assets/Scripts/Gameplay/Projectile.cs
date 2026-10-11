@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private GameEvent OnPlaySound;
+    [SerializeField] private GameEvent OnPlayParticle;
+    [SerializeField] private SoundData _hitSoundData;
+    [SerializeField] private ParticleData _hitFX; 
+
     private SpriteRenderer _sprite;
     private Rigidbody2D _rb;
     private BoxCollider2D _collider;
@@ -24,6 +29,7 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         HideAndDestroy();
+        OnHit(other.contacts[0].point);
     }
 
     private void HideAndDestroy()
@@ -39,5 +45,16 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 
+    private void OnHit(Vector2 hitPosition)
+    {
+        if (_hitSoundData != null)
+        {
+            OnPlaySound?.Raise(this, _hitSoundData);
+        }
+        if (_hitFX != null)
+        {
+            OnPlayParticle?.Raise(this, _hitFX, hitPosition, transform.rotation.eulerAngles.z - 90f);
+        }
+    }
 
 }

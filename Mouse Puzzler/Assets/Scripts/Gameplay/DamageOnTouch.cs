@@ -2,13 +2,29 @@ using UnityEngine;
 
 public class DamageOnTouch : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D other)
+
+    [SerializeField] private SpriteRenderer _rendererToDisplayOnDeath;
+
+    private bool _rendererChanged = false;
+    private int _originalLayer = 0;
+
+    public void OnPlayerContinue()
     {
-        Debug.Log("Collision");
-        // Must specifically be the Player
-        IHealth health = other.gameObject.GetComponentInChildren<IHealth>();
+        if (!_rendererChanged) return;
+        _rendererToDisplayOnDeath.sortingOrder = _originalLayer;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+
         if (other.gameObject.GetComponentInChildren<IPlayer>() == null) return;
         
+        // Display object that killed player over the black overlay
+        _rendererChanged = true;
+        _originalLayer = _rendererToDisplayOnDeath.sortingOrder;
+        _rendererToDisplayOnDeath.sortingOrder = 10;
+
+        IHealth health = other.gameObject.GetComponentInChildren<IHealth>();
         health.TakeDamage();
     }
 }

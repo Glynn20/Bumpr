@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 6355123356934622472}
 --- !u!50 &7289349965717135500
 Rigidbody2D:
   serializedVersion: 5
@@ -145,6 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7d27e1f1a204541ae1a7039d1dfe1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  OnPlaySound: {fileID: 11400000, guid: 9d906f875fbb79c41980f0198d9aff1e, type: 2}
+  OnPlayParticle: {fileID: 11400000, guid: b17b839987ce55f428204c4057261578, type: 2}
+  _hitSoundData: {fileID: 11400000, guid: 7aa463fd84b3e564394ffe6a96f92d5b, type: 2}
+  _hitFX: {fileID: 11400000, guid: 0be471bceddc67040942fc167b971eb6, type: 2}
 --- !u!61 &8137259096536282462
 BoxCollider2D:
   m_ObjectHideFlags: 0

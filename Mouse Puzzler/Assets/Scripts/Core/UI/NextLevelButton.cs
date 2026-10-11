@@ -6,14 +6,14 @@ public class NextLevelButton : MonoBehaviour
     [SerializeField] private GameEvent OnPlaySound;
     [SerializeField] private GameEvent OnNextLevelButtonPressed;
 
-    [Header("SFX")] 
-    [SerializeField] private SoundData UIClickSound;
+    //[Header("SFX")] 
+    //[SerializeField] private SoundData UIClickSound;
 
 
     public void OnClick()
     {
         OnNextLevelButtonPressed?.Raise(this, null);
-        OnPlaySound?.Raise(this, UIClickSound);
+        //OnPlaySound?.Raise(this, UIClickSound);
     }
     
 

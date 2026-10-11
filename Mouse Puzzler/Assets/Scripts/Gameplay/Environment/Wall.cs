@@ -18,12 +18,15 @@ public class Wall : MonoBehaviour
         PlayerMoveState state = playerMovement.GetMoveState();
         if (state == PlayerMoveState.Running || state == PlayerMoveState.Overheating)
         {
-            OnPlayWallBumpSound?.Raise(this, _wallBumpSoundData);
+            if (_wallBumpSoundData != null)
+            {
+                OnPlayWallBumpSound?.Raise(this, _wallBumpSoundData);
+            }
             
-            if (_wallHitFX == null) return;  
-
-            OnPlayWallBumpParticle?.Raise(this, _wallHitFX, other.contacts[0].point);
-            
+            if (_wallHitFX != null)
+            {
+                OnPlayWallBumpParticle?.Raise(this, _wallHitFX, other.contacts[0].point);
+            }
         }
         
     }

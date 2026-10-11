@@ -79,10 +79,10 @@ public class MenuSettings : Menu<MenuSettings>
 
     private void SetVolumeText(float value)
     {
-        volumeText.text = $"Game Volume: {Math.Round(value, 1)}";
+        volumeText.text = $"GAME VOLUME: {Math.Round(value, 1)}";
     }
     private void SetSensitivityText(float value)
     {
-        sensitivityText.text = $"Sensitivity: {Math.Round(value, 2)}";
+        sensitivityText.text = $"SENSITIVITY: {Math.Round(value, 2)}";
     }
 }

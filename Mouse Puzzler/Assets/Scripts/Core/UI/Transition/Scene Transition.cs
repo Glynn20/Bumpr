@@ -11,7 +11,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private GameEvent OnPlaySound;
 
     [Header("SFX")] 
-    [SerializeField] private SoundData UIClickSound;
+    [SerializeField] private SoundData _sceneTransitionInFX;
     
     private Animator _transitionObjectAnimator;
 
@@ -39,6 +39,7 @@ public class SceneTransition : MonoBehaviour
     public void PlayTransitionStartAnimation()
     {
         if (_transitionObjectAnimator == null) return;
+        OnPlaySound?.Raise(this, _sceneTransitionInFX);
         _transitionObjectAnimator.Play(_transitionStartAnimName);
     }
 }

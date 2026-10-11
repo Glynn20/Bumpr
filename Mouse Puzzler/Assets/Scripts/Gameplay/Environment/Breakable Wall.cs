@@ -107,13 +107,17 @@ IReset
         if ( mover.GetMoveState() == PlayerMoveState.Overheating )
         {
             TakeDamage();
-            PlayHitFX(other.contacts[0].point);
+
+            Vector3 direction = other.gameObject.transform.position - this.gameObject.transform.position;
+            float angleRad = Mathf.Atan2(direction.y, direction.x);
+            float angleDeg = angleRad * Mathf.Rad2Deg;
+            PlayHitFX(other.contacts[0].point, angleDeg - 90f);
         }
     }
-    private void PlayHitFX(Vector2 position)
+    private void PlayHitFX(Vector2 position, float zRotation)
     {
         if (_wallHitFX == null) return; 
-        OnPlayHitParticle?.Raise(this, _wallHitFX, position); 
+        OnPlayHitParticle?.Raise(this, _wallHitFX, position, zRotation); 
     }
     private void ChangeColour(Color newColour)
     {

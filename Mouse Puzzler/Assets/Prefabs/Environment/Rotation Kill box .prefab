@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2279355527939110866}
   - component: {fileID: 6296379498879490642}
   - component: {fileID: 8767710640512877452}
+  - component: {fileID: 7229307464524196555}
   m_Layer: 9
   m_Name: Kill Square
   m_TagString: Untagged
@@ -150,6 +151,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  _rendererToDisplayOnDeath: {fileID: 2279355527939110866}
+--- !u!114 &7229307464524196555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295552292579402258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8767710640512877452}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1391337962715422640
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +191,7 @@ GameObject:
   - component: {fileID: 8558034430228013327}
   - component: {fileID: 2764591324814741709}
   - component: {fileID: 5751464912089304049}
+  - component: {fileID: 146608136327540322}
   m_Layer: 9
   m_Name: Centre Ball
   m_TagString: Untagged
@@ -253,6 +284,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  _rendererToDisplayOnDeath: {fileID: 2764591324814741709}
+--- !u!114 &146608136327540322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391337962715422640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8767710640512877452}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2830644011168938087
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +325,7 @@ GameObject:
   - component: {fileID: 8907786806049424243}
   - component: {fileID: 4612134388100342754}
   - component: {fileID: 1198614317179235962}
+  - component: {fileID: 5156679245081428856}
   m_Layer: 9
   m_Name: Kill Square 1
   m_TagString: Untagged
@@ -403,6 +464,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  _rendererToDisplayOnDeath: {fileID: 8907786806049424243}
+--- !u!114 &5156679245081428856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830644011168938087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8767710640512877452}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3427419607107623653
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +555,7 @@ GameObject:
   - component: {fileID: 8166706847003506799}
   - component: {fileID: 2597788391335854505}
   - component: {fileID: 108986892947471528}
+  - component: {fileID: 8873161742041179055}
   m_Layer: 9
   m_Name: Kill Square 2
   m_TagString: Untagged
@@ -603,3 +694,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  _rendererToDisplayOnDeath: {fileID: 8166706847003506799}
+--- !u!114 &8873161742041179055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4240430085352302264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8767710640512877452}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

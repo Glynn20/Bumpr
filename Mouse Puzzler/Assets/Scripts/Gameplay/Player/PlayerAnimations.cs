@@ -11,6 +11,12 @@ public class PlayerAnimations : MonoBehaviour
     [SerializeField] private ParticleData _playerDeathFX;
     [SerializeField] private GameEvent OnPlayPlayerDeathSound;
     [SerializeField] private GameEvent OnPlayPlayerDeathParticle;
+
+    public void OnLevelComplete()
+    {
+        PlayCelebration();
+    }
+
     public void TriggerDeath() // Called as GameEvent response via inspector
     {
         _animator.SetTrigger("Died"); // Plays Death Anim
@@ -33,5 +39,10 @@ public class PlayerAnimations : MonoBehaviour
     private void Update()
     {
         _animator.SetFloat("Speed", _movement.GetCurrentSpeed());
+    }
+
+    public void PlayCelebration()
+    {
+        _animator.Play("Celebrate");
     }
 }

@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 8886888261777690274}
   - component: {fileID: 7472708137711045993}
   - component: {fileID: 330574269219067366}
+  - component: {fileID: 3971900656210280743}
   m_Layer: 9
   m_Name: Kill Circle (7)
   m_TagString: Untagged
@@ -154,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 8886888261777690274}
 --- !u!58 &330574269219067366
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -190,6 +192,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &3971900656210280743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892217505875546085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7472708137711045993}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1125957199945917497
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +232,7 @@ GameObject:
   - component: {fileID: 2204999397714011267}
   - component: {fileID: 2853388786354893809}
   - component: {fileID: 7338896525117640822}
+  - component: {fileID: 6413560439210986968}
   m_Layer: 9
   m_Name: Kill Circle
   m_TagString: Untagged
@@ -294,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 2204999397714011267}
 --- !u!58 &7338896525117640822
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -330,6 +362,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &6413560439210986968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125957199945917497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2853388786354893809}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2024496279629367342
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +437,7 @@ GameObject:
   - component: {fileID: 3777456665353554761}
   - component: {fileID: 5347193762484509333}
   - component: {fileID: 5950889084989304551}
+  - component: {fileID: 374552262097813143}
   m_Layer: 9
   m_Name: Kill Circle (1)
   m_TagString: Untagged
@@ -469,6 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 3777456665353554761}
 --- !u!58 &5950889084989304551
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -505,6 +567,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &374552262097813143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262923716392629627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5347193762484509333}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2432313618094027776
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +607,7 @@ GameObject:
   - component: {fileID: 3502041619033248939}
   - component: {fileID: 6270222845658211615}
   - component: {fileID: 1777360312862593651}
+  - component: {fileID: 1232844908723862259}
   m_Layer: 9
   m_Name: Kill Circle (6)
   m_TagString: Untagged
@@ -609,6 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 3502041619033248939}
 --- !u!58 &1777360312862593651
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -645,6 +737,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &1232844908723862259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2432313618094027776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6270222845658211615}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3083917666876254483
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +777,7 @@ GameObject:
   - component: {fileID: 8158162320078343980}
   - component: {fileID: 1134188630040950917}
   - component: {fileID: 4920851095128391999}
+  - component: {fileID: 3108322910577492907}
   m_Layer: 9
   m_Name: Kill Circle (5)
   m_TagString: Untagged
@@ -749,6 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 8158162320078343980}
 --- !u!58 &4920851095128391999
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -785,6 +907,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0000019073486, y: 0}
   m_Radius: 0.2
+--- !u!114 &3108322910577492907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083917666876254483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1134188630040950917}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3228149925135359579
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +947,7 @@ GameObject:
   - component: {fileID: 5515464156067661281}
   - component: {fileID: 241684275975154902}
   - component: {fileID: 890445112034040724}
+  - component: {fileID: 3649093058529822343}
   m_Layer: 9
   m_Name: Kill Circle (2)
   m_TagString: Untagged
@@ -889,6 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 5515464156067661281}
 --- !u!58 &890445112034040724
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -925,6 +1077,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &3649093058529822343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228149925135359579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 241684275975154902}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3958307280238739527
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +1117,7 @@ GameObject:
   - component: {fileID: 549281213995164630}
   - component: {fileID: 1966383298285079570}
   - component: {fileID: 6489584259210425943}
+  - component: {fileID: 1235549032078034749}
   m_Layer: 9
   m_Name: Kill Circle (4)
   m_TagString: Untagged
@@ -1029,6 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 549281213995164630}
 --- !u!58 &6489584259210425943
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1065,6 +1247,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &1235549032078034749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958307280238739527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1966383298285079570}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4003074879755425498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1287,7 @@ GameObject:
   - component: {fileID: 8527581853648944340}
   - component: {fileID: 689919011447388909}
   - component: {fileID: 4717735477486966449}
+  - component: {fileID: 8719214295207540009}
   m_Layer: 9
   m_Name: Kill Circle (3)
   m_TagString: Untagged
@@ -1169,6 +1380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 8527581853648944340}
 --- !u!58 &4717735477486966449
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1205,6 +1417,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &8719214295207540009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003074879755425498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 689919011447388909}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4586196170843682355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1457,7 @@ GameObject:
   - component: {fileID: 675026215816238770}
   - component: {fileID: 6088041682627755174}
   - component: {fileID: 8564897656913377032}
+  - component: {fileID: 5436168305592217401}
   m_Layer: 9
   m_Name: Kill Circle (3)
   m_TagString: Untagged
@@ -1309,6 +1550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 675026215816238770}
 --- !u!58 &8564897656913377032
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1345,6 +1587,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &5436168305592217401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4586196170843682355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6088041682627755174}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4956193050531954155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1627,7 @@ GameObject:
   - component: {fileID: 5897860628990496523}
   - component: {fileID: 4326570041589742087}
   - component: {fileID: 1287126836112166942}
+  - component: {fileID: 2508491274615474790}
   m_Layer: 9
   m_Name: Kill Circle (3)
   m_TagString: Untagged
@@ -1449,6 +1720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 5897860628990496523}
 --- !u!58 &1287126836112166942
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1485,6 +1757,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &2508491274615474790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956193050531954155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4326570041589742087}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5048738592773174627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,6 +1797,7 @@ GameObject:
   - component: {fileID: 3930372692904583548}
   - component: {fileID: 430501526425200806}
   - component: {fileID: 6287028881309453604}
+  - component: {fileID: 9213245796540325590}
   m_Layer: 9
   m_Name: Kill Circle (1)
   m_TagString: Untagged
@@ -1589,6 +1890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 3930372692904583548}
 --- !u!58 &6287028881309453604
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1625,6 +1927,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &9213245796540325590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048738592773174627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 430501526425200806}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5063442823551407133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +2002,7 @@ GameObject:
   - component: {fileID: 2439223524808779010}
   - component: {fileID: 1520189257748625044}
   - component: {fileID: 5075559952271104154}
+  - component: {fileID: 2280719273571534178}
   m_Layer: 9
   m_Name: Kill Circle (4)
   m_TagString: Untagged
@@ -1764,6 +2095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 2439223524808779010}
 --- !u!58 &5075559952271104154
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1800,6 +2132,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &2280719273571534178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531823534839161343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1520189257748625044}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5585847618397661068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +2172,7 @@ GameObject:
   - component: {fileID: 6755033039186169726}
   - component: {fileID: 7936018297502089166}
   - component: {fileID: 8603418635715132761}
+  - component: {fileID: 3800001734392211047}
   m_Layer: 9
   m_Name: Kill Circle (2)
   m_TagString: Untagged
@@ -1904,6 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 6755033039186169726}
 --- !u!58 &8603418635715132761
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1940,6 +2302,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0000019073486, y: 0}
   m_Radius: 0.2
+--- !u!114 &3800001734392211047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5585847618397661068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7936018297502089166}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5654364946486202638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +2342,7 @@ GameObject:
   - component: {fileID: 6225897707232070745}
   - component: {fileID: 6935400498230580962}
   - component: {fileID: 7110522939931361812}
+  - component: {fileID: 8637444826423593508}
   m_Layer: 9
   m_Name: Kill Circle (2)
   m_TagString: Untagged
@@ -2044,6 +2435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 6225897707232070745}
 --- !u!58 &7110522939931361812
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2080,6 +2472,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &8637444826423593508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654364946486202638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6935400498230580962}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5976685386018140102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,6 +2547,7 @@ GameObject:
   - component: {fileID: 7183566497184373162}
   - component: {fileID: 1211599014684519751}
   - component: {fileID: 2407664669104742144}
+  - component: {fileID: 6927925239477583196}
   m_Layer: 9
   m_Name: Kill Circle (4)
   m_TagString: Untagged
@@ -2219,6 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 7183566497184373162}
 --- !u!58 &2407664669104742144
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2255,6 +2677,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &6927925239477583196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765080594922465040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1211599014684519751}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7036391464081337784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2717,7 @@ GameObject:
   - component: {fileID: 3650007411167740135}
   - component: {fileID: 6438793282323083721}
   - component: {fileID: 2742335945184814544}
+  - component: {fileID: 8859182247752813625}
   m_Layer: 9
   m_Name: Kill Circle (5)
   m_TagString: Untagged
@@ -2359,6 +2810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 3650007411167740135}
 --- !u!58 &2742335945184814544
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2395,6 +2847,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
+--- !u!114 &8859182247752813625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7036391464081337784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6438793282323083721}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8642325784126963292
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3326902597651709865}
   - component: {fileID: 3628835240160130015}
   - component: {fileID: 8921089927908655470}
+  - component: {fileID: -9183242699278605402}
   m_Layer: 7
   m_Name: Sleeper
   m_TagString: Untagged
@@ -73,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc67d6dd6efa174d97c128bfb5f6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnTouch
+  _rendererToDisplayOnDeath: {fileID: 5522834717923057033}
 --- !u!58 &3451551414231218898
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -194,6 +196,34 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!114 &-9183242699278605402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412212982035976710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3002955a1ccf8a40af54a7b129dca28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: 9ae599af3daa3ae4482637a232b98b90, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7076753537449032295}
+        m_TargetAssemblyTypeName: DamageOnTouch, Assembly-CSharp
+        m_MethodName: OnPlayerContinue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4275478856837668203
 GameObject:
   m_ObjectHideFlags: 0
