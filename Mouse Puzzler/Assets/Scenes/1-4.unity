@@ -31732,6 +31732,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1525832259026471501, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525832259026471501, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525832259026471501, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525832259026471501, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1553678524521686127, guid: ca09eb0eb1a99c048a92518cf019c376, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -32305,7 +32321,7 @@ PrefabInstance:
     - target: {fileID: 6297200834420783437, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
       propertyPath: _currentSceneData
       value: 
-      objectReference: {fileID: 11400000, guid: 7f46919f87b8d6d4ea198654dafcad9f, type: 2}
+      objectReference: {fileID: 11400000, guid: 7b92d84c648bfc84b8a1f1a8f72bd9b2, type: 2}
     - target: {fileID: 6297200834420783437, guid: cf19363e0bbad86438f2d0741f9e5a06, type: 3}
       propertyPath: _initialSpawnPoint
       value: 

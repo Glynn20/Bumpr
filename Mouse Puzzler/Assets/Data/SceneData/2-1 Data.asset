@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: 2-1 Data
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
   SceneName: 2-1
-  BGMTrack: {fileID: 0}
+  InGameDisplayName: SMASH
+  BGMTrack: {fileID: 11400000, guid: 0a2b3663bece0b54d98b6161dba235dd, type: 2}
   ColourData: {fileID: 11400000, guid: 9065952467edb4a47a609475782f9578, type: 2}
   levelType: 1
-  STime: 12
-  ATime: 18
-  BTime: 25
-  CTime: 40
+  STime: 24
+  ATime: 36
+  BTime: 48
+  CTime: 60

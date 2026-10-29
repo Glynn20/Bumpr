@@ -4,8 +4,9 @@ using UnityEngine;
 public class LevelListCreator : MonoBehaviour
 {
     [SerializeField] private SceneRegistry _sceneRegistry;
-    private List<SceneData> _levelList = new List<SceneData>();
     [SerializeField] private GameObject _listItemPrefab;
+    
+    private List<SceneData> _levelList = new List<SceneData>();
     
     private void Awake()
     {

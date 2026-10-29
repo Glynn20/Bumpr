@@ -4,6 +4,7 @@ using UnityEngine;
 public class SceneData : ScriptableObject
 {
     public string SceneName; // Must map onto the corresponding scene's actual name
+    public string InGameDisplayName;
 
     [Header("Config")]
     
@@ -14,10 +15,10 @@ public class SceneData : ScriptableObject
     [Header("Rankings")]
     
     // Time to beat Rankings
-    public float STime;
-    public float ATime;
-    public float BTime;
-    public float CTime;
+    public int STime;
+    public int ATime;
+    public int BTime;
+    public int CTime;
 
     public enum LevelType
     {

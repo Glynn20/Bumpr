@@ -30,7 +30,7 @@ public class AudioManager : Singleton<AudioManager>
             {
                 StopBGMTrack();
             }
-            else
+            else if (_currentMusicTrackData != sceneData.BGMTrack)
             {
                 ChangeBGMTrack(sceneData.BGMTrack);
             }

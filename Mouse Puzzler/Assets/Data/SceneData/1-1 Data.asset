@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 1-1 Data
   m_EditorClassIdentifier: Assembly-CSharp::SceneData
   SceneName: 1-1
-  BGMTrack: {fileID: 0}
+  InGameDisplayName: CAKEWALK
+  BGMTrack: {fileID: 11400000, guid: 0a2b3663bece0b54d98b6161dba235dd, type: 2}
   ColourData: {fileID: 11400000, guid: 9065952467edb4a47a609475782f9578, type: 2}
   levelType: 1
   STime: 11

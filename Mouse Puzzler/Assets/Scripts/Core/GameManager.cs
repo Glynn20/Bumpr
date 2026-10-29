@@ -35,4 +35,12 @@ public class GameManager : Singleton<GameManager>
         
     }
 
+    public void OnRequestScreenModeChange(Component sender, params object[] data)
+    {
+        if (data.Length > 0 && data[0] is FullScreenMode mode)
+        {
+            GameSettings.SetScreenMode(mode);
+        }
+    }
+
 }

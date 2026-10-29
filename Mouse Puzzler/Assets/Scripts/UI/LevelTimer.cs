@@ -44,16 +44,9 @@ public class LevelTimer : MonoBehaviour
         if (_clock == null) return "Error";
 
         int seconds = (int) _levelTime % 60;
-        string secondsText = seconds >= 10 ? $"{seconds}" : $"0{seconds}";
-        
-        if (_levelTime < 60)
-        {
-            return $"00:{secondsText}";
-        }
+        int minutes = (int)_levelTime / 60;
 
-        int minutes = (int) Math.Round((_levelTime / 60), 1);
-        string minutesText = minutes >= 10 ? $"{minutes}" : $"0{minutes}";
         
-        return $"{minutesText}:{secondsText}";
+        return $"{minutes:D2}:{seconds:D2}";
     }
 }

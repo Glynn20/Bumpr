@@ -5,21 +5,41 @@ using UnityEngine.UI;
 public class LevelButton : MonoBehaviour
 {
     [HideInInspector] public SceneData SceneOnClick;
-    [HideInInspector] public TextMeshProUGUI Text;
+    [SerializeField] private TextMeshProUGUI LevelName;
+    [SerializeField] private TextMeshProUGUI LevelDisplayText;
+    
     
     [Header("Events")]
     [SerializeField] private GameEvent OnRequestLoadScene;
 
     [Header("Config")]
-    [SerializeField] private GameObject _lockedIcon;
+    //[SerializeField] private GameObject _lockedIcon;
 
-    private Image _image;
+    [SerializeField] private TextMeshProUGUI _sTime;
+    [SerializeField] private TextMeshProUGUI _aTime;
+    [SerializeField] private TextMeshProUGUI _bTime;
+
+    private Image _backgroundImage;
     
     public void Initialize(SceneData scene)
     {
         SceneOnClick = scene;
-        Text.text = scene.SceneName;
+        LevelName.text = scene.SceneName;
+        LevelDisplayText.text = scene.InGameDisplayName;
         SetColor(scene);
+
+        if (_sTime != null)
+        {
+            _sTime.text = ConvertToClockTime(scene.STime);
+        }
+        if (_aTime != null)
+        {
+            _aTime.text = ConvertToClockTime(scene.ATime);
+        }
+        if (_bTime != null)
+        {
+            _bTime.text = ConvertToClockTime(scene.BTime);
+        }
     }
 
     public void LoadLevel()
@@ -28,36 +48,33 @@ public class LevelButton : MonoBehaviour
     }
     private void Awake()
     {
-        Text = GetComponentInChildren<TextMeshProUGUI>();
-        _image = GetComponent<Image>();
+        _backgroundImage = GetComponent<Image>();
     }
 
     private void SetColor(SceneData scene)
     {
-        if (_image == null) return;
+        if (_backgroundImage == null) return;
 
         switch (scene.levelType)
         {
             case (SceneData.LevelType.Normal):
-                _image.color = scene.ColourData.unlockedNormalColour;
+                _backgroundImage.color = scene.ColourData.unlockedNormalColour;
             break;
             case (SceneData.LevelType.Challenge):
-                _image.color = scene.ColourData.unlockedChallengeColour;
+                _backgroundImage.color = scene.ColourData.unlockedChallengeColour;
             break;
             case (SceneData.LevelType.Nightmare):
-                _image.color = scene.ColourData.unlockedNightmareColour;
+                _backgroundImage.color = scene.ColourData.unlockedNightmareColour;
             break;
         }
     }
 
-    private void Lock()
+    private string ConvertToClockTime(int totalSeconds)
     {
-        _lockedIcon.SetActive(true);
-    }
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
 
-    private void Unlock()
-    {
-        _lockedIcon.SetActive(false);
+        return $"{minutes:D2}:{seconds:D2}";
     }
 
 }

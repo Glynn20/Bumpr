@@ -258,7 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Killbox
   _shadow: {fileID: 3641879705643343147}
   _killboxCollider: {fileID: 2121956652525588373}
-  _colliderLeniency: 0.05
+  _colliderLeniency: 0.06
 --- !u!114 &1128367041969505486
 MonoBehaviour:
   m_ObjectHideFlags: 0

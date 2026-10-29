@@ -13,8 +13,10 @@ public class MenuSettings : Menu<MenuSettings>
     [SerializeField] private TextMeshProUGUI sensitivityText;
 
     [Header("Events")]
+    [SerializeField] private GameEvent OnRequestSetFullScreenMode;
     [SerializeField] private GameEvent OnRequestSetMasterVolume;
     [SerializeField] private GameEvent OnSensitivityChanged; // for player to change at runtime
+    
     public override void OnBackPressed()
     {
         PlayUISound();
@@ -61,6 +63,18 @@ public class MenuSettings : Menu<MenuSettings>
     {
         Hide();
     }
+    
+    public void OnFullscreenButtonToggled(bool isOn)
+    {
+        if (isOn)
+        {
+            OnRequestSetFullScreenMode?.Raise(this, FullScreenMode.ExclusiveFullScreen);
+        }
+        else
+        {
+            OnRequestSetFullScreenMode?.Raise(this, FullScreenMode.FullScreenWindow);
+        }
+    }
 
     public void OnVolumeSliderValueChanged(float newValue)
     {
@@ -85,4 +99,5 @@ public class MenuSettings : Menu<MenuSettings>
     {
         sensitivityText.text = $"SENSITIVITY: {Math.Round(value, 2)}";
     }
+    
 }
