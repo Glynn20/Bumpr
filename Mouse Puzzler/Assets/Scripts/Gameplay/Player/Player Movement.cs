@@ -106,12 +106,6 @@ public class PlayerMovement : MonoBehaviour, IMovement
         }
     }
 
-    public virtual void FixedUpdate()
-    {
-        if (_isInputEnabled == false) return;
-        AdjustPosition();
-    }
-
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();  
@@ -133,6 +127,11 @@ public class PlayerMovement : MonoBehaviour, IMovement
         _mouseSens = Mathf.Clamp(newValue, _minMouseSens, _maxMouseSens);
     }
 
+    private void FixedUpdate()
+    {
+        if (_isInputEnabled == false) return;
+        AdjustPosition();
+    }
     private void AdjustPosition()
     {
         float actualDistanceMoved = UnityEngine.Vector2.Distance(_rb.position, _lastPosition);
@@ -157,7 +156,6 @@ public class PlayerMovement : MonoBehaviour, IMovement
             _direction = GetDirection(transform.position, targetPosition);
             
             if (_flipSprite) _sprite.flipX = _direction.x < 0;
-
 
             ResetAccumulatedInputs();
         }
